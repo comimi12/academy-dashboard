@@ -190,7 +190,7 @@
     <nav class="nav">
       <div class="cap">Views</div>
       <button class="tab active" data-view="v1"><span class="tnum">1</span><span class="tlabel">신규 아카데미 채용 계획</span></button>
-      <button class="tab" data-view="v2"><span class="tnum">2</span><span class="tlabel">신규 아카데미 운영방안</span></button>
+      <button class="tab" data-view="v2"><span class="tnum">2</span><span class="tlabel">아카데미 매장 시뮬레이션</span></button>
       <button class="tab" data-view="v3"><span class="tnum">3</span><span class="tlabel">기존 아카데미 현황</span></button>
       <button class="tab" data-view="v4"><span class="tnum">4</span><span class="tlabel">아카데미 상세 커리큘럼</span></button>
       <button class="tab" data-view="v5"><span class="tnum">5</span><span class="tlabel">채용팀 역할 분담</span></button>
@@ -366,49 +366,93 @@
       </div>
     </section>
 
-    <!-- ===== 뷰2: 신규 아카데미 운영방안 ===== -->
+    <!-- ===== 뷰2: 아카데미 매장 시뮬레이션 ===== -->
     <section id="v2" class="view">
       <div class="grid">
+
+        <!-- 상단 와이드: 공간 계획 -->
         <div class="sec-card c-gold wide">
-          <div class="sec-card-head"><span>🏪 아카데미 매장 시뮬레이션 (방배동)</span></div>
+          <div class="sec-card-head"><span>📍 방배동 본사 인근 배달형 아카데미 매장 — 공간 구성 (50평)</span></div>
           <div class="sec-card-body">
-            <div class="sim-box">
-              <div class="sim-title">📍 방배동 근거리 매장 운영 시나리오 (총 50평)</div>
-              <div class="space-grid">
-                <div class="space-cell" style="background:#FEF3C7;border:1px solid #FDE68A;"><div class="sc-title" style="color:#92400E;">📦 도시락 생산 구역</div><div style="font-size:10.5px;color:#78350F;">25평 · 산업용 조리 장비<br>일 300~500팩 생산 목표</div></div>
-                <div class="space-cell" style="background:#DCFCE7;border:1px solid #86EFAC;"><div class="sc-title" style="color:#166534;">🛵 배달 운영 구역</div><div style="font-size:10.5px;color:#14532D;">배달의민족·쿠팡이츠 입점<br>픽업·배달 동시 운영</div></div>
-                <div class="space-cell" style="background:#EFF6FF;border:1px solid #BFDBFE;"><div class="sc-title" style="color:#1E40AF;">🎓 훈련 교실 구역</div><div style="font-size:10.5px;color:#1E3A8A;">15평 · 이론+데모 공간<br>20석 강의 가능</div></div>
-                <div class="space-cell" style="background:#FAF5FF;border:1px solid #E9D5FF;"><div class="sc-title" style="color:#5B21B6;">🗂 사무·행정 구역</div><div style="font-size:10.5px;color:#4C1D95;">10평 · 담당자 2명<br>인사·회계·보고</div></div>
+            <div class="alert alert-blue" style="margin-bottom:12px;"><div>🏢</div><div>본사 인근 <b>방배동</b> 위치 · 지하 1층~지상 5층 모두 검토 가능 · 총 <b>50평</b> 규모 · 배달형 매장 + 교육 공간 겸용</div></div>
+            <div class="space-grid">
+              <div class="space-cell" style="background:#FEF3C7;border:1px solid #FDE68A;">
+                <div class="sc-title" style="color:#92400E;">📦 도시락 생산 구역</div>
+                <div style="font-size:10.5px;color:#78350F;line-height:1.6;">25평 · 산업용 조리 장비<br>일 300~500팩 생산 목표<br><b>배달의민족·쿠팡이츠 입점</b></div>
+              </div>
+              <div class="space-cell" style="background:#DCFCE7;border:1px solid #86EFAC;">
+                <div class="sc-title" style="color:#166534;">🎓 훈련 교실 구역</div>
+                <div style="font-size:10.5px;color:#14532D;line-height:1.6;">15평 · 이론 + 데모 실습 공간<br>20석 강의 가능<br><b>브랜드 매뉴얼 교육 전용</b></div>
+              </div>
+              <div class="space-cell" style="background:#EFF6FF;border:1px solid #BFDBFE;">
+                <div class="sc-title" style="color:#1E40AF;">🛵 배달 운영 구역</div>
+                <div style="font-size:10.5px;color:#1E3A8A;line-height:1.6;">픽업·배달 동시 운영<br>교육생이 직접 주문 처리<br><b>실무 감각 현장 체득</b></div>
+              </div>
+              <div class="space-cell" style="background:#FAF5FF;border:1px solid #E9D5FF;">
+                <div class="sc-title" style="color:#5B21B6;">🗂 사무·행정 구역</div>
+                <div style="font-size:10.5px;color:#4C1D95;line-height:1.6;">10평 · 담당자 2명<br>인사·회계·보고<br><b>교육생 출결·평가 관리</b></div>
               </div>
             </div>
             <hr class="inner-div">
             <div class="sub-h">📊 예상 매출·운영 지표 (월간)</div>
             <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label">도시락 매출 (300팩×22일×3,500원)</span><span class="ri-val" style="color:#92400E;">약 2,310만원</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label">배달 플랫폼 수수료 (약 15%)</span><span class="ri-val" style="color:#EF4444;">-347만원</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label">재료비 (매출의 35%)</span><span class="ri-val" style="color:#EF4444;">-808만원</span></div>
-            <div class="row-item" style="background:#FFFBEB;border-radius:6px;padding:6px;"><div class="ri-dot" style="background:#F59E0B"></div><span class="ri-label" style="font-weight:700;">순 기여 (운영비 일부 상쇄)</span><span class="ri-val" style="color:#D97706;font-size:13px;">약 1,155만원</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#EF4444"></div><span class="ri-label">배달 플랫폼 수수료 (약 15%)</span><span class="ri-val" style="color:#EF4444;">−347만원</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#EF4444"></div><span class="ri-label">재료비 (매출의 35%)</span><span class="ri-val" style="color:#EF4444;">−808만원</span></div>
+            <div class="row-item" style="background:#FFFBEB;border-radius:6px;padding:6px;"><div class="ri-dot" style="background:#F59E0B"></div><span class="ri-label" style="font-weight:700;">순 기여 (운영비 일부 상쇄)</span><span class="ri-val" style="color:#D97706;font-size:13px;">약 1,155만원/월</span></div>
           </div>
         </div>
 
-        <div class="sec-card c-gold">
-          <div class="sec-card-head"><span>👨‍🍳 아카데미 핵심 운영 인력</span></div>
+        <!-- 좌: 현재 운영 실적 -->
+        <div class="sec-card c-blue">
+          <div class="sec-card-head"><span>📋 현재 아카데미 운영 실적 (2026년 누계)</span></div>
           <div class="sec-card-body">
-            <div class="org-wrap">
-              <div class="org-box" style="background:linear-gradient(135deg,#B45309,#D97706);">아카데미 총괄 (원장급)</div>
-              <div class="org-line"></div>
-              <div class="org-row"><div class="org-box sub" style="background:linear-gradient(135deg,#D97706,#F59E0B);min-width:110px;">수석 훈련 강사</div><div class="org-box sub" style="background:linear-gradient(135deg,#D97706,#F59E0B);min-width:110px;">행정 매니저</div></div>
-              <div class="org-line"></div>
-              <div class="org-row"><div class="org-box task">보조 강사 ×1</div><div class="org-box task">매장 운영 담당</div><div class="org-box task">인사·회계</div></div>
-            </div>
-            <hr class="inner-div">
-            <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label"><b>수석 강사:</b> 10년↑ 현장 경력 필수, 브랜드 조리 매뉴얼 마스터, 수료 평가 주관</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label"><b>행정 매니저:</b> 교육생 출결·평가 관리, 매장 재무 정산, 채용팀 연계 보고</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label"><b>매장 운영 담당:</b> 도시락 QC·플랫폼 주문 처리, 재고 발주, 위생 점검</span></div>
+            <table style="width:100%;border-collapse:collapse;font-size:11px;">
+              <thead>
+                <tr style="background:#0F2147;color:#fff;">
+                  <th style="padding:6px 8px;text-align:center;">기수</th>
+                  <th style="padding:6px 8px;text-align:center;">채용 루트</th>
+                  <th style="padding:6px 8px;text-align:center;">입교</th>
+                  <th style="padding:6px 8px;text-align:center;">배치</th>
+                  <th style="padding:6px 8px;text-align:center;">시기</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid #E8EDF5;">
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#1A4FAB;">1기</td>
+                  <td style="padding:6px 8px;font-size:10.5px;color:var(--muted);">부천대 계약학과</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;">21명</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#059669;">21명</td>
+                  <td style="padding:6px 8px;text-align:center;font-size:10px;color:var(--muted);">1월입교→2월배치</td>
+                </tr>
+                <tr style="border-bottom:1px solid #E8EDF5;background:#F8FAFC;">
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#1A4FAB;">2기</td>
+                  <td style="padding:6px 8px;font-size:10.5px;color:var(--muted);">부천대 2명 + 특별채용 2명</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;">4명</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#059669;">4명</td>
+                  <td style="padding:6px 8px;text-align:center;font-size:10px;color:var(--muted);">2월입교→3월배치</td>
+                </tr>
+                <tr style="border-bottom:1px solid #E8EDF5;">
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#1A4FAB;">3기</td>
+                  <td style="padding:6px 8px;font-size:10.5px;color:var(--muted);">서울50+ 취업사관학교<br>(144명 면접→3명 선발)</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;">3명</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#D97706;">3명↗</td>
+                  <td style="padding:6px 8px;text-align:center;font-size:10px;color:var(--muted);">6월입교→7월배치</td>
+                </tr>
+                <tr style="background:#EEF3FB;">
+                  <td colspan="2" style="padding:6px 8px;font-weight:700;color:var(--navy);">누계 합계</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:800;color:#1A4FAB;font-size:13px;">28명</td>
+                  <td style="padding:6px 8px;text-align:center;font-weight:800;color:#059669;font-size:13px;">28명</td>
+                  <td style="padding:6px 8px;text-align:center;font-size:11px;font-weight:700;color:var(--navy);">재직중 23명</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert alert-blue" style="margin-top:10px;font-size:11px;"><div>📌</div><div>1기 퇴사 5명 제외 · 현재 재직중 <b>23명</b> (재직률 82%) · 연간 목표 배치 75명 대비 <b>37% 달성</b></div></div>
           </div>
         </div>
 
+        <!-- 우: 투자·운영 비용 -->
         <div class="sec-card c-accent">
-          <div class="sec-card-head"><span>💰 아카데미 예상 투자·운영 비용</span></div>
+          <div class="sec-card-head"><span>💰 아카데미 투자·운영 비용 계획</span></div>
           <div class="sec-card-body">
             <table class="budget-table">
               <thead><tr><th class="l">항목</th><th class="l">구분</th><th>금액</th></tr></thead>
@@ -420,27 +464,41 @@
                 <tr class="total-row"><td class="l" colspan="2"><b>초기 투자 합계</b></td><td class="num-cell" style="color:#B91C1C;">1억 8,500만원</td></tr>
                 <tr><td class="l">인건비 (4명)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">1,200만원/월</td></tr>
                 <tr><td class="l">임차료 (방배동)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">300만원/월</td></tr>
-                <tr><td class="l">재료비·운영 소모품</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">850만원/월</td></tr>
-                <tr><td class="l">매출 수익 상쇄</td><td class="l"><span class="tag tag-green">월 수익</span></td><td class="num-cell" style="color:#166534;">-1,155만원/월</td></tr>
+                <tr><td class="l">재료비·소모품</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">850만원/월</td></tr>
+                <tr><td class="l">매출 수익 상쇄</td><td class="l"><span class="tag tag-green">월 수익</span></td><td class="num-cell" style="color:#166534;">−1,155만원/월</td></tr>
                 <tr class="total-row"><td class="l" colspan="2"><b>월 순 운영비</b></td><td class="num-cell" style="color:#D97706;">약 1,195만원</td></tr>
-                <tr class="total-row"><td class="l" colspan="2"><b>연간 총 소요 비용</b></td><td class="num-cell" style="color:#B91C1C;">약 3억 2,840만원</td></tr>
+                <tr class="total-row"><td class="l" colspan="2"><b>연간 총 소요 비용</b></td><td class="num-cell" style="color:#B91C1C;">약 3억 1,200만원</td></tr>
               </tbody>
             </table>
-            <div class="alert alert-green" style="margin-top:8px;"><div>✅</div><div>일용직 연간 <b>14억원</b> 대비, 아카데미 연간 투자 <b>~3.3억</b> → <b>10.7억 절감 가능성</b> (3년차 기준)</div></div>
+            <div class="alert alert-green" style="margin-top:8px;"><div>✅</div><div>일용직 연간 <b>16.5억원</b> 대비, 아카데미 연간 운영 <b>~3.1억</b> → <b>약 13억 절감 가능</b> (안정화 후 기준)</div></div>
           </div>
         </div>
 
+        <!-- 하단 와이드: 운영 인력 + 배치 정책 -->
         <div class="sec-card c-green wide">
-          <div class="sec-card-head"><span>🏬 매장 배치 구조 및 인건비 안분</span></div>
-          <div class="sec-card-body">
-            <div class="alert alert-blue"><div>💡</div><div><b>핵심 정책:</b> 수료생 배치 후 <b>3개월간</b> 해당 매장 인건비 미부과 → <b>본사 비용 처리 또는 전사 안분</b></div></div>
-            <hr class="inner-div">
-            <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>배치 기준:</b> 수료 역량 등급 + 해당 브랜드 수요 매칭</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>배치 통보:</b> 수료 2주 전 영업팀에 사전 고지</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>인건비 안분:</b> 배치 1~3개월 — 월 약 240만원 본사 부담</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>정규 편입:</b> 3개월 평가 후 매장 정규 인력 전환</span></div>
+          <div class="sec-card-head"><span>👨‍🍳 운영 인력 구성 및 매장 배치 정책</span></div>
+          <div class="sec-card-body" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+            <div>
+              <div class="sub-h">핵심 운영 인력</div>
+              <div class="org-wrap" style="margin-bottom:0;">
+                <div class="org-box" style="background:linear-gradient(135deg,#065F46,#059669);">아카데미 총괄 (원장급)</div>
+                <div class="org-line"></div>
+                <div class="org-row"><div class="org-box sub" style="background:linear-gradient(135deg,#059669,#10B981);min-width:110px;">수석 훈련 강사</div><div class="org-box sub" style="background:linear-gradient(135deg,#059669,#10B981);min-width:110px;">행정 매니저</div></div>
+                <div class="org-line"></div>
+                <div class="org-row"><div class="org-box task">보조 강사 ×1</div><div class="org-box task">매장 운영 담당</div><div class="org-box task">인사·회계</div></div>
+              </div>
+            </div>
+            <div>
+              <div class="sub-h">매장 배치 정책</div>
+              <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>배치 기준:</b> 수료 역량 등급 + 브랜드 수요 매칭</span></div>
+              <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>배치 통보:</b> 수료 2주 전 영업팀에 사전 고지</span></div>
+              <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>인건비 안분:</b> 배치 1~3개월 — 월 약 240만원 본사 부담</span></div>
+              <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>정규 편입:</b> 3개월 평가 후 매장 정규 인력 전환</span></div>
+              <div class="alert alert-blue" style="margin-top:8px;font-size:11px;"><div>💡</div><div>수료 후 <b>3개월간</b> 해당 매장 인건비 미부과 → 본사 비용 처리</div></div>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
 
