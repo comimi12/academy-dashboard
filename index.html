@@ -200,11 +200,11 @@
       <div class="flow-wrapper">
         <div class="flow-bar">
           <div class="flow-stage s1">
-            <div class="stage-head"><div class="stage-num">1</div><div><div class="stage-label">채용 (Recruitment)</div><div class="stage-sub">연간 200명 · 3-트랙 파이프라인</div></div></div>
+            <div class="stage-head"><div class="stage-num">1</div><div><div class="stage-label">채용 (Recruitment)</div><div class="stage-sub" id="v1-total-sub">연간 200명 · 3-트랙 파이프라인</div></div></div>
             <div class="stage-body">
-              <div class="row-item"><div class="ri-dot" style="background:#3B82F6"></div><span class="ri-label">고급 기능직 (숙련 조리사)</span><span class="ri-val" style="color:#1D4ED8">30% / 60명</span></div>
-              <div class="row-item"><div class="ri-dot" style="background:#8B5CF6"></div><span class="ri-label">중급 기능직 (경력 2~5년)</span><span class="ri-val" style="color:#6D28D9">60% / 120명</span></div>
-              <div class="row-item"><div class="ri-dot" style="background:#10B981"></div><span class="ri-label">기초 기능직 · 신입</span><span class="ri-val" style="color:#065F46">10% / 20명</span></div>
+              <div class="row-item"><div class="ri-dot" style="background:#3B82F6"></div><span class="ri-label">고급 기능직 (숙련 조리사)</span><span class="ri-val" style="color:#1D4ED8" id="v1-go-val">30% / 60명</span></div>
+              <div class="row-item"><div class="ri-dot" style="background:#8B5CF6"></div><span class="ri-label">중급 기능직 (경력 2~5년)</span><span class="ri-val" style="color:#6D28D9" id="v1-jung-val">60% / 120명</span></div>
+              <div class="row-item"><div class="ri-dot" style="background:#10B981"></div><span class="ri-label">기초 기능직 · 신입</span><span class="ri-val" style="color:#065F46" id="v1-gi-val">10% / 20명</span></div>
             </div>
           </div>
           <div class="flow-arrow">→</div>
@@ -246,7 +246,7 @@
         </div>
 
         <div class="sec-card c-blue">
-          <div class="sec-card-head"><span>🔀 인력 수급 파이프라인 (연 200명)</span></div>
+          <div class="sec-card-head"><span>🔀 인력 수급 파이프라인 (<span id="v1-pipe-total">연 200명</span>)</span></div>
           <div class="sec-card-body">
             <div class="donut-row">
               <div class="donut-wrap">
@@ -256,7 +256,7 @@
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#7C3AED" stroke-width="3.8" stroke-dasharray="20 80" stroke-dashoffset="-45"/>
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#059669" stroke-width="3.8" stroke-dasharray="10 90" stroke-dashoffset="-71"/>
                 </svg>
-                <div class="donut-center"><div class="big">200</div><div class="sm">명/년</div></div>
+                <div class="donut-center"><div class="big" id="v1-donut-num">200</div><div class="sm">명/년</div></div>
               </div>
               <div style="flex:1">
                 <div class="legend-row"><div class="legend-dot" style="background:#2563EB"></div><span class="legend-lbl">직접 채용</span><span class="legend-pct" style="color:#1D4ED8">70% · 140명</span></div>
@@ -274,9 +274,9 @@
         <div class="sec-card c-teal">
           <div class="sec-card-head"><span>🎯 채용 3-트랙 구성</span></div>
           <div class="sec-card-body">
-            <div class="row-item"><div class="ri-dot" style="background:#3B82F6"></div><span class="ri-label">고급 기능직 (숙련 조리사)</span><span class="ri-val" style="color:#1D4ED8">30% / 60명</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#8B5CF6"></div><span class="ri-label">중급 기능직 (경력 2~5년)</span><span class="ri-val" style="color:#6D28D9">60% / 120명</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#10B981"></div><span class="ri-label">기초 기능직 · 신입</span><span class="ri-val" style="color:#065F46">10% / 20명</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#3B82F6"></div><span class="ri-label">고급 기능직 (숙련 조리사)</span><span class="ri-val" style="color:#1D4ED8" id="v1-go-val2">30% / 60명</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#8B5CF6"></div><span class="ri-label">중급 기능직 (경력 2~5년)</span><span class="ri-val" style="color:#6D28D9" id="v1-jung-val2">60% / 120명</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#10B981"></div><span class="ri-label">기초 기능직 · 신입</span><span class="ri-val" style="color:#065F46" id="v1-gi-val2">10% / 20명</span></div>
             <div class="note">미숙련 신입은 아카데미 입교 → 실무 훈련 후 매장 배치.</div>
           </div>
         </div>
@@ -636,6 +636,24 @@
 
   var fo=document.getElementById('f-org'); if(fo) fo.textContent=D.meta.org;
   var fd=document.getElementById('f-doc'); if(fd) fd.innerHTML='문서 '+D.meta.docno+' · 기준 '+last.ym;
+
+  // ── 뷰1: data.js targets 기반 동적 업데이트 ──
+  var tgt = D.targets.채용;
+  var pGo   = Math.round(tgt.고급  / tgt.total * 100);
+  var pJung = Math.round(tgt.중급  / tgt.total * 100);
+  var pGi   = 100 - pGo - pJung;
+  function setEl(id, txt){ var el=document.getElementById(id); if(el) el.textContent=txt; }
+  setEl('v1-total-sub',  '연간 '+tgt.total+'명 · 3-트랙 파이프라인');
+  setEl('v1-go-val',     pGo+'% / '+tgt.고급+'명');
+  setEl('v1-jung-val',   pJung+'% / '+tgt.중급+'명');
+  setEl('v1-gi-val',     pGi+'% / '+tgt.기초+'명');
+  setEl('v1-go-val2',    pGo+'% / '+tgt.고급+'명');
+  setEl('v1-jung-val2',  pJung+'% / '+tgt.중급+'명');
+  setEl('v1-gi-val2',    pGi+'% / '+tgt.기초+'명');
+  setEl('v1-donut-num',  tgt.total);
+  setEl('v1-pipe-total', '연 '+tgt.total+'명');
+  if(document.getElementById('v1').classList.contains('active'))
+    setEl('vh-desc','연간 '+tgt.total+'명 채용 수요·시장 공급 분석과 인력 수급 파이프라인');
   }
 
   var s=document.createElement('script');
