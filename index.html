@@ -115,6 +115,11 @@
   .bm-src{font-size:10.5px;color:var(--muted);margin-top:10px;}
   .bm-src a{color:var(--blue);text-decoration:none;}
   .bm-src a:hover{text-decoration:underline;}
+  .chk-h{font-size:11.5px;font-weight:700;color:var(--navy);margin:10px 0 4px;}
+  .chk-item{display:flex;gap:8px;font-size:11.5px;padding:3px 0;align-items:flex-start;}
+  .chk-item .cb{flex-shrink:0;color:var(--blue);font-weight:800;}
+  .chk-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
+  @media(max-width:680px){.chk-cols{grid-template-columns:1fr;}}
 
   /* ── 인포그래픽 요소 ── */
   .row-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid #F1F5F9;}
@@ -684,6 +689,24 @@
           </div>
         </div>
 
+        <div class="bm-card" data-cat="labor">
+          <div class="sec-card c-blue">
+            <div class="sec-card-head"><span>📄 표준 근로계약서 샘플 — 아카데미 교육생</span><span class="meta">양식 · 노무사 검토 필요</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">제1조 기간</span><span class="bm-v">2026년 ○월 ○일 ~ ○월 ○일 (수습 ○개월 포함). ※ 수습 감액은 1년 이상 계약 시 최저임금의 10% 이내만 가능</span></div>
+              <div class="bm-row"><span class="bm-k">제2조 장소</span><span class="bm-v">SL&amp;C 조리 아카데미(방배동) 및 수료 후 배치 매장</span></div>
+              <div class="bm-row"><span class="bm-k">제3조 업무</span><span class="bm-v">조리 교육·훈련 및 실무(도시락 생산·배달 운영 보조)</span></div>
+              <div class="bm-row"><span class="bm-k">제4조 근로시간</span><span class="bm-v">1일 8시간·주 40시간(휴게 1시간 별도). <b>교육시간과 근로시간 명확 구분 기재</b></span></div>
+              <div class="bm-row"><span class="bm-k">제5조 임금</span><span class="bm-v">월 ○○○원(<b>최저임금 100% 이상</b>), 매월 ○일 지급. 연장·야간·휴일근로 가산수당 별도</span></div>
+              <div class="bm-row"><span class="bm-k">제6조 4대보험</span><span class="bm-v"><b>국민연금·건강보험·고용보험·산재보험 가입</b>(입사일 기준 즉시)</span></div>
+              <div class="bm-row"><span class="bm-k">제7조 교육</span><span class="bm-v">3개월 과정·수료 평가 실시. <b>※ 교육비 반환·의무복무 위약금 조항 미포함</b>(근로기준법 제20조 준수)</span></div>
+              <div class="bm-row"><span class="bm-k">제8조 안전</span><span class="bm-v">입교 시 안전보건교육 이수 의무, 보호구(미끄럼방지화 등) 착용</span></div>
+              <div class="bm-row"><span class="bm-k">제9조 기타</span><span class="bm-v">본 계약에 정하지 않은 사항은 근로기준법·취업규칙에 따름</span></div>
+              <div class="alert alert-amber"><div>⚠️</div><div><b>참고용 샘플입니다.</b> 실제 체결 전 노무사 검토 필수. 일학습병행제 활용 시 <b>학습근로자 계약서 별도 작성</b>(훈련시간·근로시간 구분).</div></div>
+            </div>
+          </div>
+        </div>
+
         <div class="bm-card" data-cat="edu">
           <div class="sec-card c-accent">
             <div class="sec-card-head"><span>⑥ 교육-현장 괴리 & 효과(ROI) 측정 불가</span><span class="meta">교육 효과</span></div>
@@ -716,6 +739,39 @@
               <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">교육서비스업 재해 형태: 전도 26.4%·화상 17.2%. 산업안전보건법상 현장실습생도 안전보건교육 의무 대상</span></div>
               <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 입교 첫날 <b>안전보건교육(칼·화상 응급·미끄럼방지화) 실시+서명 기록 보관</b> · 미끄럼방지 매트·칼 보관함·방화장갑 비치 · 훈련 중 <b>산재보험 적용 사전 확인</b></div></div>
               <div class="bm-src">출처 · <a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=244353" target="_blank" rel="noopener">산업안전보건법 시행규칙</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="safety">
+          <div class="sec-card c-teal">
+            <div class="sec-card-head"><span>✅ 입교 안전 체크리스트 — 조리 실습</span><span class="meta">양식 · 기록 보관</span></div>
+            <div class="sec-card-body">
+              <div class="chk-cols">
+                <div>
+                  <div class="chk-h">입교 전·당일</div>
+                  <div class="chk-item"><span class="cb">☐</span><span>안전보건교육 <b>8시간↑ 실시 + 서명 기록 보관</b></span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>칼 다루기·화상 응급처치·전도 예방 교육</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>미끄럼 방지화 지급·착용 확인</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>산재보험 가입 확인</span></div>
+                  <div class="chk-h">시설·장비 비치</div>
+                  <div class="chk-item"><span class="cb">☐</span><span>미끄럼 방지 매트 / 바닥 물기 관리</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>칼 전용 보관함 · 내열(방화) 장갑</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>소화기·구급함 위치 안내, 응급 연락망 게시</span></div>
+                </div>
+                <div>
+                  <div class="chk-h">조리 실습 중</div>
+                  <div class="chk-item"><span class="cb">☐</span><span>칼 사용 구역 지정·정리정돈</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>뜨거운 기물 '고온' 표시</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>바닥 물기·기름 즉시 제거</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>가스·전기 기기 사용 후 차단 확인</span></div>
+                  <div class="chk-h">기록·관리</div>
+                  <div class="chk-item"><span class="cb">☐</span><span>안전교육 일지 작성·보관</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>사고 발생 시 보고 절차 게시</span></div>
+                  <div class="chk-item"><span class="cb">☐</span><span>월 1회 안전 점검 실시</span></div>
+                </div>
+              </div>
+              <div class="alert alert-green"><div>🛡</div><div>산업안전보건법상 <b>현장실습생도 안전보건교육 의무 대상</b> — 교육 실시·기록 미비 시 사업주 책임. 교육 일지·서명은 반드시 보관.</div></div>
             </div>
           </div>
         </div>
