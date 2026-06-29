@@ -613,18 +613,134 @@
 
     <!-- ===== 뷰7: 이슈 및 해결 방안 ===== -->
     <section id="v7" class="view">
-      <div class="grid">
-        <div class="sec-card c-accent wide">
-          <div class="sec-card-head"><span>⚠️ 예상 부작용 및 이슈 해결 방안</span></div>
-          <div class="sec-card-body">
-            <div class="alert alert-red"><div>🔴</div><div><b>Issue 1 — 현장 수요 불일치:</b> 아카데미 수료생이 매장 피크타임 즉시 전력 투입 어려움</div></div>
-            <div class="case-box"><div class="case-title">📖 참고: 본아이에프 '본죽&amp;비빔밥' 아카데미 모델</div><div class="case-text">배치 초기 2~4주는 '서포터' 역할 지정, 기존 조리사 옆 보조 → 4주 후 독립 스테이션 담당 전환. 현장 부담 최소화.</div></div>
-            <div class="alert alert-amber" style="margin-top:8px;"><div>🟡</div><div><b>Issue 2 — 인사행정 이슈:</b> 배치 인원의 고용 형태·사회보험 처리, 수습기간 vs 정규직 구분 불명확</div></div>
-            <div class="case-box"><div class="case-title">📖 참고: CJ푸드빌 인턴→정규 전환 프로세스</div><div class="case-text">3개월 '인턴십 협약서' 사전 체결, 4대보험 본사 부담, 3개월 후 평가 기반 정규 전환 확정 통보. 법적 분쟁 Zero 사례.</div></div>
-            <div class="alert alert-red" style="margin-top:8px;"><div>🔴</div><div><b>Issue 3 — 조기 이탈:</b> 배치 후 1~2개월 내 퇴직 리스크 (신입 조리사 30일 이탈율 평균 25%)</div></div>
-            <div class="case-box"><div class="case-title">📖 참고: 이랜드이츠 '리텐션 인센티브' 설계</div><div class="case-text">3개월 완주 시 '수료 수당' 30만원 지급, 6개월 근속 시 급여 인상 확정 약속 → 3개월 이탈율 25% → 8%로 감소.</div></div>
-            <div class="alert alert-amber" style="margin-top:8px;"><div>🟡</div><div><b>Issue 4 — 매장장 저항:</b> "검증 안 된 인력 보내지 마라" 현장 반발 가능</div></div>
-            <div class="case-box"><div class="case-title">💡 해결책 제안</div><div class="case-text">① 수료증·역량 등급카드 동봉 배치<br>② 매장장 대상 사전 오리엔테이션 1시간 진행<br>③ 3개월 인건비 무부담 인센티브 강조</div></div>
+      <div class="bm-wrap">
+        <div class="subtabs" id="iss-tabs">
+          <button class="subtab active" data-cat="all">🔎 전체</button>
+          <button class="subtab" data-cat="field">현장 적응</button>
+          <button class="subtab" data-cat="retention">이탈·리텐션</button>
+          <button class="subtab" data-cat="labor">인사·노무</button>
+          <button class="subtab" data-cat="edu">교육 효과</button>
+          <button class="subtab" data-cat="safety">안전·법규</button>
+          <button class="subtab" data-cat="gov">지원금</button>
+        </div>
+
+        <div class="bm-card" data-cat="field">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>① 수료생 피크타임 즉시 투입 불가</span><span class="meta">현장 적응</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">통제된 실습과 달리 실제 매장은 주문 폭주·복수 메뉴 동시 처리가 겹쳐, 3개월 수료자도 피크 시 독립 포지션이 어렵고 오히려 기존 직원의 발을 묶는 '짐'이 될 수 있음</span></div>
+              <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">미국 NRAEF 외식 어프렌티스십 — 수료율 80%라도 현장 독립까지 별도 적응기간 필요. 본아이에프는 배치 초기 2~4주 '서포터'로 보조 후 독립 전환</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 수료 후 <b>2~4주 '현장 동행기간' 공식화</b>(단독 X, 보조) · 매장장에 주차별 독립도 목표표 사전 공유 · 피크 외 시간(준비·마감)부터 배정 → 점진 확대</div></div>
+              <div class="bm-src">출처 · <a href="https://apprenticeshiptoolkit.chooserestaurants.org/" target="_blank" rel="noopener">NRAEF 어프렌티스십 툴킷</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="field">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>② 매장장·기존 직원 반발 ("검증 안 된 사람 왜")</span><span class="meta">현장 수용성</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">매장장에게 교육생은 지도 부담+실수 처리+고객 불만 리스크. 기존 직원도 "왜 내가 가르치나" 저항</span></div>
+              <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">Worldchefs — 관리자가 직원 개발에 쓰는 시간 평균 13%, 멘토 중요 인식 76% vs 실제 보유 37%(구조적 갭). 파리크라상 영캠프는 <b>전문 강사진 별도 운영</b>으로 매장 멘토 부담 전가 안 함</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 배치 전 <b>매장장 오리엔테이션</b>(신입 수용 매뉴얼·기대치 조정) · 멘토 직원에 <b>수당/고과 가점</b> · 교육기간엔 본사 소속 전담 트레이너가 지도해 매장 부담 최소화</div></div>
+              <div class="bm-src">출처 · <a href="https://worldchefs.org/why-mentorship-matters-now-more-than-ever-in-the-culinary-world/" target="_blank" rel="noopener">Worldchefs</a> · <a href="https://www.viva100.com/article/202401033409889" target="_blank" rel="noopener">파리크라상 영캠프</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="retention">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>③ 조기 이탈·리텐션 붕괴</span><span class="meta">이탈·리텐션</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">주방 직군 고이직 산업(미국 주방직 연 43%, 외식 평균 75~80%). 학교급식 신규의 22.8%가 6개월 내 퇴사. "교육비 지원기간만 버티고 이탈" 패턴 반복 위험</span></div>
+              <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">이직 원인 1위 저임금(47%)·2위 성장경로 부재(37%)·인정 부족(44%). 이랜드이츠는 수료수당+근속 시 급여인상 확정으로 3개월 이탈 25%→8% 감소</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 수료 후 <b>3·6·12개월 잔류율 KPI화</b>(처우·배치매장 연동 분석) · 입사 초기 명확한 커리어패스(수료→포지션→승급) 제시 · 첫 3개월 <b>버디 시스템</b>+월1회 적응 체크인</div></div>
+              <div class="bm-src">출처 · <a href="https://www.joinhomebase.com/blog/restaurant-employee-turnover" target="_blank" rel="noopener">Homebase 이직률</a> · <a href="https://www.idomin.com/news/articleView.html?idxno=936093" target="_blank" rel="noopener">경남도민일보</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="labor">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>④ 교육비 반환 약정·위약금 (위법 소지)</span><span class="meta">인사·노무 ⚠️법령</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">"2년 의무근무 미충족 시 교육비 반환" 조항은 <b>근로기준법 제20조(위약예정 금지) 위반</b> 가능성 높음</span></div>
+              <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">대법원 2021다234924 — 의무근무 미충족 시 교육비 반환 약정 무효 판결. 로톡 해설: 명칭이 '교육비 반환'이라도 퇴직 자유 제한이면 무효, 대표 벌금 330만원 확정 사례</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 교육비 반환·위약금 조항 <b>계약서에 넣지 않음</b> · 이탈 억제는 <b>잔류 인센티브(장기 근속 수당·성과급)</b>로 설계 · 외부 수강료 등 실비 약정은 노무사 사전 검토 필수</div></div>
+              <div class="bm-src">출처 · <a href="https://www.lawtalk.co.kr/case-lenses/29402" target="_blank" rel="noopener">로톡 — 교육비 반환 약정 판결</a> · <a href="https://casenote.kr/%EB%8C%80%EB%B2%95%EC%9B%90/2021%EB%8B%A4234924" target="_blank" rel="noopener">대법원 2021다234924</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="labor">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>⑤ 훈련생 신분·4대보험·최저임금</span><span class="meta">인사·노무 ⚠️법령</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">'교육생' 명칭이라도 실제 근로 제공 시 근로기준법상 근로자. 4대보험 미가입·최저임금 미만 지급은 법 위반</span></div>
+              <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">월 60시간 이상 근로 시 4대보험 의무, 수습기간도 계속근로에 포함. 일학습병행 학습근로자도 최저임금법 적용</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 교육 <b>첫날부터 근로계약서+4대보험</b> · <b>최저임금 100%↑</b> 지급(수습 감액은 1년+ 계약·최대 10%만) · 일학습병행 시 학습근로자 계약 별도, 훈련시간·근로시간 명확 구분</div></div>
+              <div class="bm-src">출처 · <a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=210288" target="_blank" rel="noopener">산업현장 일학습병행 지원법</a> · <a href="https://www.moel.go.kr/minwon/fastcounsel/fastcounselView.do?inetDcssMngId=202407231212084970941" target="_blank" rel="noopener">고용노동부 상담</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="edu">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>⑥ 교육-현장 괴리 & 효과(ROI) 측정 불가</span><span class="meta">교육 효과</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">표준 레시피·위생 중심 커리큘럼 vs 실제 매장은 주문변형·재료부족 대응·속도가 핵심. 효과 측정 지표 없으면 개선 불가</span></div>
+              <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">레스토랑 교육은 '고객 응대 중 측정 불가'라는 구조적 한계로 정성평가에 의존. Kirkpatrick 4단계·Phillips ROI가 표준이나 Level 3(행동)·4(결과)는 체계적 추적 없인 측정 불가</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 커리큘럼 설계 전 <b>매장장 인터뷰</b>로 "첫 달 필요능력 Top5" 반영 · 지표화: ①90일 독립수행률 ②매장장 만족도 ③6개월 이직률을 <b>코호트별 추적</b> · 분기 1회 교육팀↔매장 피드백 세션</div></div>
+              <div class="bm-src">출처 · <a href="https://www.crunchtime.com/blog/the-roi-of-ops-excellence-how-restaurants-can-measure-the-value-of-improved-employee-learning-and-development" target="_blank" rel="noopener">CrunchTime — 교육 ROI</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="edu">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>⑦ 강사·현장교사 확보 부담</span><span class="meta">교육 효과</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">사내 강사 교육 중 현업 공백, 1명이 다수 지도+본인 업무 병행하는 이중 부담. 강사 개인 편차 크면 품질 표준화 무의미</span></div>
+              <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">KRIVET — 기업현장교사 확보·운영 부담이 일학습병행 3대 문제(업무공백·과정설계·기관연계). 파리크라상은 전문 강사진 별도 운영으로 분리</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> <b>아카데미 전담 강사 1~2명(본사 소속) + 현장 OJT 멘토(매장 소속) 이원화</b> · 현장교사 역할에 공식 보상(수당·가점) 사전 설계 · <b>표준 교재(SOP 체크리스트)</b>로 강사 편차 최소화</div></div>
+              <div class="bm-src">출처 · <a href="https://www.krivet.re.kr/repository/bitstream/202405/9196/2/P32006_02_fulltext.pdf" target="_blank" rel="noopener">KRIVET 일학습병행 연구</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="safety">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>⑧ 안전·산업재해 (칼·화상·전도)</span><span class="meta">안전·법규 ⚠️법령</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">조리 실습 중 칼 부상·화상·미끄러짐 위험. 훈련생도 산재 대상이며, 사업주가 안전교육 실시를 입증 못하면 책임</span></div>
+              <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">교육서비스업 재해 형태: 전도 26.4%·화상 17.2%. 산업안전보건법상 현장실습생도 안전보건교육 의무 대상</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 입교 첫날 <b>안전보건교육(칼·화상 응급·미끄럼방지화) 실시+서명 기록 보관</b> · 미끄럼방지 매트·칼 보관함·방화장갑 비치 · 훈련 중 <b>산재보험 적용 사전 확인</b></div></div>
+              <div class="bm-src">출처 · <a href="https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=244353" target="_blank" rel="noopener">산업안전보건법 시행규칙</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="safety">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>⑨ 운영 매장 병행 충돌 & HACCP</span><span class="meta">안전·법규 ⚠️법령</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">방배동 도시락·배달 매장을 실습+영업 겸용 시, 훈련생 실수가 고객 불만·식품 손실·납기 지연으로 직결. 도시락 제조는 <b>HACCP 의무 적용</b>이라 절차 미이행 시 인증 위반</span></div>
+              <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">도시락 제조·가공업은 HACCP 의무 대상. 실제 고객 서비스 중 훈련 측정은 산업 공통 한계</span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> 주간 스케줄로 <b>교육 배치/영업 배치 분리</b>(예: 오전 실습, 런치 출고는 숙련 직원) · 피크 출고 2시간 전엔 숙련자만 · 훈련생 조리분은 <b>슈퍼바이저 QC 통과 후 출고</b></div></div>
+              <div class="bm-src">출처 · <a href="https://blog.bluedawn.kr/entry/2025%EB%85%84-%EA%B8%B0%EC%A4%80-HACCP-%EC%9D%98%EB%AC%B4%EC%A0%81%EC%9A%A9-%EB%8C%80%EC%83%81-%EC%8B%9D%ED%92%88-%EC%A0%95%EB%A6%AC" target="_blank" rel="noopener">HACCP 의무대상 정리</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bm-card" data-cat="gov">
+          <div class="sec-card c-accent">
+            <div class="sec-card-head"><span>⑩ 정부지원금 부정수급 리스크</span><span class="meta">지원금 ⚠️법령</span></div>
+            <div class="sec-card-body">
+              <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">사업주훈련(HRD-Net)·일학습병행·고용장려금 활용 시 출석률·실시요건 미충족, 허위 출결은 부정수급으로 처벌</span></div>
+              <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">사업주훈련 출석률 80%↑ 요건(미달 시 환수). 부정수급은 <b>최대 5배 추가징수 + 5년 이하 징역·5천만원 이하 벌금</b></span></div>
+              <div class="alert alert-green"><div>✅</div><div><b>SL&amp;C 해결:</b> <b>지문/앱 기반 실시간 출결</b> 시스템 · 지원금 신청 전 노무사·HRD 컨설턴트 검토 의무화 · 수령 규모는 '가능 금액'이 아닌 <b>'확실히 충족 가능한 조건'으로 보수적 책정</b></div></div>
+              <div class="bm-src">출처 · <a href="https://www.moel.go.kr/news/enews/report/enewsView.do?news_seq=19464" target="_blank" rel="noopener">고용노동부 부정수급 안내</a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -773,7 +889,7 @@
     v4:{t:'아카데미 상세 커리큘럼', d:'3개월 과정 단계별 커리큘럼과 운영 원칙'},
     v5:{t:'채용팀 역할 분담', d:'채용팀 R&R · 매장(영업팀) R&R'},
     v6:{t:'사후 관리 방안', d:'배치 후 체크인·멘토링·이탈 방지·커리어 패스'},
-    v7:{t:'이슈 및 해결 방안', d:'예상 부작용·리스크와 해결책 (참고 사례 포함)'},
+    v7:{t:'이슈 및 해결 방안', d:'아카데미 운영 10대 이슈 — 타브랜드·업계 근거 + 삼천리 SL&C 해결 방안 (카테고리 인덱스)'},
     v8:{t:'타브랜드 아카데미', d:'7개사(SPC·CJ·더본·아워홈·본아이에프·이랜드·롯데GRS) 조리 아카데미 벤치마킹 — 회사별 인덱스'}
   };
   var order = ['v1','v2','v3','v4','v5','v6','v7','v8'];
@@ -794,6 +910,22 @@
       window.scrollTo(0,0);
     });
   });
+
+  // ── 뷰7: 이슈 카테고리 인덱스 탭 ──
+  (function(){
+    var tabs=document.querySelectorAll('#iss-tabs .subtab');
+    var cards=document.querySelectorAll('#v7 .bm-card');
+    tabs.forEach(function(b){
+      b.addEventListener('click',function(){
+        var sel=b.getAttribute('data-cat');
+        tabs.forEach(function(x){x.classList.remove('active');});
+        b.classList.add('active');
+        cards.forEach(function(c){
+          c.style.display=(sel==='all'||c.getAttribute('data-cat')===sel)?'':'none';
+        });
+      });
+    });
+  })();
 
   // ── 뷰8: 회사별 인덱스 탭 ──
   (function(){
