@@ -256,32 +256,36 @@
                 </div>
               </div>
               <!-- 트랙 도넛 차트 -->
-              <div style="font-size:10px;font-weight:700;color:var(--navy);margin-bottom:6px;">트랙별 채용 목표 인원</div>
-              <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px;">
-                <svg width="92" height="92" viewBox="0 0 36 36" style="flex-shrink:0;">
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#E2E8F0" stroke-width="3.8"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1A4FAB" stroke-width="3.8" stroke-dasharray="66.67 33.33" stroke-dashoffset="25"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#7C3AED" stroke-width="3.8" stroke-dasharray="20.73 79.27" stroke-dashoffset="-41.67"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#059669" stroke-width="3.8" stroke-dasharray="12.60 87.40" stroke-dashoffset="-62.4"/>
-                  <text x="18" y="16.5" text-anchor="middle" dominant-baseline="middle" fill="#0F2147" font-size="5.5" font-weight="800">381명</text>
-                  <text x="18" y="21.5" text-anchor="middle" dominant-baseline="middle" fill="#64748B" font-size="3.5">연간 목표</text>
+              <div style="font-size:10px;font-weight:700;color:var(--navy);margin-bottom:8px;text-align:center;letter-spacing:.3px;">트랙별 채용 목표 인원</div>
+              <div style="display:flex;justify-content:center;margin-bottom:10px;">
+                <svg width="152" height="152" viewBox="0 0 36 36">
+                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#E2E8F0" stroke-width="3.2"/>
+                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1A4FAB" stroke-width="3.2" stroke-dasharray="66.67 33.33" stroke-dashoffset="25"/>
+                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#7C3AED" stroke-width="3.2" stroke-dasharray="20.73 79.27" stroke-dashoffset="-41.67"/>
+                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#059669" stroke-width="3.2" stroke-dasharray="12.60 87.40" stroke-dashoffset="-62.4"/>
+                  <text x="18" y="16" text-anchor="middle" dominant-baseline="middle" fill="#0F2147" font-size="4.8" font-weight="800">381명</text>
+                  <text x="18" y="20.8" text-anchor="middle" dominant-baseline="middle" fill="#64748B" font-size="2.9">연간 채용 목표</text>
                 </svg>
-                <div style="flex:1;min-width:0;">
-                  <div style="display:flex;align-items:center;gap:5px;margin-bottom:6px;">
-                    <div style="width:10px;height:10px;border-radius:50%;background:#1A4FAB;flex-shrink:0;"></div>
-                    <div style="flex:1;font-size:9.5px;color:var(--text);">고급 <b style="color:#1A4FAB;">254명</b></div>
-                    <div style="font-size:9px;color:var(--muted);">66.7%</div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:5px;margin-bottom:6px;">
-                    <div style="width:10px;height:10px;border-radius:50%;background:#7C3AED;flex-shrink:0;"></div>
-                    <div style="flex:1;font-size:9.5px;color:var(--text);">중급 <b style="color:#7C3AED;">79명</b></div>
-                    <div style="font-size:9px;color:var(--muted);">20.7%</div>
-                  </div>
-                  <div style="display:flex;align-items:center;gap:5px;">
-                    <div style="width:10px;height:10px;border-radius:50%;background:#059669;flex-shrink:0;"></div>
-                    <div style="flex:1;font-size:9.5px;color:var(--text);">기초 <b style="color:#059669;">48명</b></div>
-                    <div style="font-size:9px;color:var(--muted);">12.6%</div>
-                  </div>
+              </div>
+              <!-- 범례 카드 (차트 아래 3열) -->
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:10px;">
+                <div style="background:#EEF3FB;border-radius:8px;padding:7px 4px;text-align:center;border-top:3px solid #1A4FAB;">
+                  <div style="font-size:15px;font-weight:800;color:#1A4FAB;line-height:1.1;">254명</div>
+                  <div style="font-size:8.5px;font-weight:700;color:#1A4FAB;margin-top:2px;">고급</div>
+                  <div style="font-size:7.5px;color:var(--muted);margin-top:1px;">채용팀 직접</div>
+                  <div style="font-size:7.5px;color:var(--muted);">66.7%</div>
+                </div>
+                <div style="background:#F5F3FF;border-radius:8px;padding:7px 4px;text-align:center;border-top:3px solid #7C3AED;">
+                  <div style="font-size:15px;font-weight:800;color:#7C3AED;line-height:1.1;">79명</div>
+                  <div style="font-size:8.5px;font-weight:700;color:#7C3AED;margin-top:2px;">중급</div>
+                  <div style="font-size:7.5px;color:var(--muted);margin-top:1px;">채용팀+아카데미</div>
+                  <div style="font-size:7.5px;color:var(--muted);">20.7%</div>
+                </div>
+                <div style="background:#ECFDF5;border-radius:8px;padding:7px 4px;text-align:center;border-top:3px solid #059669;">
+                  <div style="font-size:15px;font-weight:800;color:#059669;line-height:1.1;">48명</div>
+                  <div style="font-size:8.5px;font-weight:700;color:#059669;margin-top:2px;">기초</div>
+                  <div style="font-size:7.5px;color:var(--muted);margin-top:1px;">아카데미 중심</div>
+                  <div style="font-size:7.5px;color:var(--muted);">12.6%</div>
                 </div>
               </div>
               <!-- 절감 인사이트 -->
