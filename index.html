@@ -227,62 +227,48 @@
             <div class="stage-body" style="padding:10px 12px;">
               <!-- KPI 3개 -->
               <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:10px;">
-                <div style="background:#EEF3FB;border-radius:8px;padding:7px 4px;text-align:center;">
-                  <div style="font-size:18px;font-weight:800;color:#1A4FAB;line-height:1.1;">381</div>
-                  <div style="font-size:9px;color:var(--muted);margin-top:1px;">연간 채용 목표</div>
+                <div style="background:#EEF3FB;border-radius:8px;padding:7px 4px;text-align:center;border-bottom:3px solid #1A4FAB;">
+                  <div style="font-size:20px;font-weight:800;color:#1A4FAB;line-height:1.1;">381</div>
+                  <div style="font-size:8.5px;color:var(--muted);margin-top:2px;">연간 채용 목표</div>
                 </div>
-                <div style="background:#FFF7ED;border-radius:8px;padding:7px 4px;text-align:center;">
-                  <div style="font-size:18px;font-weight:800;color:#D97706;line-height:1.1;">275</div>
-                  <div style="font-size:9px;color:var(--muted);margin-top:1px;">BOH 인원수(2025)</div>
+                <div style="background:#FFF7ED;border-radius:8px;padding:7px 4px;text-align:center;border-bottom:3px solid #D97706;">
+                  <div style="font-size:20px;font-weight:800;color:#D97706;line-height:1.1;">275</div>
+                  <div style="font-size:8.5px;color:var(--muted);margin-top:2px;">BOH 인원수(2025)</div>
                 </div>
-                <div style="background:#ECFDF5;border-radius:8px;padding:7px 4px;text-align:center;">
-                  <div style="font-size:18px;font-weight:800;color:#059669;line-height:1.1;">48</div>
-                  <div style="font-size:9px;color:var(--muted);margin-top:1px;">아카데미 대체 목표</div>
-                </div>
-              </div>
-              <!-- 도넛차트 + 범례 -->
-              <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px;">
-                <svg width="78" height="78" viewBox="0 0 36 36" style="flex-shrink:0;">
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#E2E8F0" stroke-width="4.2"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1A4FAB" stroke-width="4.2" stroke-dasharray="67.7 32.3" stroke-dashoffset="25"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#7C3AED" stroke-width="4.2" stroke-dasharray="19.5 80.5" stroke-dashoffset="-42.7"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#059669" stroke-width="4.2" stroke-dasharray="12.8 87.2" stroke-dashoffset="-62.2"/>
-                  <text x="18" y="17.5" text-anchor="middle" dominant-baseline="middle" fill="#0F2147" font-size="5" font-weight="800">381명</text>
-                  <text x="18" y="22" text-anchor="middle" dominant-baseline="middle" fill="#64748B" font-size="3.5">연간 목표</text>
-                </svg>
-                <div style="flex:1;min-width:0;">
-                  <div style="margin-bottom:5px;">
-                    <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;"><span style="font-weight:700;color:#1A4FAB;">고급 254명</span><span style="color:var(--muted);">67.7%</span></div>
-                    <div style="height:6px;background:#E2E8F0;border-radius:99px;"><div style="height:100%;width:67.7%;background:#1A4FAB;border-radius:99px;"></div></div>
-                  </div>
-                  <div style="margin-bottom:5px;">
-                    <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;"><span style="font-weight:700;color:#7C3AED;">중급 79명</span><span style="color:var(--muted);">19.5%</span></div>
-                    <div style="height:6px;background:#E2E8F0;border-radius:99px;"><div style="height:100%;width:19.5%;background:#7C3AED;border-radius:99px;"></div></div>
-                  </div>
-                  <div>
-                    <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;"><span style="font-weight:700;color:#059669;">기초 48명</span><span style="color:var(--muted);">12.8%</span></div>
-                    <div style="height:6px;background:#E2E8F0;border-radius:99px;"><div style="height:100%;width:12.8%;background:#059669;border-radius:99px;"></div></div>
-                  </div>
+                <div style="background:#ECFDF5;border-radius:8px;padding:7px 4px;text-align:center;border-bottom:3px solid #059669;">
+                  <div style="font-size:20px;font-weight:800;color:#059669;line-height:1.1;">107</div>
+                  <div style="font-size:8.5px;color:var(--muted);margin-top:2px;">아카데미 대체 목표</div>
                 </div>
               </div>
-              <!-- 담당 배지 3개 -->
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:8px;">
-                <div style="background:#EEF3FB;border-radius:6px;padding:5px 3px;text-align:center;border-top:2px solid #1A4FAB;">
-                  <div style="font-size:9px;font-weight:700;color:#1A4FAB;">고급</div>
-                  <div style="font-size:8.5px;color:var(--muted);">채용팀 직접</div>
-                </div>
-                <div style="background:#F5F3FF;border-radius:6px;padding:5px 3px;text-align:center;border-top:2px solid #7C3AED;">
-                  <div style="font-size:9px;font-weight:700;color:#7C3AED;">중급</div>
-                  <div style="font-size:8.5px;color:var(--muted);">채용팀+아카데미</div>
-                </div>
-                <div style="background:#ECFDF5;border-radius:6px;padding:5px 3px;text-align:center;border-top:2px solid #059669;">
-                  <div style="font-size:9px;font-weight:700;color:#059669;">기초</div>
-                  <div style="font-size:8.5px;color:var(--muted);">아카데미 중심</div>
-                </div>
-              </div>
+              <!-- 세로 막대차트 (SVG) -->
+              <div style="font-size:10px;font-weight:700;color:var(--navy);margin-bottom:4px;">트랙별 채용 목표 인원</div>
+              <svg width="100%" height="96" viewBox="0 0 200 96" preserveAspectRatio="none" style="display:block;margin-bottom:8px;overflow:visible;">
+                <line x1="0" y1="15" x2="200" y2="15" stroke="#F1F5F9" stroke-width="0.8"/>
+                <line x1="0" y1="35" x2="200" y2="35" stroke="#F1F5F9" stroke-width="0.8"/>
+                <line x1="0" y1="55" x2="200" y2="55" stroke="#F1F5F9" stroke-width="0.8"/>
+                <line x1="0" y1="75" x2="200" y2="75" stroke="#E2E8F0" stroke-width="0.8"/>
+                <!-- 고급 254명: 254/381=66.7% → h=50 -->
+                <rect x="10" y="25" width="52" height="50" rx="5" fill="url(#g1)"/>
+                <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#1A4FAB"/></linearGradient></defs>
+                <text x="36" y="22" text-anchor="middle" fill="#1A4FAB" font-size="7.5" font-weight="800">254명</text>
+                <text x="36" y="86" text-anchor="middle" fill="#475569" font-size="7" font-weight="600">고급</text>
+                <text x="36" y="94" text-anchor="middle" fill="#94A3B8" font-size="6">채용팀</text>
+                <!-- 중급 79명: 79/381=20.7% → h=15.6 -->
+                <rect x="76" y="59" width="52" height="16" rx="5" fill="url(#g2)"/>
+                <defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs>
+                <text x="102" y="56" text-anchor="middle" fill="#7C3AED" font-size="7.5" font-weight="800">79명</text>
+                <text x="102" y="86" text-anchor="middle" fill="#475569" font-size="7" font-weight="600">중급</text>
+                <text x="102" y="94" text-anchor="middle" fill="#94A3B8" font-size="6">채용팀+아카데미</text>
+                <!-- 기초 48명: 48/381=12.6% → h=9.5 -->
+                <rect x="142" y="65.5" width="52" height="9.5" rx="4" fill="url(#g3)"/>
+                <defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#059669"/></linearGradient></defs>
+                <text x="168" y="62" text-anchor="middle" fill="#059669" font-size="7.5" font-weight="800">48명</text>
+                <text x="168" y="86" text-anchor="middle" fill="#475569" font-size="7" font-weight="600">기초</text>
+                <text x="168" y="94" text-anchor="middle" fill="#94A3B8" font-size="6">아카데미</text>
+              </svg>
               <!-- 절감 인사이트 -->
               <div style="background:#FFF7ED;border-radius:7px;padding:7px 9px;border-left:3px solid #D97706;">
-                <div style="font-size:9.5px;color:#92400E;line-height:1.6;">BOH 275명 중 기초 인력 <b>48명</b>을 아카데미로 대체 · 일용직 대비 연간 <b style="color:#B45309;">약 9,855만원</b> 절감 가능</div>
+                <div style="font-size:9.5px;color:#92400E;line-height:1.6;">BOH <b>275명</b> 중 기초 인력 <b>107명</b>을 아카데미로 대체 · 일용직 대비 연간 <b style="color:#B45309;">약 9,855만원</b> 절감 가능</div>
               </div>
             </div>
           </div>
@@ -294,27 +280,54 @@
             <div class="stage-head"><div class="stage-num">2</div><div><div class="stage-label">기초 운영방안</div><div class="stage-sub">아카데미 채용 목표 · 107명</div></div></div>
             <div class="stage-body" style="padding:10px 12px;">
               <!-- 큰 KPI -->
-              <div style="text-align:center;margin-bottom:10px;padding:8px;background:#FFFBEB;border-radius:10px;">
-                <div style="font-size:30px;font-weight:800;color:#D97706;line-height:1;">107<span style="font-size:14px;">명</span></div>
-                <div style="font-size:9.5px;color:var(--muted);">아카데미 연간 채용 목표</div>
+              <div style="text-align:center;margin-bottom:10px;padding:8px 4px;background:#FFFBEB;border-radius:10px;border:1px solid #FDE68A;">
+                <div style="font-size:32px;font-weight:800;color:#D97706;line-height:1;">107<span style="font-size:15px;font-weight:600;">명</span></div>
+                <div style="font-size:9px;color:var(--muted);">아카데미 연간 채용 목표</div>
               </div>
-              <!-- 가로 막대 차트 -->
-              <div style="font-size:10px;font-weight:700;color:var(--navy);margin-bottom:6px;">채용 루트별 목표 인원</div>
-              <div style="margin-bottom:5px;">
-                <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;"><span style="color:var(--text);">P-TECH</span><span style="font-weight:700;color:#D97706;">20명</span></div>
-                <div style="height:9px;background:#FDE68A;border-radius:99px;"><div style="height:100%;width:57%;background:linear-gradient(90deg,#D97706,#F59E0B);border-radius:99px;"></div></div>
-              </div>
-              <div style="margin-bottom:5px;">
-                <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;"><span style="color:var(--text);">대학 연계</span><span style="font-weight:700;color:#D97706;">32명</span></div>
-                <div style="height:9px;background:#FDE68A;border-radius:99px;"><div style="height:100%;width:91%;background:linear-gradient(90deg,#D97706,#F59E0B);border-radius:99px;"></div></div>
-              </div>
-              <div style="margin-bottom:5px;">
-                <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;"><span style="color:var(--text);">중장년 모집</span><span style="font-weight:700;color:#B45309;">35명 ★</span></div>
-                <div style="height:9px;background:#FDE68A;border-radius:99px;"><div style="height:100%;width:100%;background:linear-gradient(90deg,#B45309,#D97706);border-radius:99px;"></div></div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;"><span style="color:var(--text);">특성화고</span><span style="font-weight:700;color:#D97706;">20명</span></div>
-                <div style="height:9px;background:#FDE68A;border-radius:99px;"><div style="height:100%;width:57%;background:linear-gradient(90deg,#D97706,#F59E0B);border-radius:99px;"></div></div>
+              <!-- 2×2 원형 진행 카드 -->
+              <div style="font-size:10px;font-weight:700;color:var(--navy);margin-bottom:6px;">채용 루트별 목표 (총 107명)</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:8px;">
+                <!-- P-TECH 20명 18.7% -->
+                <div style="background:#FEF9C3;border-radius:10px;padding:8px 6px;text-align:center;">
+                  <svg width="52" height="52" viewBox="0 0 44 44" style="display:block;margin:0 auto 4px;">
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#FDE68A" stroke-width="4.5"/>
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#D97706" stroke-width="4.5" stroke-dasharray="21.1 92" stroke-dashoffset="28.3" stroke-linecap="round"/>
+                    <text x="22" y="22" text-anchor="middle" dominant-baseline="middle" fill="#92400E" font-size="7.5" font-weight="800">20명</text>
+                  </svg>
+                  <div style="font-size:9.5px;font-weight:700;color:#92400E;">P-TECH</div>
+                  <div style="font-size:8px;color:var(--muted);">18.7%</div>
+                </div>
+                <!-- 대학연계 32명 29.9% -->
+                <div style="background:#FEF9C3;border-radius:10px;padding:8px 6px;text-align:center;">
+                  <svg width="52" height="52" viewBox="0 0 44 44" style="display:block;margin:0 auto 4px;">
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#FDE68A" stroke-width="4.5"/>
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#B45309" stroke-width="4.5" stroke-dasharray="33.8 79.3" stroke-dashoffset="28.3" stroke-linecap="round"/>
+                    <text x="22" y="22" text-anchor="middle" dominant-baseline="middle" fill="#92400E" font-size="7.5" font-weight="800">32명</text>
+                  </svg>
+                  <div style="font-size:9.5px;font-weight:700;color:#92400E;">대학 연계</div>
+                  <div style="font-size:8px;color:var(--muted);">29.9%</div>
+                </div>
+                <!-- 중장년 35명 32.7% -->
+                <div style="background:#FEF3C7;border-radius:10px;padding:8px 6px;text-align:center;border:1.5px solid #FDE68A;">
+                  <svg width="52" height="52" viewBox="0 0 44 44" style="display:block;margin:0 auto 4px;">
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#FDE68A" stroke-width="4.5"/>
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#92400E" stroke-width="4.5" stroke-dasharray="37 76.1" stroke-dashoffset="28.3" stroke-linecap="round"/>
+                    <text x="22" y="21" text-anchor="middle" dominant-baseline="middle" fill="#92400E" font-size="7.5" font-weight="800">35명</text>
+                    <text x="22" y="28" text-anchor="middle" dominant-baseline="middle" fill="#D97706" font-size="5.5" font-weight="700">★최다</text>
+                  </svg>
+                  <div style="font-size:9.5px;font-weight:700;color:#92400E;">중장년</div>
+                  <div style="font-size:8px;color:var(--muted);">32.7%</div>
+                </div>
+                <!-- 특성화고 20명 18.7% -->
+                <div style="background:#FEF9C3;border-radius:10px;padding:8px 6px;text-align:center;">
+                  <svg width="52" height="52" viewBox="0 0 44 44" style="display:block;margin:0 auto 4px;">
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#FDE68A" stroke-width="4.5"/>
+                    <circle cx="22" cy="22" r="18" fill="none" stroke="#D97706" stroke-width="4.5" stroke-dasharray="21.1 92" stroke-dashoffset="28.3" stroke-linecap="round"/>
+                    <text x="22" y="22" text-anchor="middle" dominant-baseline="middle" fill="#92400E" font-size="7.5" font-weight="800">20명</text>
+                  </svg>
+                  <div style="font-size:9.5px;font-weight:700;color:#92400E;">특성화고</div>
+                  <div style="font-size:8px;color:var(--muted);">18.7%</div>
+                </div>
               </div>
               <!-- 운영 방안 -->
               <div style="background:#FFF7ED;border-radius:7px;padding:7px 9px;border-left:3px solid #F59E0B;">
@@ -330,35 +343,63 @@
           <div class="flow-stage s3">
             <div class="stage-head"><div class="stage-num">3</div><div><div class="stage-label">매장 운영 교육 플랜</div><div class="stage-sub">3개월 과정 · 수료 후 BOH 현장 투입</div></div></div>
             <div class="stage-body" style="padding:10px 12px;">
-              <!-- 3개월 진행 바 -->
-              <div style="display:flex;height:22px;border-radius:8px;overflow:hidden;font-size:9px;font-weight:700;margin-bottom:12px;">
-                <div style="flex:1;background:linear-gradient(90deg,#1A4FAB,#2563EB);display:flex;align-items:center;justify-content:center;color:#fff;">1개월</div>
-                <div style="width:2px;background:#fff;"></div>
-                <div style="flex:2;background:linear-gradient(90deg,#059669,#10B981);display:flex;align-items:center;justify-content:center;color:#fff;">2개월~</div>
-                <div style="width:2px;background:#fff;"></div>
-                <div style="flex:1;background:linear-gradient(90deg,#D97706,#F59E0B);display:flex;align-items:center;justify-content:center;color:#fff;">수료 후</div>
+              <!-- Gantt 차트 -->
+              <div style="font-size:10px;font-weight:700;color:var(--navy);margin-bottom:5px;">교육 일정 (월별 Gantt)</div>
+              <div style="margin-bottom:10px;">
+                <div style="display:grid;grid-template-columns:56px 1fr;gap:0;margin-bottom:3px;">
+                  <div></div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;text-align:center;">
+                    <div style="font-size:8px;color:var(--muted);font-weight:600;">1개월</div>
+                    <div style="font-size:8px;color:var(--muted);font-weight:600;">2개월</div>
+                    <div style="font-size:8px;color:var(--muted);font-weight:600;">3개월~</div>
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:56px 1fr;gap:4px;align-items:center;margin-bottom:4px;">
+                  <div style="font-size:9px;color:var(--text);font-weight:700;text-align:right;padding-right:6px;">기초교육</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+                    <div style="height:14px;background:linear-gradient(90deg,#1A4FAB,#2563EB);border-radius:4px;"></div>
+                    <div style="height:14px;background:#E2E8F0;border-radius:4px;"></div>
+                    <div style="height:14px;background:#E2E8F0;border-radius:4px;"></div>
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:56px 1fr;gap:4px;align-items:center;margin-bottom:4px;">
+                  <div style="font-size:9px;color:var(--text);font-weight:700;text-align:right;padding-right:6px;">실무교육</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+                    <div style="height:14px;background:#E2E8F0;border-radius:4px;"></div>
+                    <div style="height:14px;background:linear-gradient(90deg,#059669,#10B981);border-radius:4px;"></div>
+                    <div style="height:14px;background:linear-gradient(90deg,#059669,#10B981);border-radius:4px;"></div>
+                  </div>
+                </div>
+                <div style="display:grid;grid-template-columns:56px 1fr;gap:4px;align-items:center;">
+                  <div style="font-size:9px;color:var(--text);font-weight:700;text-align:right;padding-right:6px;">매장배치</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;">
+                    <div style="height:14px;background:#E2E8F0;border-radius:4px;"></div>
+                    <div style="height:14px;background:#E2E8F0;border-radius:4px;"></div>
+                    <div style="height:14px;background:linear-gradient(90deg,#D97706,#F59E0B);border-radius:4px;"></div>
+                  </div>
+                </div>
               </div>
-              <!-- 타임라인 3단계 -->
-              <div style="display:flex;flex-direction:column;gap:7px;">
-                <div style="display:flex;gap:8px;align-items:flex-start;">
-                  <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#1A4FAB,#2563EB);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;flex-shrink:0;">1</div>
-                  <div style="background:#EEF3FB;border-radius:8px;padding:7px 9px;flex:1;border-left:3px solid #1A4FAB;">
-                    <div style="font-size:10.5px;font-weight:700;color:#1A4FAB;margin-bottom:2px;">기초교육 (1개월)</div>
-                    <div style="font-size:9px;color:var(--muted);line-height:1.5;">조리 기본기 · 위생 · 안전 기준 이수<br>브랜드별 매뉴얼 교육 진행</div>
+              <!-- 단계 카드 -->
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="display:flex;gap:7px;align-items:center;">
+                  <div style="width:24px;height:24px;border-radius:50%;background:#1A4FAB;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;flex-shrink:0;">1</div>
+                  <div style="background:#EEF3FB;border-radius:7px;padding:6px 8px;flex:1;border-left:3px solid #1A4FAB;">
+                    <div style="font-size:10px;font-weight:700;color:#1A4FAB;">기초교육 (1개월)</div>
+                    <div style="font-size:9px;color:var(--muted);">조리 기본기 · 위생 · 브랜드 매뉴얼</div>
                   </div>
                 </div>
-                <div style="display:flex;gap:8px;align-items:flex-start;">
-                  <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#059669,#10B981);display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;flex-shrink:0;">2</div>
-                  <div style="background:#ECFDF5;border-radius:8px;padding:7px 9px;flex:1;border-left:3px solid #059669;">
-                    <div style="font-size:10.5px;font-weight:700;color:#059669;margin-bottom:2px;">실무형 교육 (2개월~)</div>
-                    <div style="font-size:9px;color:var(--muted);line-height:1.5;">배달형 매장 실제 운영<br>영업하며 조리·포장·운영 실습 병행</div>
+                <div style="display:flex;gap:7px;align-items:center;">
+                  <div style="width:24px;height:24px;border-radius:50%;background:#059669;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800;flex-shrink:0;">2</div>
+                  <div style="background:#ECFDF5;border-radius:7px;padding:6px 8px;flex:1;border-left:3px solid #059669;">
+                    <div style="font-size:10px;font-weight:700;color:#059669;">실무형 교육 (2개월~)</div>
+                    <div style="font-size:9px;color:var(--muted);">배달형 매장 실제 운영 · 영업 병행</div>
                   </div>
                 </div>
-                <div style="display:flex;gap:8px;align-items:flex-start;">
-                  <div style="width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#D97706,#F59E0B);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;flex-shrink:0;">✓</div>
-                  <div style="background:#FFFBEB;border-radius:8px;padding:7px 9px;flex:1;border-left:3px solid #F59E0B;">
-                    <div style="font-size:10.5px;font-weight:700;color:#D97706;margin-bottom:2px;">매장 배치 (수료 후)</div>
-                    <div style="font-size:9px;color:var(--muted);line-height:1.5;">수요 매장 순차 배치<br>BOH 일용직 대체 인력으로 즉시 투입</div>
+                <div style="display:flex;gap:7px;align-items:center;">
+                  <div style="width:24px;height:24px;border-radius:50%;background:#D97706;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;flex-shrink:0;">✓</div>
+                  <div style="background:#FFFBEB;border-radius:7px;padding:6px 8px;flex:1;border-left:3px solid #D97706;">
+                    <div style="font-size:10px;font-weight:700;color:#D97706;">매장 배치 (수료 후)</div>
+                    <div style="font-size:9px;color:var(--muted);">수요 매장 배치 · BOH 일용직 대체</div>
                   </div>
                 </div>
               </div>
