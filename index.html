@@ -246,7 +246,7 @@
 
           <!-- ① 채용 -->
           <div class="flow-stage s1">
-            <div class="stage-head"><div class="stage-num">1</div><div><div class="stage-label">채용</div><div class="stage-sub" id="v1-total-sub">2025년 연간 일용직 사용 현황</div></div></div>
+            <div class="stage-head"><div class="stage-num">1</div><div><div class="stage-label">채용</div><div class="stage-sub" id="v1-total-sub" style="font-size:12px;font-weight:600;opacity:1;">2025년도 일용직 사용 기준 연간 채용 목표 설정</div></div></div>
             <div class="stage-body" style="padding:10px 12px;">
               <!-- KPI 3개 -->
               <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:7px;">
@@ -1413,7 +1413,7 @@
   var pJung = Math.round(tgt.중급  / tgt.total * 100);
   var pGi   = 100 - pGo - pJung;
   function setEl(id, txt){ var el=document.getElementById(id); if(el) el.textContent=txt; }
-  setEl('v1-total-sub',  '연간 '+tgt.total+'명 · 3-트랙 파이프라인');
+  setEl('v1-total-sub',  '2025년도 일용직 사용 기준 연간 채용 목표 설정');
   setEl('v1-go-val',     pGo+'% / '+tgt.고급+'명');
   setEl('v1-jung-val',   pJung+'% / '+tgt.중급+'명');
   setEl('v1-gi-val',     pGi+'% / '+tgt.기초+'명');
