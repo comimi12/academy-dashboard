@@ -464,30 +464,51 @@
     <section id="v2" class="view">
       <div class="grid">
 
-        <!-- ① 상단 와이드: 위치 + 공간 구역 -->
+        <!-- ① 상단 와이드: 6개 원형 카테고리 카드 -->
         <div class="sec-card c-gold wide">
           <div class="sec-card-head"><span>📍 방배동 아카데미 매장 시뮬레이션 — 차이797 서래마을점 인근 (50평)</span></div>
           <div class="sec-card-body">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
-              <div class="alert alert-blue" style="margin:0;"><div>📌</div><div><b>차이797 서래마을점</b> (서초구 방배동 810-2, 동광로 78) 인근 · 서래마을 상권 내 <b>50평</b> 규모 · 지하1층~5층 모두 검토 가능</div></div>
-              <div class="alert alert-green" style="margin:0;"><div>🏠</div><div><b>참고 매물</b>: 방배역 도보 3분 리모델링 1층 상가 (지하1층·지상7층 건물) · 제2종 근린생활시설 · 음식점 허가 가능 · 즉시 입주<br><span style="font-size:10px;color:var(--muted);">출처: buildingforest.co.kr (2026년 기준)</span></div></div>
+            <!-- 위치 요약 한 줄 -->
+            <div style="text-align:center;font-size:11px;color:var(--muted);margin-bottom:16px;background:#FFFBEB;border-radius:8px;padding:7px 12px;border:1px solid #FDE68A;">
+              서초구 방배동 810-2 (동광로 78) 인근 &nbsp;·&nbsp; 방배역 도보 3분 &nbsp;·&nbsp; 제2종 근린생활시설 &nbsp;·&nbsp; 음식점 허가 가능 &nbsp;·&nbsp; 즉시 입주
             </div>
-            <div class="space-grid">
-              <div class="space-cell" style="background:#FEF3C7;border:1px solid #FDE68A;">
-                <div class="sc-title" style="color:#92400E;">📦 도시락 생산 구역</div>
-                <div style="font-size:10.5px;color:#78350F;line-height:1.6;">25평 · 산업용 조리 장비<br>일 300~500팩 생산 목표<br><b>배달의민족·쿠팡이츠 입점</b></div>
+            <!-- 6개 원형 카드 (1줄) -->
+            <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;">
+              <!-- 위치 -->
+              <div style="text-align:center;">
+                <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#DBEAFE,#93C5FD);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;box-shadow:0 4px 12px rgba(59,130,246,.2);">📍</div>
+                <div style="font-size:10.5px;font-weight:700;color:var(--navy);margin-bottom:3px;">위치</div>
+                <div style="font-size:9px;color:var(--muted);line-height:1.55;">서래마을 상권<br>차이797 인근</div>
               </div>
-              <div class="space-cell" style="background:#DCFCE7;border:1px solid #86EFAC;">
-                <div class="sc-title" style="color:#166534;">🎓 훈련 교실 구역</div>
-                <div style="font-size:10.5px;color:#14532D;line-height:1.6;">15평 · 이론 + 데모 실습 공간<br>20석 강의 가능<br><b>브랜드 매뉴얼 교육 전용</b></div>
+              <!-- 총 규모 -->
+              <div style="text-align:center;">
+                <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#FEF9C3,#FDE68A);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;box-shadow:0 4px 12px rgba(217,119,6,.2);">🏠</div>
+                <div style="font-size:10.5px;font-weight:700;color:var(--navy);margin-bottom:3px;">총 규모</div>
+                <div style="font-size:9px;color:var(--muted);line-height:1.55;">50평<br>즉시 입주 가능</div>
               </div>
-              <div class="space-cell" style="background:#EFF6FF;border:1px solid #BFDBFE;">
-                <div class="sc-title" style="color:#1E40AF;">🛵 배달 운영 구역</div>
-                <div style="font-size:10.5px;color:#1E3A8A;line-height:1.6;">픽업·배달 동시 운영<br>교육생이 직접 주문 처리<br><b>실무 감각 현장 체득</b></div>
+              <!-- 생산 구역 -->
+              <div style="text-align:center;">
+                <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#FEF3C7,#FCD34D);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;box-shadow:0 4px 12px rgba(251,191,36,.2);">📦</div>
+                <div style="font-size:10.5px;font-weight:700;color:var(--navy);margin-bottom:3px;">생산 구역</div>
+                <div style="font-size:9px;color:var(--muted);line-height:1.55;">25평<br>일 300~500팩</div>
               </div>
-              <div class="space-cell" style="background:#FAF5FF;border:1px solid #E9D5FF;">
-                <div class="sc-title" style="color:#5B21B6;">🗂 사무·행정 구역</div>
-                <div style="font-size:10.5px;color:#4C1D95;line-height:1.6;">10평 · 담당자 2명<br>인사·회계·보고<br><b>교육생 출결·평가 관리</b></div>
+              <!-- 교육 구역 -->
+              <div style="text-align:center;">
+                <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#DCFCE7,#86EFAC);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;box-shadow:0 4px 12px rgba(5,150,105,.2);">🎓</div>
+                <div style="font-size:10.5px;font-weight:700;color:var(--navy);margin-bottom:3px;">교육 구역</div>
+                <div style="font-size:9px;color:var(--muted);line-height:1.55;">15평<br>20석 강의실</div>
+              </div>
+              <!-- 배달 운영 -->
+              <div style="text-align:center;">
+                <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#EFF6FF,#BFDBFE);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;box-shadow:0 4px 12px rgba(37,99,235,.2);">🛵</div>
+                <div style="font-size:10.5px;font-weight:700;color:var(--navy);margin-bottom:3px;">배달 운영</div>
+                <div style="font-size:9px;color:var(--muted);line-height:1.55;">픽업·배달<br>실무 현장 실습</div>
+              </div>
+              <!-- 행정 구역 -->
+              <div style="text-align:center;">
+                <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#FAF5FF,#E9D5FF);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 8px;box-shadow:0 4px 12px rgba(124,58,237,.2);">🗂</div>
+                <div style="font-size:10.5px;font-weight:700;color:var(--navy);margin-bottom:3px;">행정 구역</div>
+                <div style="font-size:9px;color:var(--muted);line-height:1.55;">10평<br>담당자 2명</div>
               </div>
             </div>
           </div>
