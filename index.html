@@ -1573,18 +1573,30 @@
   // KPI 4개 카드
   var kpiEl = document.getElementById('kpi-cards');
   if(kpiEl){
+    var goalPct = Math.min(100, Math.round(cumBaechi / D.targets.배치 * 100));
     var kpiData = [
       {icon:'👥', num:cumChae+'명', label:'총 채용 인원', sub:'1~3기 누계', color:'#1A4FAB', bg:'#EFF6FF'},
       {icon:'🏬', num:cumBaechi+'명', label:'매장 배치 인원', sub:'누계 투입 완료', color:'#059669', bg:'#ECFDF5'},
       {icon:'🌱', num:jaejikRate+'%', label:'현 재직률', sub:'배치 대비 현 재직', color:'#0891B2', bg:'#EEF9FF'},
-      {icon:'🎯', num:Math.min(100,Math.round(cumBaechi/D.targets.배치*100))+'%', label:'연간목표 달성', sub:'배치 75명 기준', color:'#D97706', bg:'#FEF3C7'},
+      {icon:'🎯', num:goalPct+'%', label:'연간 배치 목표 달성', sub:'', color:'#D97706', bg:'#FEF3C7',
+       cur:cumBaechi, tgt:D.targets.배치},
     ];
     kpiEl.innerHTML = kpiData.map(function(k){
+      var extra = '';
+      if(k.cur != null){
+        var remain = k.tgt - k.cur;
+        extra = '<div style="margin-top:10px;background:#E5E7EB;border-radius:999px;height:6px;overflow:hidden;">'
+          + '<div style="height:100%;width:'+goalPct+'%;background:'+k.color+';border-radius:999px;transition:width .4s;"></div>'
+          + '</div>'
+          + '<div style="font-size:9.5px;color:#92400E;margin-top:6px;font-weight:600;">'+k.cur+'명 달성 / 목표 '+k.tgt+'명</div>'
+          + '<div style="font-size:9px;color:#6B7280;margin-top:2px;">잔여 '+remain+'명</div>';
+      }
       return '<div style="background:'+k.bg+';border-radius:14px;padding:20px 12px;text-align:center;border-top:3px solid '+k.color+';">'
         +'<div style="font-size:22px;margin-bottom:8px;">'+k.icon+'</div>'
         +'<div style="font-size:32px;font-weight:900;color:'+k.color+';line-height:1.1;">'+k.num+'</div>'
         +'<div style="font-size:11px;font-weight:700;color:#374151;margin-top:7px;">'+k.label+'</div>'
-        +'<div style="font-size:9.5px;color:#64748B;margin-top:2px;">'+k.sub+'</div>'
+        +(k.sub ? '<div style="font-size:9.5px;color:#64748B;margin-top:2px;">'+k.sub+'</div>' : '')
+        +extra
         +'</div>';
     }).join('');
   }
