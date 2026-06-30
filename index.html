@@ -720,7 +720,11 @@
                     <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#0891B2;line-height:1.1;">16</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">재직중</div></div>
                   </div>
                   <div style="background:#FEF2F2;border-radius:6px;padding:5px 8px;font-size:9px;color:#991B1B;margin-bottom:5px;">⚠️ 퇴사 5명 — 김화성·최희수·허은찬·이한나·김시하</div>
-                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 재직률 76% · 1월 입교 → 2월 배치</div>
+                  <div style="margin-bottom:6px;">
+                    <div style="display:flex;justify-content:space-between;font-size:8.5px;color:#64748B;margin-bottom:3px;"><span>재직률</span><span style="font-weight:700;color:#B45309;">76% (16 / 21명)</span></div>
+                    <div style="background:#E5E7EB;border-radius:999px;height:5px;overflow:hidden;"><div style="height:100%;width:76%;background:linear-gradient(90deg,#D97706,#F59E0B);border-radius:999px;"></div></div>
+                  </div>
+                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 1월 입교 → 2월 배치</div>
                 </div>
               </div>
               <!-- 2기 -->
@@ -737,7 +741,11 @@
                     <div style="color:#CBD5E1;font-size:18px;">→</div>
                     <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#0891B2;line-height:1.1;">4</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">재직중</div></div>
                   </div>
-                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 재직률 100% · 2월 입교 → 3월 배치</div>
+                  <div style="margin-bottom:6px;">
+                    <div style="display:flex;justify-content:space-between;font-size:8.5px;color:#64748B;margin-bottom:3px;"><span>재직률</span><span style="font-weight:700;color:#059669;">100% (4 / 4명)</span></div>
+                    <div style="background:#E5E7EB;border-radius:999px;height:5px;overflow:hidden;"><div style="height:100%;width:100%;background:linear-gradient(90deg,#059669,#34D399);border-radius:999px;"></div></div>
+                  </div>
+                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 전원 재직 · 2월 입교 → 3월 배치</div>
                 </div>
               </div>
               <!-- 3기 -->
@@ -754,8 +762,12 @@
                     <div style="color:#CBD5E1;font-size:18px;">→</div>
                     <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#0891B2;line-height:1.1;">3</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">재직중</div></div>
                   </div>
-                  <div style="background:#FEF3C7;border-radius:6px;padding:5px 8px;font-size:9px;color:#92400E;margin-bottom:5px;">📋 144명 면접 → 3명 선발 · 6월 입교 → 7월 배치</div>
-                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 재직 확인 중</div>
+                  <div style="background:#FEF3C7;border-radius:6px;padding:5px 8px;font-size:9px;color:#92400E;margin-bottom:6px;">📋 144명 면접 → 3명 선발 · 6월 입교 → 7월 배치</div>
+                  <div style="margin-bottom:6px;">
+                    <div style="display:flex;justify-content:space-between;font-size:8.5px;color:#64748B;margin-bottom:3px;"><span>재직률</span><span style="font-weight:700;color:#6B7280;">확인 중 (3명 배치)</span></div>
+                    <div style="background:#E5E7EB;border-radius:999px;height:5px;overflow:hidden;"><div style="height:100%;width:100%;background:linear-gradient(90deg,#9CA3AF,#D1D5DB);border-radius:999px;"></div></div>
+                  </div>
+                  <div style="background:#F0F9FF;border-radius:6px;padding:5px 8px;font-size:9px;color:#0369A1;">🔍 재직 현황 모니터링 중</div>
                 </div>
               </div>
             </div>
@@ -1596,39 +1608,59 @@
   // KPI 4개 카드
   var kpiEl = document.getElementById('kpi-cards');
   if(kpiEl){
-    var goalPct = Math.min(100, Math.round(cumBaechi / D.targets.배치 * 100));
+    var goalPct  = Math.min(100, Math.round(cumBaechi / D.targets.배치 * 100));
+    var chaePct  = Math.min(100, Math.round(cumChae  / D.targets.채용.total * 100));
+    var jrTarget = D.targets.재직률;
+    var jrOver   = jaejikRate >= jrTarget;
+    function kpiBar(pct, color){
+      return '<div style="margin-top:9px;background:#E5E7EB;border-radius:999px;height:5px;overflow:hidden;">'
+        +'<div style="height:100%;width:'+pct+'%;background:'+color+';border-radius:999px;"></div>'
+        +'</div>';
+    }
     var kpiData = [
-      {icon:'👥', num:cumChae+'명', label:'총 채용 인원', sub:'1~3기 누계', color:'#1A4FAB', bg:'#EFF6FF'},
-      {icon:'🏬', num:cumBaechi+'명', label:'매장 배치 인원', sub:'누계 투입 완료', color:'#059669', bg:'#ECFDF5'},
-      {icon:'🌱', num:jaejikRate+'%', label:'현 재직률', sub:'배치 대비 현 재직', color:'#0891B2', bg:'#EEF9FF'},
-      {icon:'🎯', num:goalPct+'%', label:'연간 배치 목표 달성', sub:'', color:'#D97706', bg:'#FEF3C7',
-       cur:cumBaechi, tgt:D.targets.배치},
+      { icon:'👥', num:cumChae+'명', label:'총 채용 인원',
+        sub:'연간 목표 '+D.targets.채용.total+'명 대비 '+chaePct+'%',
+        color:'#1A4FAB', bg:'#EFF6FF',
+        bar: kpiBar(chaePct,'#1A4FAB'),
+        note: cumChae+'명 달성 · 잔여 '+(D.targets.채용.total-cumChae)+'명' },
+      { icon:'🏬', num:cumBaechi+'명', label:'매장 배치 인원',
+        sub:'전원 현장 투입 완료',
+        color:'#059669', bg:'#ECFDF5',
+        badge: '현재 재직중 '+jaejik+'명 · 재직률 '+jaejikRate+'%' },
+      { icon:'🌱', num:jaejikRate+'%', label:'현 재직률',
+        sub: jaejik+'명 재직 / '+cumBaechi+'명 배치',
+        color: jrOver?'#059669':'#0891B2', bg: jrOver?'#ECFDF5':'#EEF9FF',
+        bar: kpiBar(Math.min(100,Math.round(jaejikRate/jrTarget*100)), jrOver?'#059669':'#0891B2'),
+        note: '목표 '+jrTarget+'%  '+(jrOver?'✅ 초과 달성':'진행 중') },
+      { icon:'🎯', num:goalPct+'%', label:'연간 배치 목표 달성',
+        sub:'',
+        color:'#D97706', bg:'#FEF3C7',
+        bar: kpiBar(goalPct,'#D97706'),
+        note: cumBaechi+'명 달성 / 목표 '+D.targets.배치+'명 · 잔여 '+(D.targets.배치-cumBaechi)+'명' },
     ];
     kpiEl.innerHTML = kpiData.map(function(k){
-      var extra = '';
-      if(k.cur != null){
-        var remain = k.tgt - k.cur;
-        extra = '<div style="margin-top:10px;background:#E5E7EB;border-radius:999px;height:6px;overflow:hidden;">'
-          + '<div style="height:100%;width:'+goalPct+'%;background:'+k.color+';border-radius:999px;transition:width .4s;"></div>'
-          + '</div>'
-          + '<div style="font-size:9.5px;color:#92400E;margin-top:6px;font-weight:600;">'+k.cur+'명 달성 / 목표 '+k.tgt+'명</div>'
-          + '<div style="font-size:9px;color:#6B7280;margin-top:2px;">잔여 '+remain+'명</div>';
-      }
-      return '<div style="background:'+k.bg+';border-radius:14px;padding:20px 12px;text-align:center;border-top:3px solid '+k.color+';">'
-        +'<div style="font-size:22px;margin-bottom:8px;">'+k.icon+'</div>'
-        +'<div style="font-size:32px;font-weight:900;color:'+k.color+';line-height:1.1;">'+k.num+'</div>'
-        +'<div style="font-size:11px;font-weight:700;color:#374151;margin-top:7px;">'+k.label+'</div>'
-        +(k.sub ? '<div style="font-size:9.5px;color:#64748B;margin-top:2px;">'+k.sub+'</div>' : '')
-        +extra
+      return '<div style="background:'+k.bg+';border-radius:14px;padding:16px 12px;text-align:center;border-top:3px solid '+k.color+';">'
+        +'<div style="font-size:20px;margin-bottom:6px;">'+k.icon+'</div>'
+        +'<div style="font-size:30px;font-weight:900;color:'+k.color+';line-height:1.1;">'+k.num+'</div>'
+        +'<div style="font-size:11px;font-weight:700;color:#374151;margin-top:6px;">'+k.label+'</div>'
+        +(k.sub ? '<div style="font-size:9px;color:#64748B;margin-top:2px;">'+k.sub+'</div>' : '')
+        +(k.bar  ? k.bar : '')
+        +(k.note ? '<div style="font-size:8.5px;color:'+k.color+';margin-top:4px;font-weight:600;">'+k.note+'</div>' : '')
+        +(k.badge? '<div style="margin-top:8px;background:rgba(0,0,0,0.06);border-radius:6px;padding:4px 8px;font-size:8.5px;color:#374151;">'+k.badge+'</div>' : '')
         +'</div>';
     }).join('');
   }
 
   function progBar(label, cur, target, c1, c2){
-    var pct = target>0 ? Math.min(100, Math.round(cur/target*100)) : 0;
+    var pct  = target>0 ? Math.min(100, Math.round(cur/target*100)) : 0;
+    var over = cur >= target;
+    var badge = over
+      ? ' <span style="background:#DCFCE7;color:#166534;font-size:7.5px;padding:1px 5px;border-radius:4px;font-weight:700;vertical-align:middle;">✅ 달성</span>'
+      : ' <span style="background:#FEF3C7;color:#92400E;font-size:7.5px;padding:1px 5px;border-radius:4px;font-weight:700;vertical-align:middle;">'+pct+'%</span>';
+    var fillColor = over ? 'linear-gradient(90deg,#059669,#34D399)' : 'linear-gradient(90deg,'+c1+','+c2+')';
     return '<div class="pipe-row">'
-      +'<div class="pipe-head"><span>'+label+'</span><span class="v">'+cur+' / '+target+' <span style="color:var(--muted)">('+pct+'%)</span></span></div>'
-      +'<div class="pipe-track"><div class="pipe-fill" style="width:'+pct+'%;background:linear-gradient(90deg,'+c1+','+c2+')"></div></div>'
+      +'<div class="pipe-head"><span>'+label+badge+'</span><span class="v">'+cur+' / '+target+'</span></div>'
+      +'<div class="pipe-track"><div class="pipe-fill" style="width:'+pct+'%;background:'+fillColor+'"></div></div>'
       +'</div>';
   }
   document.getElementById('progress').innerHTML =
@@ -1640,7 +1672,7 @@
   function trackBar(label, cur, target, c1, c2){
     var pct = target>0 ? Math.min(100, Math.round(cur/target*100)) : 0;
     return '<div class="pipe-row">'
-      +'<div class="pipe-head"><span>'+label+'</span><span class="v">'+cur+' / '+target+'명</span></div>'
+      +'<div class="pipe-head"><span>'+label+'</span><span class="v">'+cur+'명 / '+target+'명 <span style="color:var(--muted)">('+pct+'%)</span></span></div>'
       +'<div class="pipe-track"><div class="pipe-fill" style="width:'+pct+'%;background:linear-gradient(90deg,'+c1+','+c2+')"></div></div>'
       +'</div>';
   }
@@ -1680,19 +1712,25 @@
           +'<div class="bar-lbl">'+t.ym.slice(5)+'월</div></div>';
       }).join('')+'</div>';
 
+  function cell(v, isCum){
+    var s = v===0 ? 'color:#CBD5E1;' : (isCum?'font-weight:700;':'');
+    return '<td style="'+s+'">'+(v===0?'—':v)+'</td>';
+  }
   var runC=0, runS=0, runB=0, runJ=0;
   var rows = m.map(function(x){
     var mo=x.채용.고급+x.채용.중급+x.채용.기초; runC+=mo; runS+=x.수료; runB+=x.배치; runJ+=x.절감액;
     return '<tr><td class="l">'+x.ym+'</td>'
-      +'<td>'+mo+'</td><td>'+x.입교+'</td><td>'+x.수료+'</td><td>'+x.배치+'</td><td>'+x.재직중+'</td><td>'+(x.절감액?won(x.절감액):'-')+'</td>'
-      +'<td class="cum">'+runC+'</td><td class="cum">'+runB+'</td><td class="cum">'+(runJ?won(runJ):'-')+'</td></tr>';
+      +cell(mo)+cell(x.입교)+cell(x.수료)+cell(x.배치)
+      +'<td style="'+(x.재직중>0?'font-weight:700;color:#0891B2;':'color:#CBD5E1;')+'">'+x.재직중+'</td>'
+      +'<td>'+(x.절감액?won(x.절감액):'—')+'</td>'
+      +'<td class="cum">'+runC+'</td><td class="cum">'+runB+'</td><td class="cum">'+(runJ?won(runJ):'—')+'</td></tr>';
   }).join('');
   document.getElementById('trend-table').innerHTML =
     '<table><thead><tr>'
-    +'<th class="l">월</th><th>채용</th><th>입교</th><th>수료</th><th>배치</th><th>재직</th><th>절감</th>'
-    +'<th>누계채용</th><th>누계배치</th><th>누계절감</th></tr></thead>'
+    +'<th class="l">월</th><th>채용</th><th>입교</th><th>수료</th><th>배치</th><th>재직중</th><th>절감</th>'
+    +'<th class="cum">누계채용</th><th class="cum">누계배치</th><th class="cum">누계절감</th></tr></thead>'
     +'<tbody>'+rows
-    +'<tr class="total-row"><td class="l">누계</td><td>'+cumChae+'</td><td>'+sum(m,function(x){return x.입교;})+'</td><td>'+cumSuryo+'</td><td>'+cumBaechi+'</td><td>'+jaejik+'</td><td>'+won(cumJeolgam)+'</td><td colspan="3"></td></tr>'
+    +'<tr class="total-row"><td class="l">합계</td><td>'+cumChae+'</td><td>'+sum(m,function(x){return x.입교;})+'</td><td>'+cumSuryo+'</td><td>'+cumBaechi+'</td><td style="color:#0891B2;font-weight:700;">'+jaejik+'명 재직</td><td>'+(cumJeolgam?won(cumJeolgam):'—')+'</td><td colspan="3" style="color:var(--muted);font-size:8.5px;">← 우측은 월별 누계</td></tr>'
     +'</tbody></table>';
 
   var fo=document.getElementById('f-org'); if(fo) fo.textContent=D.meta.org;
