@@ -1684,16 +1684,58 @@
       + savBars(savRows)
       + '<div class="note">절감액은 일용직 대비 월 추정치(데이터 입력값)의 누계입니다.</div>';
 
-  var runChae=0; var trend = m.map(function(x){ var mo=x.채용.고급+x.채용.중급+x.채용.기초; runChae+=mo; return {ym:x.ym, mo:mo, cum:runChae}; });
-  var maxC = Math.max.apply(null, trend.map(function(t){return t.cum;}).concat([1]));
-  document.getElementById('trend-bars').innerHTML =
-    '<div style="font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px;">누계 채용 추이 (목표 '+D.targets.채용.total+'명)</div>'
-    + '<div class="bars">'+trend.map(function(t){
-        var h=Math.round(t.cum/Math.max(maxC,D.targets.채용.total)*100);
-        return '<div class="bar-col"><div class="bar-val">'+t.cum+'</div>'
-          +'<div class="bar" style="height:'+h+'%"></div>'
-          +'<div class="bar-lbl">'+t.ym.slice(5)+'월</div></div>';
-      }).join('')+'</div>';
+  // 도넛 차트 — 배치 현황 (재직중 / 퇴사 / 잔여 목표)
+  (function(){
+    var tgt      = D.targets.배치;                      // 75
+    var toesa    = cumBaechi - jaejik;                   // 퇴사 = 배치 - 현재재직
+    var remain   = Math.max(0, tgt - cumBaechi);         // 아직 미배치
+    var r = 72, sw = 34, sz = 210;
+    var cx = sz / 2, cy = sz / 2;
+    var circ = 2 * Math.PI * r;
+    var GAP = 1.5; // 세그먼트 간 시각적 틈 (px)
+
+    function arc(v, color, startOff) {
+      var len = (v / tgt) * circ;
+      if (len <= GAP) return '';
+      return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none"'
+        +' stroke="'+color+'" stroke-width="'+sw+'"'
+        +' stroke-dasharray="'+(len - GAP).toFixed(2)+' '+circ.toFixed(2)+'"'
+        +' stroke-dashoffset="'+(-startOff).toFixed(2)+'"'
+        +' stroke-linecap="butt"/>';
+    }
+
+    var o1 = 0;
+    var o2 = (jaejik   / tgt) * circ;
+    var o3 = o2 + (toesa / tgt) * circ;
+
+    var svg = '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 '+sz+' '+sz+'" style="display:block;margin:0 auto;">'
+      +'<g transform="rotate(-90,'+cx+','+cy+')">'
+      + arc(jaejik,  '#0891B2', o1)   // 재직중 — 파란색
+      + arc(toesa,   '#EF4444', o2)   // 퇴사   — 빨간색
+      + arc(remain,  '#E2E8F0', o3)   // 잔여    — 연회색
+      +'</g>'
+      // 중앙 텍스트
+      +'<text x="'+cx+'" y="'+(cy-20)+'" text-anchor="middle" font-size="36" font-weight="900" fill="#0891B2" font-family="inherit">'+jaejik+'</text>'
+      +'<text x="'+cx+'" y="'+(cy+2)+'"  text-anchor="middle" font-size="11" font-weight="700" fill="#374151" font-family="inherit">명 재직중</text>'
+      +'<text x="'+cx+'" y="'+(cy+18)+'" text-anchor="middle" font-size="9"  fill="#6B7280"  font-family="inherit">배치 '+cumBaechi+'명 / 목표 '+tgt+'명</text>'
+      +'</svg>';
+
+    function dot(color, label) {
+      return '<div style="display:flex;align-items:center;gap:5px;font-size:9.5px;color:#374151;">'
+        +'<div style="width:11px;height:11px;border-radius:3px;background:'+color+';flex-shrink:0;'+(color==='#E2E8F0'?'border:1px solid #CBD5E1;':'')+'">'
+        +'</div>'+label+'</div>';
+    }
+    var legend = '<div style="display:flex;justify-content:center;gap:18px;margin-top:8px;padding-bottom:4px;">'
+      + dot('#0891B2', '재직중 '+jaejik+'명')
+      + dot('#EF4444', '퇴사 '+toesa+'명')
+      + dot('#E2E8F0', '잔여 목표 '+remain+'명')
+      +'</div>';
+
+    var el = document.getElementById('trend-bars');
+    if(el) el.innerHTML =
+      '<div style="font-size:11px;font-weight:700;color:var(--navy);padding:0 17px 10px;">배치 현황 — 연간 목표 '+tgt+'명 기준</div>'
+      +'<div style="padding:0 17px 4px;">'+svg+legend+'</div>';
+  })();
 
   function cell(v, isCum){
     var s = v===0 ? 'color:#CBD5E1;' : (isCum?'font-weight:700;':'');
