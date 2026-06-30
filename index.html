@@ -669,66 +669,89 @@
     <section id="v3" class="view">
       <div class="grid">
 
-        <!-- 현재 운영 실적 (v2에서 이동) -->
+        <!-- KPI 4개 (JS 렌더) -->
         <div class="sec-card c-blue wide">
-          <div class="sec-card-head"><span>📋 현재 아카데미 운영 실적 (2026년 누계)</span></div>
+          <div class="sec-card-head"><span>📊 2026 아카데미 핵심 지표</span><span class="meta" id="prog-asof"></span></div>
           <div class="sec-card-body">
-            <table style="width:100%;border-collapse:collapse;font-size:11px;">
-              <thead>
-                <tr style="background:#0F2147;color:#fff;">
-                  <th style="padding:6px 8px;text-align:center;">기수</th>
-                  <th style="padding:6px 8px;text-align:center;">채용 루트</th>
-                  <th style="padding:6px 8px;text-align:center;">입교</th>
-                  <th style="padding:6px 8px;text-align:center;">배치</th>
-                  <th style="padding:6px 8px;text-align:center;">시기</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #E8EDF5;">
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#1A4FAB;">1기</td>
-                  <td style="padding:6px 8px;font-size:10.5px;color:var(--muted);">부천대 계약학과</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;">21명</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#059669;">21명</td>
-                  <td style="padding:6px 8px;text-align:center;font-size:10px;color:var(--muted);">1월입교→2월배치</td>
-                </tr>
-                <tr style="border-bottom:1px solid #E8EDF5;background:#F8FAFC;">
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#1A4FAB;">2기</td>
-                  <td style="padding:6px 8px;font-size:10.5px;color:var(--muted);">부천대 2명 + 특별채용 2명</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;">4명</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#059669;">4명</td>
-                  <td style="padding:6px 8px;text-align:center;font-size:10px;color:var(--muted);">2월입교→3월배치</td>
-                </tr>
-                <tr style="border-bottom:1px solid #E8EDF5;">
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#1A4FAB;">3기</td>
-                  <td style="padding:6px 8px;font-size:10.5px;color:var(--muted);">서울50+ 취업사관학교<br>(144명 면접→3명 선발)</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;">3명</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:700;color:#D97706;">3명↗</td>
-                  <td style="padding:6px 8px;text-align:center;font-size:10px;color:var(--muted);">6월입교→7월배치</td>
-                </tr>
-                <tr style="background:#EEF3FB;">
-                  <td colspan="2" style="padding:6px 8px;font-weight:700;color:var(--navy);">누계 합계</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:800;color:#1A4FAB;font-size:13px;">28명</td>
-                  <td style="padding:6px 8px;text-align:center;font-weight:800;color:#059669;font-size:13px;">28명</td>
-                  <td style="padding:6px 8px;text-align:center;font-size:11px;font-weight:700;color:var(--navy);">재직중 23명</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="alert alert-blue" style="margin-top:10px;font-size:11px;"><div>📌</div><div>1기 퇴사 5명 제외 · 현재 재직중 <b>23명</b> (재직률 82%) · 연간 목표 배치 75명 대비 <b>37% 달성</b></div></div>
+            <div id="kpi-cards" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;"></div>
           </div>
         </div>
 
-        <div class="sec-card c-blue wide">
-          <div class="sec-card-head"><span>🎯 연간 목표 대비 누계 진행률</span><span class="meta" id="prog-asof"></span></div>
+        <!-- 기수별 파이프라인 (채용→입교→배치→재직) -->
+        <div class="sec-card c-gold wide">
+          <div class="sec-card-head"><span>🎓 기수별 채용 파이프라인</span><span class="meta">채용 → 입교 → 배치 → 재직</span></div>
+          <div class="sec-card-body">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
+              <!-- 1기 -->
+              <div style="border:1.5px solid #BFDBFE;border-radius:12px;overflow:hidden;">
+                <div style="background:linear-gradient(90deg,#1E40AF,#1A4FAB);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+                  <div><div style="font-size:9px;color:#BFDBFE;font-weight:600;letter-spacing:.05em;">1기 · 완료</div><div style="font-size:13.5px;font-weight:800;color:#fff;margin-top:2px;">부천대 계약학과</div></div>
+                  <div style="background:rgba(255,255,255,0.15);border-radius:8px;padding:6px 12px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#fff;line-height:1;">21명</div><div style="font-size:8.5px;color:#BFDBFE;margin-top:2px;">채용</div></div>
+                </div>
+                <div style="padding:14px;">
+                  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;">
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#1A4FAB;line-height:1.1;">21</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">입교</div></div>
+                    <div style="color:#CBD5E1;font-size:18px;">→</div>
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#059669;line-height:1.1;">21</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">배치</div></div>
+                    <div style="color:#CBD5E1;font-size:18px;">→</div>
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#0891B2;line-height:1.1;">16</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">재직중</div></div>
+                  </div>
+                  <div style="background:#FEF2F2;border-radius:6px;padding:5px 8px;font-size:9px;color:#991B1B;margin-bottom:5px;">⚠️ 퇴사 5명 — 김화성·최희수·허은찬·이한나·김시하</div>
+                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 재직률 76% · 1월 입교 → 2월 배치</div>
+                </div>
+              </div>
+              <!-- 2기 -->
+              <div style="border:1.5px solid #BFDBFE;border-radius:12px;overflow:hidden;">
+                <div style="background:linear-gradient(90deg,#1E40AF,#1A4FAB);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+                  <div><div style="font-size:9px;color:#BFDBFE;font-weight:600;letter-spacing:.05em;">2기 · 완료</div><div style="font-size:13.5px;font-weight:800;color:#fff;margin-top:2px;">부천대 + 특별채용</div></div>
+                  <div style="background:rgba(255,255,255,0.15);border-radius:8px;padding:6px 12px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#fff;line-height:1;">4명</div><div style="font-size:8.5px;color:#BFDBFE;margin-top:2px;">채용</div></div>
+                </div>
+                <div style="padding:14px;">
+                  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;">
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#1A4FAB;line-height:1.1;">4</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">입교</div></div>
+                    <div style="color:#CBD5E1;font-size:18px;">→</div>
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#059669;line-height:1.1;">4</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">배치</div></div>
+                    <div style="color:#CBD5E1;font-size:18px;">→</div>
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#0891B2;line-height:1.1;">4</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">재직중</div></div>
+                  </div>
+                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 재직률 100% · 2월 입교 → 3월 배치</div>
+                </div>
+              </div>
+              <!-- 3기 -->
+              <div style="border:1.5px solid #FDE68A;border-radius:12px;overflow:hidden;">
+                <div style="background:linear-gradient(90deg,#B45309,#D97706);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+                  <div><div style="font-size:9px;color:#FDE68A;font-weight:600;letter-spacing:.05em;">3기 · 배치 완료</div><div style="font-size:13.5px;font-weight:800;color:#fff;margin-top:2px;">서울50+ 취업사관학교</div></div>
+                  <div style="background:rgba(255,255,255,0.15);border-radius:8px;padding:6px 12px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#fff;line-height:1;">3명</div><div style="font-size:8.5px;color:#FDE68A;margin-top:2px;">채용</div></div>
+                </div>
+                <div style="padding:14px;">
+                  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;">
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#D97706;line-height:1.1;">3</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">입교</div></div>
+                    <div style="color:#CBD5E1;font-size:18px;">→</div>
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#059669;line-height:1.1;">3</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">배치</div></div>
+                    <div style="color:#CBD5E1;font-size:18px;">→</div>
+                    <div style="text-align:center;"><div style="font-size:20px;font-weight:900;color:#0891B2;line-height:1.1;">3</div><div style="font-size:8.5px;color:#64748B;margin-top:2px;">재직중</div></div>
+                  </div>
+                  <div style="background:#FEF3C7;border-radius:6px;padding:5px 8px;font-size:9px;color:#92400E;margin-bottom:5px;">📋 144명 면접 → 3명 선발 · 6월 입교 → 7월 배치</div>
+                  <div style="background:#ECFDF5;border-radius:6px;padding:5px 8px;font-size:9px;color:#065F46;">✅ 재직 확인 중</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 연간 목표 달성률 -->
+        <div class="sec-card c-blue">
+          <div class="sec-card-head"><span>🎯 연간 목표 달성률</span></div>
           <div class="sec-card-body" id="progress"></div>
         </div>
+
+        <!-- 채용 트랙별 -->
         <div class="sec-card c-teal">
           <div class="sec-card-head"><span>📊 채용 트랙별 누계</span></div>
           <div class="sec-card-body" id="track"></div>
         </div>
-        <div class="sec-card c-green">
-          <div class="sec-card-head"><span>💰 누계 절감액 추이</span></div>
-          <div class="sec-card-body" id="savings"></div>
-        </div>
+
+        <!-- 월별 추이 -->
         <div class="sec-card c-blue wide">
           <div class="sec-card-head"><span>📈 월별 실적 & 누계</span></div>
           <div class="sec-card-body" style="padding:0 0 4px;">
@@ -736,6 +759,7 @@
             <div style="padding:8px 17px 14px;"><div id="trend-table"></div></div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -1545,6 +1569,26 @@
   if(D.meta && D.meta.title){ var ht=document.getElementById('h-title'); if(ht) ht.textContent=D.meta.title; }
 
   document.getElementById('prog-asof').textContent = '기준 '+last.ym;
+
+  // KPI 4개 카드
+  var kpiEl = document.getElementById('kpi-cards');
+  if(kpiEl){
+    var kpiData = [
+      {icon:'👥', num:cumChae+'명', label:'총 채용 인원', sub:'1~3기 누계', color:'#1A4FAB', bg:'#EFF6FF'},
+      {icon:'🏬', num:cumBaechi+'명', label:'매장 배치 인원', sub:'누계 투입 완료', color:'#059669', bg:'#ECFDF5'},
+      {icon:'🌱', num:jaejikRate+'%', label:'현 재직률', sub:'배치 대비 현 재직', color:'#0891B2', bg:'#EEF9FF'},
+      {icon:'🎯', num:Math.min(100,Math.round(cumBaechi/D.targets.배치*100))+'%', label:'연간목표 달성', sub:'배치 75명 기준', color:'#D97706', bg:'#FEF3C7'},
+    ];
+    kpiEl.innerHTML = kpiData.map(function(k){
+      return '<div style="background:'+k.bg+';border-radius:14px;padding:20px 12px;text-align:center;border-top:3px solid '+k.color+';">'
+        +'<div style="font-size:22px;margin-bottom:8px;">'+k.icon+'</div>'
+        +'<div style="font-size:32px;font-weight:900;color:'+k.color+';line-height:1.1;">'+k.num+'</div>'
+        +'<div style="font-size:11px;font-weight:700;color:#374151;margin-top:7px;">'+k.label+'</div>'
+        +'<div style="font-size:9.5px;color:#64748B;margin-top:2px;">'+k.sub+'</div>'
+        +'</div>';
+    }).join('');
+  }
+
   function progBar(label, cur, target, c1, c2){
     var pct = target>0 ? Math.min(100, Math.round(cur/target*100)) : 0;
     return '<div class="pipe-row">'
@@ -1581,7 +1625,7 @@
         +'<div class="bar-lbl">'+r.ym.slice(5)+'월</div></div>';
     }).join('')+'</div>';
   }
-  document.getElementById('savings').innerHTML =
+  var savEl = document.getElementById('savings'); if(savEl) savEl.innerHTML =
       '<div class="ms-row">'
       + '<div class="ms-item"><div class="ms-num">'+won(cumJeolgam)+'</div><div class="ms-lbl">누계 절감액</div></div>'
       + '<div class="ms-item"><div class="ms-num">'+won(D.baseline.일용직연간만원)+'</div><div class="ms-lbl">일용직 연간 기준</div></div>'
