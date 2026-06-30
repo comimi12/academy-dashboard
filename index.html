@@ -1684,57 +1684,82 @@
       + savBars(savRows)
       + '<div class="note">절감액은 일용직 대비 월 추정치(데이터 입력값)의 누계입니다.</div>';
 
-  // 도넛 차트 — 배치 현황 (재직중 / 퇴사 / 잔여 목표)
+  // 도넛 차트 — 임원용 배치 현황 요약
   (function(){
-    var tgt      = D.targets.배치;                      // 75
-    var toesa    = cumBaechi - jaejik;                   // 퇴사 = 배치 - 현재재직
-    var remain   = Math.max(0, tgt - cumBaechi);         // 아직 미배치
-    var r = 72, sw = 34, sz = 210;
-    var cx = sz / 2, cy = sz / 2;
-    var circ = 2 * Math.PI * r;
-    var GAP = 1.5; // 세그먼트 간 시각적 틈 (px)
+    var tgt    = D.targets.배치;              // 75
+    var toesa  = cumBaechi - jaejik;          // 퇴사
+    var remain = Math.max(0, tgt - cumBaechi);// 잔여 목표
+    var jrOver = jaejikRate >= D.targets.재직률;
 
-    function arc(v, color, startOff) {
-      var len = (v / tgt) * circ;
-      if (len <= GAP) return '';
-      return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none"'
-        +' stroke="'+color+'" stroke-width="'+sw+'"'
-        +' stroke-dasharray="'+(len - GAP).toFixed(2)+' '+circ.toFixed(2)+'"'
-        +' stroke-dashoffset="'+(-startOff).toFixed(2)+'"'
-        +' stroke-linecap="butt"/>';
+    // ── 도넛 SVG ──
+    var r=74, sw=38, sz=220, GAP=2;
+    var cx=sz/2, cy=sz/2, circ=2*Math.PI*r;
+    function arc(v,color,off){
+      var len=(v/tgt)*circ; if(len<=GAP) return '';
+      return '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+color
+        +'" stroke-width="'+sw+'" stroke-dasharray="'+(len-GAP).toFixed(2)+' '+circ.toFixed(2)
+        +'" stroke-dashoffset="'+(-off).toFixed(2)+'" stroke-linecap="butt"/>';
     }
-
-    var o1 = 0;
-    var o2 = (jaejik   / tgt) * circ;
-    var o3 = o2 + (toesa / tgt) * circ;
-
-    var svg = '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 '+sz+' '+sz+'" style="display:block;margin:0 auto;">'
+    var o2=(jaejik/tgt)*circ, o3=o2+(toesa/tgt)*circ;
+    var svg='<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 '+sz+' '+sz+'" style="display:block;">'
       +'<g transform="rotate(-90,'+cx+','+cy+')">'
-      + arc(jaejik,  '#0891B2', o1)   // 재직중 — 파란색
-      + arc(toesa,   '#EF4444', o2)   // 퇴사   — 빨간색
-      + arc(remain,  '#E2E8F0', o3)   // 잔여    — 연회색
+      +arc(jaejik,'#0EA5E9',0)+arc(toesa,'#F87171',o2)+arc(remain,'#E2E8F0',o3)
       +'</g>'
-      // 중앙 텍스트
-      +'<text x="'+cx+'" y="'+(cy-20)+'" text-anchor="middle" font-size="36" font-weight="900" fill="#0891B2" font-family="inherit">'+jaejik+'</text>'
-      +'<text x="'+cx+'" y="'+(cy+2)+'"  text-anchor="middle" font-size="11" font-weight="700" fill="#374151" font-family="inherit">명 재직중</text>'
-      +'<text x="'+cx+'" y="'+(cy+18)+'" text-anchor="middle" font-size="9"  fill="#6B7280"  font-family="inherit">배치 '+cumBaechi+'명 / 목표 '+tgt+'명</text>'
+      +'<text x="'+cx+'" y="'+(cy-22)+'" text-anchor="middle" font-size="42" font-weight="900" fill="#0C4A6E" font-family="inherit">'+jaejik+'</text>'
+      +'<text x="'+cx+'" y="'+(cy+4)+'"  text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F" font-family="inherit">명 재직 중</text>'
+      +'<text x="'+cx+'" y="'+(cy+21)+'" text-anchor="middle" font-size="9.5" fill="#64748B" font-family="inherit">배치 '+cumBaechi+' / 목표 '+tgt+'명</text>'
       +'</svg>';
 
-    function dot(color, label) {
-      return '<div style="display:flex;align-items:center;gap:5px;font-size:9.5px;color:#374151;">'
-        +'<div style="width:11px;height:11px;border-radius:3px;background:'+color+';flex-shrink:0;'+(color==='#E2E8F0'?'border:1px solid #CBD5E1;':'')+'">'
-        +'</div>'+label+'</div>';
+    // ── 우측 스탯 카드 ──
+    function statCard(dot,dotColor,num,numColor,label,badge,badgeColor,note){
+      return '<div style="background:#F8FAFC;border-radius:12px;padding:12px 14px;'
+        +'border-left:4px solid '+dotColor+';display:flex;align-items:flex-start;gap:10px;">'
+        +'<div style="width:10px;height:10px;border-radius:50%;background:'+dotColor
+        +';flex-shrink:0;margin-top:4px;box-shadow:0 0 0 3px '+dotColor+'22;"></div>'
+        +'<div style="flex:1;min-width:0;">'
+        +'<div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;">'
+        +'<span style="font-size:26px;font-weight:900;color:'+numColor+';line-height:1;">'+num+'</span>'
+        +'<span style="font-size:11px;font-weight:700;color:#374151;">'+label+'</span>'
+        +(badge?'<span style="font-size:8px;font-weight:700;color:'+badgeColor
+          +';background:'+badgeColor+'18;padding:2px 7px;border-radius:99px;">'+badge+'</span>':'')
+        +'</div>'
+        +(note?'<div style="font-size:8.5px;color:#64748B;margin-top:4px;">'+note+'</div>':'')
+        +'</div></div>';
     }
-    var legend = '<div style="display:flex;justify-content:center;gap:18px;margin-top:8px;padding-bottom:4px;">'
-      + dot('#0891B2', '재직중 '+jaejik+'명')
-      + dot('#EF4444', '퇴사 '+toesa+'명')
-      + dot('#E2E8F0', '잔여 목표 '+remain+'명')
+
+    var stats='<div style="display:flex;flex-direction:column;gap:10px;justify-content:center;height:100%;">'
+      +statCard('','#0EA5E9', jaejikRate+'%','#0EA5E9','재직률',
+        jrOver?'목표 초과 ✅':'목표 미달 ⚠️', jrOver?'#059669':'#D97706',
+        jaejik+'명 재직 / 배치 '+cumBaechi+'명 · 목표 '+D.targets.재직률+'%')
+      +statCard('','#F87171', toesa+'명','#DC2626','퇴사',
+        '1기 이탈','#DC2626',
+        '김화성 · 최희수 · 허은찬 · 이한나 · 김시하')
+      +statCard('','#94A3B8', remain+'명','#475569','추가 배치 필요',
+        '연간 잔여','#475569',
+        '연간 목표 '+tgt+'명 달성까지 남은 인원')
       +'</div>';
 
-    var el = document.getElementById('trend-bars');
-    if(el) el.innerHTML =
-      '<div style="font-size:11px;font-weight:700;color:var(--navy);padding:0 17px 10px;">배치 현황 — 연간 목표 '+tgt+'명 기준</div>'
-      +'<div style="padding:0 17px 4px;">'+svg+legend+'</div>';
+    // ── Executive Summary ──
+    var summary='<div style="margin-top:16px;background:linear-gradient(90deg,#EFF6FF,#F0F9FF);'
+      +'border-radius:10px;padding:11px 16px;border-left:4px solid #1A4FAB;">'
+      +'<div style="font-size:8.5px;font-weight:800;color:#1E40AF;letter-spacing:.08em;margin-bottom:4px;">EXECUTIVE SUMMARY</div>'
+      +'<div style="font-size:10.5px;color:#1E3A5F;line-height:1.65;">'
+      +'배치 완료 <strong>'+cumBaechi+'명</strong> 중 <strong>'+jaejik+'명이 재직 중 (재직률 '+jaejikRate+'%)</strong>으로 '
+      +'목표(75%)를 <strong style="color:'+(jrOver?'#059669':'#DC2626')+';">'
+      +(jrOver?'+'+(jaejikRate-D.targets.재직률)+'%p 초과 달성':'미달')+'</strong>. '
+      +'연간 배치 목표('+tgt+'명) 달성까지 <strong>'+remain+'명 추가 필요</strong>.'
+      +'</div></div>';
+
+    var el=document.getElementById('trend-bars');
+    if(el) el.innerHTML=
+      '<div style="padding:4px 17px 12px;">'
+      +'<div style="font-size:11px;font-weight:700;color:var(--navy);margin-bottom:14px;">배치 현황 — 연간 목표 '+tgt+'명 기준</div>'
+      +'<div style="display:flex;gap:18px;align-items:center;">'
+      +'<div style="flex-shrink:0;">'+svg+'</div>'
+      +'<div style="flex:1;min-width:0;">'+stats+'</div>'
+      +'</div>'
+      +summary
+      +'</div>';
   })();
 
   function cell(v, isCum){
