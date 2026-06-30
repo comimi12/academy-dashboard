@@ -10,17 +10,17 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap');
   :root{
-    --navy:#0F2147;--blue:#1A4FAB;--blue2:#2563EB;--accent:#E84B1A;--gold:#D97706;
-    --green:#059669;--teal:#0891B2;--purple:#7C3AED;--bg:#EEF2F8;--card:#FFFFFF;
-    --border:#E3E8F0;--text:#1E293B;--muted:#64748B;--light:#EEF3FB;
-    --shadow:0 1px 3px rgba(15,33,71,.05),0 8px 24px rgba(15,33,71,.06);
+    --navy:#0D1F3C;--blue:#1D4ED8;--blue2:#2563EB;--accent:#4338CA;--gold:#B45309;
+    --green:#059669;--teal:#0284C7;--purple:#6D28D9;--bg:#F1F5F9;--card:#FFFFFF;
+    --border:#E2E8F0;--text:#0F172A;--muted:#64748B;--light:#F5F8FD;
+    --shadow:0 1px 4px rgba(13,31,60,.06),0 8px 28px rgba(13,31,60,.08);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);font-size:13px;line-height:1.55;}
 
   /* ── 앱 셸 ── */
   .app{display:flex;min-height:100vh;}
-  .sidebar{width:252px;flex-shrink:0;background:linear-gradient(185deg,#0B1A38 0%,#13264D 62%,#17386b 100%);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;}
+  .sidebar{width:252px;flex-shrink:0;background:linear-gradient(180deg,#091629 0%,#0D1F3C 55%,#122647 100%);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;}
   .sb-brand{padding:24px 22px 20px;border-bottom:1px solid rgba(255,255,255,.08);}
   .sb-brand img{height:58px;width:auto;display:block;margin-bottom:14px;}
   .sb-title{font-size:15px;font-weight:800;letter-spacing:-.3px;line-height:1.3;}
@@ -31,7 +31,7 @@
   .tab .tnum{width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
   .tab .tlabel{flex:1;line-height:1.3;}
   .tab:hover{background:rgba(255,255,255,.08);color:#fff;}
-  .tab.active{background:linear-gradient(90deg,#2563EB,#1A4FAB);color:#fff;font-weight:700;box-shadow:0 6px 18px rgba(37,99,235,.4);}
+  .tab.active{background:linear-gradient(90deg,#1D4ED8,#2563EB);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(29,78,216,.45);}
   .tab.active .tnum{background:rgba(255,255,255,.25);color:#fff;}
   .sb-foot{padding:14px 22px 18px;border-top:1px solid rgba(255,255,255,.08);font-size:10px;color:rgba(255,255,255,.42);line-height:1.6;}
   .sb-foot strong{color:rgba(255,255,255,.7);}
@@ -51,11 +51,11 @@
   .sec-card{background:var(--card);border-radius:14px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);}
   .sec-card-head{padding:12px 17px 10px;font-size:13px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;justify-content:space-between;}
   .sec-card-head .meta{font-size:11px;font-weight:500;opacity:.85;}
-  .c-blue .sec-card-head{background:linear-gradient(90deg,#1A4FAB,#3B82F6);}
-  .c-gold .sec-card-head{background:linear-gradient(90deg,#B45309,#D97706);}
-  .c-green .sec-card-head{background:linear-gradient(90deg,#047857,#059669);}
-  .c-teal .sec-card-head{background:linear-gradient(90deg,#0369A1,#0891B2);}
-  .c-accent .sec-card-head{background:linear-gradient(90deg,#B91C1C,#E84B1A);}
+  .c-blue .sec-card-head{background:linear-gradient(90deg,#1D4ED8,#2563EB);}
+  .c-gold .sec-card-head{background:linear-gradient(90deg,#92400E,#B45309);}
+  .c-green .sec-card-head{background:linear-gradient(90deg,#065F46,#059669);}
+  .c-teal .sec-card-head{background:linear-gradient(90deg,#075985,#0284C7);}
+  .c-accent .sec-card-head{background:linear-gradient(90deg,#3730A3,#4338CA);}
   .sec-card-body{padding:15px 17px;flex:1;}
   .pipe-row{margin-bottom:13px;}
   .pipe-head{display:flex;justify-content:space-between;margin-bottom:4px;font-size:12px;}
@@ -77,9 +77,9 @@
   .bar-val{font-size:10.5px;font-weight:700;color:var(--navy);}
   .bar-lbl{font-size:10px;color:var(--muted);}
   .ms-row,.mini-stat{display:flex;gap:11px;flex-wrap:wrap;margin-bottom:6px;}
-  .ms-item{flex:1;min-width:92px;background:var(--light);border-radius:10px;padding:12px 10px;text-align:center;}
-  .ms-item .ms-num{font-size:20px;font-weight:800;color:var(--navy);}
-  .ms-item .ms-lbl{font-size:10px;color:var(--muted);margin-top:2px;}
+  .ms-item{flex:1;min-width:92px;background:var(--light);border-radius:10px;padding:14px 10px;text-align:center;border:1px solid var(--border);}
+  .ms-item .ms-num{font-size:22px;font-weight:800;color:var(--navy);}
+  .ms-item .ms-lbl{font-size:10px;color:var(--muted);margin-top:3px;}
   .note{font-size:10.5px;color:var(--muted);margin-top:8px;line-height:1.5;}
   .sub-h{font-size:11.5px;font-weight:700;color:var(--navy);margin:2px 0 7px;}
 
@@ -161,10 +161,10 @@
   .tl-title{font-size:12.5px;font-weight:700;margin-bottom:2px;}
   .tl-desc{font-size:11px;color:var(--muted);}
   .alert{border-radius:9px;padding:10px 13px;margin:6px 0;font-size:11.5px;display:flex;gap:8px;align-items:flex-start;}
-  .alert-red{background:#FEF2F2;border-left:3px solid #EF4444;}
-  .alert-green{background:#F0FDF4;border-left:3px solid #22C55E;}
-  .alert-amber{background:#FFFBEB;border-left:3px solid #F59E0B;}
-  .alert-blue{background:#EFF6FF;border-left:3px solid #3B82F6;}
+  .alert-red{background:#FEF2F2;border-left:3px solid #F87171;}
+  .alert-green{background:#F0FDF4;border-left:3px solid #34D399;}
+  .alert-amber{background:#FFFBEB;border-left:3px solid #FCD34D;}
+  .alert-blue{background:#EFF6FF;border-left:3px solid #60A5FA;}
   .case-box{background:#F7FAFC;border-radius:9px;padding:11px 13px;margin:7px 0;border-left:3px solid var(--teal);}
   .case-box .case-title{font-size:11.5px;font-weight:700;color:var(--teal);margin-bottom:4px;}
   .case-box .case-text{font-size:11px;color:var(--text);line-height:1.55;}
@@ -481,7 +481,7 @@
       <!-- V1 Executive Summary -->
       <div style="padding:0 38px 28px;">
         <div style="background:#fff;border-radius:14px;border:1px solid #E3E8F0;box-shadow:0 1px 3px rgba(15,33,71,.05),0 8px 24px rgba(15,33,71,.06);overflow:hidden;">
-          <div style="background:linear-gradient(90deg,#0F2147,#1A4FAB);padding:11px 17px;font-size:13px;font-weight:700;color:#fff;">📋 EXECUTIVE SUMMARY — 채용 계획 핵심</div>
+          <div style="background:linear-gradient(90deg,#0D1F3C,#1D4ED8);padding:11px 17px;font-size:13px;font-weight:700;color:#fff;">📋 EXECUTIVE SUMMARY — 채용 계획 핵심</div>
           <div style="padding:15px 17px;">
             <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
               <div style="background:#EFF6FF;border-radius:12px;padding:14px 10px;text-align:center;border-top:3px solid #1A4FAB;">
@@ -1437,55 +1437,55 @@
       <div class="bm-wrap">
 
         <!-- V7 이슈 Overview Card -->
-        <div style="background:linear-gradient(135deg,#1E3A5F 0%,#1A4FAB 100%);border-radius:16px;padding:20px 24px;margin-bottom:18px;color:#fff;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:.12em;color:#93C5FD;margin-bottom:8px;">ISSUE OVERVIEW</div>
-          <div style="display:grid;grid-template-columns:auto 1fr;gap:0 24px;align-items:center;margin-bottom:14px;">
-            <div style="text-align:center;">
-              <div style="font-size:48px;font-weight:900;line-height:1;color:#fff;">10</div>
-              <div style="font-size:9px;color:#93C5FD;margin-top:2px;">총 이슈</div>
+        <div style="background:linear-gradient(90deg,#091629,#0D1F3C);border-radius:14px;padding:20px 24px;margin-bottom:18px;color:#fff;border:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:9.5px;font-weight:700;letter-spacing:.14em;color:#7DD3FC;margin-bottom:12px;text-transform:uppercase;">Issue Overview</div>
+          <div style="display:grid;grid-template-columns:76px 1fr;gap:0 24px;align-items:center;margin-bottom:14px;">
+            <div style="text-align:center;background:rgba(255,255,255,.05);border-radius:12px;padding:12px 8px;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:44px;font-weight:900;line-height:1;color:#fff;">10</div>
+              <div style="font-size:8px;color:#94A3B8;margin-top:3px;font-weight:600;">총 이슈</div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-              <div style="background:rgba(239,68,68,0.2);border:1px solid rgba(239,68,68,0.5);border-radius:10px;padding:10px 8px;text-align:center;">
-                <div style="font-size:20px;font-weight:900;color:#FCA5A5;">5</div>
-                <div style="font-size:8px;color:#FCA5A5;margin-top:2px;font-weight:700;">HIGH</div>
-                <div style="font-size:7.5px;color:#FECACA;margin-top:1px;">법령·이탈·안전</div>
+              <div style="background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.3);border-radius:10px;padding:12px 8px;text-align:center;">
+                <div style="font-size:22px;font-weight:900;color:#FCA5A5;line-height:1;">5</div>
+                <div style="font-size:8px;color:#FCA5A5;margin-top:4px;font-weight:700;letter-spacing:.05em;">HIGH</div>
+                <div style="font-size:7px;color:#FECACA;margin-top:2px;">법령·이탈·안전</div>
               </div>
-              <div style="background:rgba(251,146,60,0.2);border:1px solid rgba(251,146,60,0.5);border-radius:10px;padding:10px 8px;text-align:center;">
-                <div style="font-size:20px;font-weight:900;color:#FDB47F;">4</div>
-                <div style="font-size:8px;color:#FDB47F;margin-top:2px;font-weight:700;">MEDIUM</div>
-                <div style="font-size:7.5px;color:#FED7AA;margin-top:1px;">적응·교육·운영</div>
+              <div style="background:rgba(251,191,36,.12);border:1px solid rgba(251,191,36,.3);border-radius:10px;padding:12px 8px;text-align:center;">
+                <div style="font-size:22px;font-weight:900;color:#FCD34D;line-height:1;">4</div>
+                <div style="font-size:8px;color:#FCD34D;margin-top:4px;font-weight:700;letter-spacing:.05em;">MEDIUM</div>
+                <div style="font-size:7px;color:#FDE68A;margin-top:2px;">적응·교육·운영</div>
               </div>
-              <div style="background:rgba(16,185,129,0.2);border:1px solid rgba(16,185,129,0.5);border-radius:10px;padding:10px 8px;text-align:center;">
-                <div style="font-size:20px;font-weight:900;color:#6EE7B7;">1</div>
-                <div style="font-size:8px;color:#6EE7B7;margin-top:2px;font-weight:700;">LOW</div>
-                <div style="font-size:7.5px;color:#A7F3D0;margin-top:1px;">지원금 관리</div>
+              <div style="background:rgba(52,211,153,.12);border:1px solid rgba(52,211,153,.3);border-radius:10px;padding:12px 8px;text-align:center;">
+                <div style="font-size:22px;font-weight:900;color:#6EE7B7;line-height:1;">1</div>
+                <div style="font-size:8px;color:#6EE7B7;margin-top:4px;font-weight:700;letter-spacing:.05em;">LOW</div>
+                <div style="font-size:7px;color:#A7F3D0;margin-top:2px;">지원금 관리</div>
               </div>
             </div>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;">
-            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:7px 4px;text-align:center;">
-              <div style="font-size:7.5px;color:#BFDBFE;font-weight:700;">현장 적응</div>
-              <div style="font-size:13px;font-weight:900;color:#fff;margin-top:2px;">2</div>
+          <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:6px;border-top:1px solid rgba(255,255,255,.07);padding-top:14px;">
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:7px;color:#94A3B8;font-weight:600;letter-spacing:.04em;">현장 적응</div>
+              <div style="font-size:14px;font-weight:800;color:#E2E8F0;margin-top:3px;">2</div>
             </div>
-            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:7px 4px;text-align:center;">
-              <div style="font-size:7.5px;color:#BFDBFE;font-weight:700;">이탈·리텐션</div>
-              <div style="font-size:13px;font-weight:900;color:#fff;margin-top:2px;">1</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:7px;color:#94A3B8;font-weight:600;letter-spacing:.04em;">이탈·리텐션</div>
+              <div style="font-size:14px;font-weight:800;color:#E2E8F0;margin-top:3px;">1</div>
             </div>
-            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:7px 4px;text-align:center;">
-              <div style="font-size:7.5px;color:#BFDBFE;font-weight:700;">인사·노무</div>
-              <div style="font-size:13px;font-weight:900;color:#fff;margin-top:2px;">3</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:7px;color:#94A3B8;font-weight:600;letter-spacing:.04em;">인사·노무</div>
+              <div style="font-size:14px;font-weight:800;color:#E2E8F0;margin-top:3px;">3</div>
             </div>
-            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:7px 4px;text-align:center;">
-              <div style="font-size:7.5px;color:#BFDBFE;font-weight:700;">교육 효과</div>
-              <div style="font-size:13px;font-weight:900;color:#fff;margin-top:2px;">2</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:7px;color:#94A3B8;font-weight:600;letter-spacing:.04em;">교육 효과</div>
+              <div style="font-size:14px;font-weight:800;color:#E2E8F0;margin-top:3px;">2</div>
             </div>
-            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:7px 4px;text-align:center;">
-              <div style="font-size:7.5px;color:#BFDBFE;font-weight:700;">안전·법규</div>
-              <div style="font-size:13px;font-weight:900;color:#fff;margin-top:2px;">2</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:7px;color:#94A3B8;font-weight:600;letter-spacing:.04em;">안전·법규</div>
+              <div style="font-size:14px;font-weight:800;color:#E2E8F0;margin-top:3px;">2</div>
             </div>
-            <div style="background:rgba(255,255,255,0.1);border-radius:8px;padding:7px 4px;text-align:center;">
-              <div style="font-size:7.5px;color:#BFDBFE;font-weight:700;">지원금</div>
-              <div style="font-size:13px;font-weight:900;color:#fff;margin-top:2px;">1</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.08);">
+              <div style="font-size:7px;color:#94A3B8;font-weight:600;letter-spacing:.04em;">지원금</div>
+              <div style="font-size:14px;font-weight:800;color:#E2E8F0;margin-top:3px;">1</div>
             </div>
           </div>
         </div>
@@ -1502,7 +1502,7 @@
 
         <div class="bm-card" data-cat="field">
           <div class="sec-card c-accent">
-            <div class="sec-card-head"><span>① 수료생 피크타임 즉시 투입 불가</span><span class="meta">현장 적응 &nbsp;<span style="background:#F97316;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
+            <div class="sec-card-head"><span>① 수료생 피크타임 즉시 투입 불가</span><span class="meta">현장 적응 &nbsp;<span style="background:#D97706;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
             <div class="sec-card-body">
               <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">통제된 실습과 달리 실제 매장은 주문 폭주·복수 메뉴 동시 처리가 겹쳐, 3개월 수료자도 피크 시 독립 포지션이 어렵고 오히려 기존 직원의 발을 묶는 '짐'이 될 수 있음</span></div>
               <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">미국 NRAEF 외식 어프렌티스십 — 수료율 80%라도 현장 독립까지 별도 적응기간 필요. 본아이에프는 배치 초기 2~4주 '서포터'로 보조 후 독립 전환</span></div>
@@ -1514,7 +1514,7 @@
 
         <div class="bm-card" data-cat="field">
           <div class="sec-card c-accent">
-            <div class="sec-card-head"><span>② 매장장·기존 직원 반발 ("검증 안 된 사람 왜")</span><span class="meta">현장 수용성 &nbsp;<span style="background:#F97316;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
+            <div class="sec-card-head"><span>② 매장장·기존 직원 반발 ("검증 안 된 사람 왜")</span><span class="meta">현장 수용성 &nbsp;<span style="background:#D97706;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
             <div class="sec-card-body">
               <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">매장장에게 교육생은 지도 부담+실수 처리+고객 불만 리스크. 기존 직원도 "왜 내가 가르치나" 저항</span></div>
               <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">Worldchefs — 관리자가 직원 개발에 쓰는 시간 평균 13%, 멘토 중요 인식 76% vs 실제 보유 37%(구조적 갭). 파리크라상 영캠프는 <b>전문 강사진 별도 운영</b>으로 매장 멘토 부담 전가 안 함</span></div>
@@ -1580,7 +1580,7 @@
 
         <div class="bm-card" data-cat="edu">
           <div class="sec-card c-accent">
-            <div class="sec-card-head"><span>⑥ 교육-현장 괴리 &amp; 효과(ROI) 측정 불가</span><span class="meta">교육 효과 &nbsp;<span style="background:#F97316;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
+            <div class="sec-card-head"><span>⑥ 교육-현장 괴리 &amp; 효과(ROI) 측정 불가</span><span class="meta">교육 효과 &nbsp;<span style="background:#D97706;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
             <div class="sec-card-body">
               <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">표준 레시피·위생 중심 커리큘럼 vs 실제 매장은 주문변형·재료부족 대응·속도가 핵심. 효과 측정 지표 없으면 개선 불가</span></div>
               <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">레스토랑 교육은 '고객 응대 중 측정 불가'라는 구조적 한계로 정성평가에 의존. Kirkpatrick 4단계·Phillips ROI가 표준이나 Level 3(행동)·4(결과)는 체계적 추적 없인 측정 불가</span></div>
@@ -1592,7 +1592,7 @@
 
         <div class="bm-card" data-cat="edu">
           <div class="sec-card c-accent">
-            <div class="sec-card-head"><span>⑦ 강사·현장교사 확보 부담</span><span class="meta">교육 효과 &nbsp;<span style="background:#F97316;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
+            <div class="sec-card-head"><span>⑦ 강사·현장교사 확보 부담</span><span class="meta">교육 효과 &nbsp;<span style="background:#D97706;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
             <div class="sec-card-body">
               <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">사내 강사 교육 중 현업 공백, 1명이 다수 지도+본인 업무 병행하는 이중 부담. 강사 개인 편차 크면 품질 표준화 무의미</span></div>
               <div class="bm-row"><span class="bm-k">근거·사례</span><span class="bm-v">KRIVET — 기업현장교사 확보·운영 부담이 일학습병행 3대 문제(업무공백·과정설계·기관연계). 파리크라상은 전문 강사진 별도 운영으로 분리</span></div>
@@ -1649,7 +1649,7 @@
 
         <div class="bm-card" data-cat="safety">
           <div class="sec-card c-accent">
-            <div class="sec-card-head"><span>⑨ 운영 매장 병행 충돌 (실습 vs 영업)</span><span class="meta">운영·품질 리스크 &nbsp;<span style="background:#F97316;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
+            <div class="sec-card-head"><span>⑨ 운영 매장 병행 충돌 (실습 vs 영업)</span><span class="meta">운영·품질 리스크 &nbsp;<span style="background:#D97706;color:#fff;border-radius:4px;padding:1px 7px;font-size:8px;font-weight:800;letter-spacing:.04em;">MEDIUM</span></span></div>
             <div class="sec-card-body">
               <div class="bm-row"><span class="bm-k">이슈</span><span class="bm-v">방배동 일반음식점(배달형)을 실습+영업 겸용 시, 훈련생 실수가 고객 불만·식품 손실·납기 지연으로 직결. HACCP 의무는 없으나 식품위생법상 위생 기준 및 <b>조리사 위생교육(연 1회)</b> 준수 필요</span></div>
               <div class="bm-row"><span class="bm-k">근거</span><span class="bm-v">일반음식점은 HACCP 비의무 대상. 단, 주방 위생 점검·배달 평점 관리가 영업 지속의 핵심. 훈련생 실수가 배달 앱 별점에 직접 영향</span></div>
@@ -1687,65 +1687,65 @@
         </div>
 
         <!-- V8 SL&C 포지셔닝 카드 -->
-        <div style="background:linear-gradient(135deg,#1E3A5F 0%,#0F766E 100%);border-radius:16px;padding:20px 24px;margin-bottom:18px;color:#fff;">
-          <div style="font-size:10px;font-weight:700;letter-spacing:.12em;color:#99F6E4;margin-bottom:8px;">SL&amp;C POSITIONING — 벤치마킹 7개사 대비</div>
+        <div style="background:linear-gradient(90deg,#091629,#0D1F3C);border-radius:14px;padding:20px 24px;margin-bottom:18px;color:#fff;border:1px solid rgba(255,255,255,.06);">
+          <div style="font-size:9.5px;font-weight:700;letter-spacing:.14em;color:#7DD3FC;margin-bottom:12px;text-transform:uppercase;">SL&amp;C Positioning — 벤치마킹 7개사 대비</div>
           <div style="display:grid;grid-template-columns:1fr 2fr;gap:20px;align-items:start;margin-bottom:14px;">
-            <div>
-              <div style="font-size:28px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:4px;">초기 구축 단계</div>
-              <div style="font-size:9px;color:#99F6E4;line-height:1.5;">7개 벤치마크사 모두 수년~수십 년 누적 운영.<br>SL&amp;C는 2026년 1기 시작 — 설계 단계에서 선택 가능.</div>
+            <div style="background:rgba(255,255,255,.05);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:20px;font-weight:900;color:#F1F5F9;line-height:1.2;margin-bottom:6px;">초기 구축<br>단계</div>
+              <div style="font-size:8.5px;color:#94A3B8;line-height:1.6;">7개사 모두 수년~수십 년 누적.<br>SL&amp;C 2026년 1기 시작 —<br>설계 단계에서 선택 가능.</div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
-              <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:8px 6px;text-align:center;">
-                <div style="font-size:8px;color:#A5F3FC;font-weight:700;margin-bottom:3px;">교육 대상</div>
-                <div style="font-size:8.5px;color:#fff;line-height:1.5;">내부 신입<br>BOH 조리직</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:10px 6px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+                <div style="font-size:7.5px;color:#7DD3FC;font-weight:600;margin-bottom:4px;letter-spacing:.04em;">교육 대상</div>
+                <div style="font-size:8.5px;color:#E2E8F0;line-height:1.5;">내부 신입<br>BOH 조리직</div>
               </div>
-              <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:8px 6px;text-align:center;">
-                <div style="font-size:8px;color:#A5F3FC;font-weight:700;margin-bottom:3px;">교육 기간</div>
-                <div style="font-size:8.5px;color:#fff;line-height:1.5;">3개월<br>(아워홈 1년 대비 단기)</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:10px 6px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+                <div style="font-size:7.5px;color:#7DD3FC;font-weight:600;margin-bottom:4px;letter-spacing:.04em;">교육 기간</div>
+                <div style="font-size:8.5px;color:#E2E8F0;line-height:1.5;">3개월<br>(아워홈 1년 대비)</div>
               </div>
-              <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:8px 6px;text-align:center;">
-                <div style="font-size:8px;color:#A5F3FC;font-weight:700;margin-bottom:3px;">시설 모델</div>
-                <div style="font-size:8.5px;color:#fff;line-height:1.5;">방배동 운영 매장<br>(롯데GRS 파일럿샵 동일)</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:10px 6px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+                <div style="font-size:7.5px;color:#7DD3FC;font-weight:600;margin-bottom:4px;letter-spacing:.04em;">시설 모델</div>
+                <div style="font-size:8.5px;color:#E2E8F0;line-height:1.5;">방배동 운영 매장<br>파일럿샵 동일</div>
               </div>
-              <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:8px 6px;text-align:center;">
-                <div style="font-size:8px;color:#A5F3FC;font-weight:700;margin-bottom:3px;">연간 규모</div>
-                <div style="font-size:8.5px;color:#fff;line-height:1.5;">목표 75명<br>(CJ 1,800명 대비 소규모)</div>
+              <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:10px 6px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+                <div style="font-size:7.5px;color:#7DD3FC;font-weight:600;margin-bottom:4px;letter-spacing:.04em;">연간 규모</div>
+                <div style="font-size:8.5px;color:#E2E8F0;line-height:1.5;">목표 75명<br>소규모 파일럿</div>
               </div>
             </div>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;">
-            <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:8px;color:#FDE68A;font-weight:700;">SPC</div>
-              <div style="font-size:7px;color:#E2E8F0;margin-top:2px;line-height:1.4;">외부 공개<br>유료 교육원</div>
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-bottom:12px;">
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:8px;color:#CBD5E1;font-weight:700;">SPC</div>
+              <div style="font-size:7px;color:#94A3B8;margin-top:3px;line-height:1.4;">외부 공개<br>유료 교육원</div>
             </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:8px;color:#FDE68A;font-weight:700;">CJ</div>
-              <div style="font-size:7px;color:#E2E8F0;margin-top:2px;line-height:1.4;">내부+가맹<br>이중 구조</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:8px;color:#CBD5E1;font-weight:700;">CJ</div>
+              <div style="font-size:7px;color:#94A3B8;margin-top:3px;line-height:1.4;">내부+가맹<br>이중 구조</div>
             </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:8px;color:#FDE68A;font-weight:700;">더본</div>
-              <div style="font-size:7px;color:#E2E8F0;margin-top:2px;line-height:1.4;">다거점<br>지자체 협력</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:8px;color:#CBD5E1;font-weight:700;">더본</div>
+              <div style="font-size:7px;color:#94A3B8;margin-top:3px;line-height:1.4;">다거점<br>지자체 협력</div>
             </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:8px;color:#FDE68A;font-weight:700;">아워홈</div>
-              <div style="font-size:7px;color:#E2E8F0;margin-top:2px;line-height:1.4;">1년 사내<br>자격제도</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:8px;color:#CBD5E1;font-weight:700;">아워홈</div>
+              <div style="font-size:7px;color:#94A3B8;margin-top:3px;line-height:1.4;">1년 사내<br>자격제도</div>
             </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:8px;color:#FDE68A;font-weight:700;">본아이에프</div>
-              <div style="font-size:7px;color:#E2E8F0;margin-top:2px;line-height:1.4;">시설 없이<br>자격검정</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:8px;color:#CBD5E1;font-weight:700;">본아이에프</div>
+              <div style="font-size:7px;color:#94A3B8;margin-top:3px;line-height:1.4;">시설 없이<br>자격검정</div>
             </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,0.15);">
-              <div style="font-size:8px;color:#FDE68A;font-weight:700;">이랜드</div>
-              <div style="font-size:7px;color:#E2E8F0;margin-top:2px;line-height:1.4;">5단계 인증<br>커리어 연동</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(255,255,255,.1);">
+              <div style="font-size:8px;color:#CBD5E1;font-weight:700;">이랜드</div>
+              <div style="font-size:7px;color:#94A3B8;margin-top:3px;line-height:1.4;">5단계 인증<br>커리어 연동</div>
             </div>
-            <div style="background:rgba(99,214,255,0.18);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(99,214,255,0.5);">
-              <div style="font-size:8px;color:#67E8F9;font-weight:800;">SL&amp;C</div>
-              <div style="font-size:7px;color:#E0F2FE;margin-top:2px;line-height:1.4;">방배동 파일럿<br>매장형 실습</div>
+            <div style="background:rgba(29,78,216,.25);border-radius:8px;padding:8px 4px;text-align:center;border:1px solid rgba(96,165,250,.45);">
+              <div style="font-size:8px;color:#93C5FD;font-weight:800;">SL&amp;C</div>
+              <div style="font-size:7px;color:#BFDBFE;margin-top:3px;line-height:1.4;">방배동 파일럿<br>매장형 실습</div>
             </div>
           </div>
-          <div style="margin-top:12px;background:rgba(255,255,255,0.1);border-radius:10px;padding:10px 14px;border-left:3px solid #67E8F9;">
-            <div style="font-size:8px;font-weight:700;color:#A5F3FC;letter-spacing:.08em;margin-bottom:4px;">KEY INSIGHT</div>
-            <div style="font-size:10.5px;color:#E0F2FE;line-height:1.65;"><strong>당장 대규모 시설 투자 없이</strong> 본아이에프 모델(자격검정)·아워홈 모델(Train-the-Trainer)을 참고해 역량 표준화 가능. 단기 목표는 이랜드형 <strong>인증 등급 → 커리어 사다리</strong> 연동으로 리텐션 강화.</div>
+          <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:12px 16px;border-left:3px solid #60A5FA;">
+            <div style="font-size:8px;font-weight:700;color:#7DD3FC;letter-spacing:.1em;margin-bottom:5px;text-transform:uppercase;">Key Insight</div>
+            <div style="font-size:10.5px;color:#CBD5E1;line-height:1.65;"><strong style="color:#E2E8F0;">대규모 시설 투자 없이</strong> 본아이에프 모델(자격검정)·아워홈 모델(Train-the-Trainer)로 역량 표준화 가능. 단기 목표는 이랜드형 <strong style="color:#E2E8F0;">인증 등급 → 커리어 사다리</strong> 연동으로 리텐션 강화.</div>
           </div>
         </div>
 
