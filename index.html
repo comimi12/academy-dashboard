@@ -579,37 +579,82 @@
           </div>
         </div>
 
-        <!-- ② 예상 매출·운영 지표 (wide) -->
+        <!-- ② 예상 손익계산서 (월간) -->
         <div class="sec-card c-gold wide">
-          <div class="sec-card-head"><span>📊 예상 매출·운영 지표 (월간)</span></div>
-          <div class="sec-card-body" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-            <!-- 좌: KPI 3개 -->
-            <div>
-              <div class="sub-h" style="margin-bottom:10px;">월간 매출 요약</div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px;">
-                <div style="background:#FFFBEB;border-radius:10px;padding:12px 6px;text-align:center;border-top:3px solid #D97706;">
-                  <div style="font-size:19px;font-weight:800;color:#92400E;line-height:1.1;">2,205<span style="font-size:10px;">만원</span></div>
-                  <div style="font-size:8.5px;color:var(--muted);margin-top:3px;">월 매출</div>
-                </div>
-                <div style="background:#FEF2F2;border-radius:10px;padding:12px 6px;text-align:center;border-top:3px solid #EF4444;">
-                  <div style="font-size:19px;font-weight:800;color:#B91C1C;line-height:1.1;">1,654<span style="font-size:10px;">만원</span></div>
-                  <div style="font-size:8.5px;color:var(--muted);margin-top:3px;">월 비용 차감</div>
-                </div>
-                <div style="background:#ECFDF5;border-radius:10px;padding:12px 6px;text-align:center;border-top:3px solid #059669;">
-                  <div style="font-size:19px;font-weight:800;color:#059669;line-height:1.1;">551<span style="font-size:10px;">만원</span></div>
-                  <div style="font-size:8.5px;color:var(--muted);margin-top:3px;">영업이익/월</div>
-                </div>
-              </div>
-              <div class="alert alert-blue" style="font-size:10.5px;"><div>💡</div><div>영업이익 551만원이 <b>월 고정비(인건비·월세 등)의 약 48%</b> 상쇄 → 순 부담 599만원/월</div></div>
-            </div>
-            <!-- 우: 항목별 내역 -->
-            <div>
-              <div class="sub-h" style="margin-bottom:10px;">항목별 내역</div>
-              <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label">도시락 매출 (150팩×연중무휴×4,900원)</span><span class="ri-val" style="color:#92400E;">약 2,205만원</span></div>
-              <div class="row-item"><div class="ri-dot" style="background:#EF4444"></div><span class="ri-label">배달 플랫폼 수수료 (약 15%)</span><span class="ri-val" style="color:#EF4444;">−331만원</span></div>
-              <div class="row-item"><div class="ri-dot" style="background:#EF4444"></div><span class="ri-label">원가 (매출의 60%)</span><span class="ri-val" style="color:#EF4444;">−1,323만원</span></div>
-              <div class="row-item" style="background:#ECFDF5;border-radius:6px;padding:8px;margin-top:6px;"><div class="ri-dot" style="background:#059669"></div><span class="ri-label" style="font-weight:700;">영업이익</span><span class="ri-val" style="color:#059669;font-size:13px;">약 551만원/월</span></div>
-            </div>
+          <div class="sec-card-head"><span>📊 예상 손익계산서 (월간)</span></div>
+          <div class="sec-card-body">
+            <table style="width:100%;border-collapse:collapse;font-size:12.5px;border-radius:10px;overflow:hidden;">
+              <thead>
+                <tr style="background:#0D1F3C;color:#fff;">
+                  <th style="padding:11px 16px;text-align:left;font-weight:700;width:38%;">계정명</th>
+                  <th style="padding:11px 16px;text-align:right;font-weight:700;width:22%;">금액</th>
+                  <th style="padding:11px 16px;text-align:right;font-weight:500;color:rgba(255,255,255,.65);font-size:11px;">비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 지표 행 -->
+                <tr style="background:#F8FAFC;border-bottom:1px solid #E2E8F0;">
+                  <td style="padding:8px 16px;color:var(--muted);font-size:11.5px;">고객수</td>
+                  <td style="padding:8px 16px;text-align:right;font-weight:600;">4,500팩 / 월</td>
+                  <td style="padding:8px 16px;text-align:right;color:var(--muted);font-size:11px;">150팩 × 30일</td>
+                </tr>
+                <tr style="background:#F8FAFC;border-bottom:2px solid #E2E8F0;">
+                  <td style="padding:8px 16px;color:var(--muted);font-size:11.5px;">객단가</td>
+                  <td style="padding:8px 16px;text-align:right;font-weight:600;">4,900원</td>
+                  <td style="padding:8px 16px;text-align:right;color:var(--muted);font-size:11px;">도시락 판매가</td>
+                </tr>
+                <!-- 매출 -->
+                <tr style="background:#FFFBEB;border-bottom:2px solid #D97706;">
+                  <td style="padding:12px 16px;font-weight:800;color:#92400E;font-size:13px;">매출</td>
+                  <td style="padding:12px 16px;text-align:right;font-weight:900;color:#D97706;font-size:17px;">2,205만원</td>
+                  <td style="padding:12px 16px;text-align:right;color:var(--muted);font-size:11px;">4,500팩 × 4,900원</td>
+                </tr>
+                <!-- 비용 항목들 -->
+                <tr style="border-bottom:1px solid #F3F4F6;">
+                  <td style="padding:9px 16px 9px 30px;color:#DC2626;">재료비</td>
+                  <td style="padding:9px 16px;text-align:right;color:#DC2626;font-weight:700;">1,323만원</td>
+                  <td style="padding:9px 16px;text-align:right;color:var(--muted);font-size:11px;">원가율 60%</td>
+                </tr>
+                <tr style="border-bottom:1px solid #F3F4F6;">
+                  <td style="padding:9px 16px 9px 30px;color:#DC2626;">인건비</td>
+                  <td style="padding:9px 16px;text-align:right;color:#DC2626;font-weight:700;">900만원</td>
+                  <td style="padding:9px 16px;text-align:right;color:var(--muted);font-size:11px;">총괄·강사·행정 3명</td>
+                </tr>
+                <tr style="border-bottom:1px solid #F3F4F6;background:#FEF9EE;">
+                  <td style="padding:9px 16px 9px 30px;color:#DC2626;">수도광열비</td>
+                  <td style="padding:9px 16px;text-align:right;color:#DC2626;font-weight:700;">50만원</td>
+                  <td style="padding:9px 16px;text-align:right;color:var(--muted);font-size:11px;">수도 · 가스 · 전기</td>
+                </tr>
+                <tr style="border-bottom:1px solid #F3F4F6;background:#FEF9EE;">
+                  <td style="padding:9px 16px 9px 30px;color:#DC2626;">임차료</td>
+                  <td style="padding:9px 16px;text-align:right;color:#DC2626;font-weight:700;">250만원</td>
+                  <td style="padding:9px 16px;text-align:right;color:var(--muted);font-size:11px;">월세 220 + 관리비 30</td>
+                </tr>
+                <tr style="border-bottom:1px solid #F3F4F6;background:#FEF9EE;">
+                  <td style="padding:9px 16px 9px 30px;color:#DC2626;">감가상각</td>
+                  <td style="padding:9px 16px;text-align:right;color:#DC2626;font-weight:700;">100만원</td>
+                  <td style="padding:9px 16px;text-align:right;color:var(--muted);font-size:11px;">설비 8,500만원 ÷ 84개월</td>
+                </tr>
+                <tr style="border-bottom:2px solid #DC2626;background:#FEF9EE;">
+                  <td style="padding:9px 16px 9px 30px;color:#DC2626;">소모품비</td>
+                  <td style="padding:9px 16px;text-align:right;color:#DC2626;font-weight:700;">361만원</td>
+                  <td style="padding:9px 16px;text-align:right;color:var(--muted);font-size:11px;">배달수수료(331) + 소모품(30)</td>
+                </tr>
+                <!-- 비용합계 -->
+                <tr style="background:#FEF2F2;border-bottom:1px solid #FECACA;">
+                  <td style="padding:12px 16px;font-weight:800;color:#B91C1C;font-size:13px;">비용합계</td>
+                  <td style="padding:12px 16px;text-align:right;font-weight:900;color:#B91C1C;font-size:17px;">2,984만원</td>
+                  <td style="padding:12px 16px;text-align:right;color:var(--muted);font-size:11px;">재료비 + 고정비 + 감가</td>
+                </tr>
+                <!-- 매장 영업이익 -->
+                <tr style="background:#FFF1F2;border-top:2px solid #F87171;">
+                  <td style="padding:14px 16px;font-weight:900;color:#991B1B;font-size:14px;">매장 영업이익</td>
+                  <td style="padding:14px 16px;text-align:right;font-weight:900;color:#991B1B;font-size:20px;">▼ 779만원</td>
+                  <td style="padding:14px 16px;text-align:right;color:var(--muted);font-size:11px;">현금 기준 −679만원 (감가 제외)</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert alert-blue" style="margin-top:10px;font-size:10.5px;"><div>💡</div><div>손실 779만원 = 아카데미 월 운영 비용 &nbsp;·&nbsp; <b>교육비가 아닌 인건비 선투자</b>: 1인당 약 234만원 (779×3개월÷10명) vs 일용직 1명 연비용 약 600만원</div></div>
           </div>
         </div>
 
