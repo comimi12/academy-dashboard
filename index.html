@@ -778,11 +778,21 @@
 
         <!-- KPI 4개 (JS 렌더) -->
         <div class="sec-card c-blue wide">
-          <div class="sec-card-head"><span>📊 2026 아카데미 핵심 지표</span><span class="meta" id="prog-asof"></span></div>
+          <div class="sec-card-head" style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <span>📊 2026 아카데미 핵심 지표</span>
+            <div style="display:flex;align-items:center;gap:8px;margin-left:auto;">
+              <span class="meta" id="prog-asof"></span>
+              <button id="v3-toggle-btn" onclick="toggleV3Detail(this)" style="background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:6px;padding:3px 10px;font-size:10px;font-weight:700;cursor:pointer;letter-spacing:.03em;white-space:nowrap;">세부 내역 ▾</button>
+            </div>
+          </div>
           <div class="sec-card-body">
             <div id="kpi-cards" style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;"></div>
           </div>
         </div>
+
+        <!-- 세부 내역 (기수별 파이프라인 + 연간 목표 달성률) — 토글 -->
+        <div id="v3-detail" style="display:none;grid-column:1/-1;">
+          <div class="grid" style="margin:0;padding:0;gap:16px;">
 
         <!-- 기수별 파이프라인 (채용→입교→배치→재직) -->
         <div class="sec-card c-gold wide">
@@ -863,6 +873,9 @@
           <div class="sec-card-head"><span>🎯 연간 목표 달성률</span></div>
           <div class="sec-card-body" id="progress"></div>
         </div>
+
+          </div><!-- /inner grid -->
+        </div><!-- /v3-detail -->
 
         <!-- 채용 트랙별 -->
         <div class="sec-card c-teal">
@@ -2414,6 +2427,13 @@
   s.onerror=function(){};
   document.head.appendChild(s);
 })();
+
+function toggleV3Detail(btn) {
+  var el = document.getElementById('v3-detail');
+  var open = el.style.display === 'block';
+  el.style.display = open ? 'none' : 'block';
+  btn.textContent = open ? '세부 내역 ▾' : '세부 내역 ▴';
+}
 </script>
 </body>
 </html>
