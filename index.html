@@ -16,7 +16,7 @@
     --shadow:0 1px 4px rgba(13,31,60,.06),0 8px 28px rgba(13,31,60,.08);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);font-size:13px;line-height:1.55;}
+  body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.55;}
 
   /* ── 앱 셸 ── */
   .app{display:flex;min-height:100vh;}
@@ -27,7 +27,7 @@
   .sb-sub{font-size:10.5px;color:rgba(255,255,255,.5);margin-top:3px;letter-spacing:.5px;}
   .nav{flex:1;overflow-y:auto;padding:14px 12px;}
   .nav .cap{font-size:9.5px;letter-spacing:2px;color:rgba(255,255,255,.34);padding:6px 12px 10px;text-transform:uppercase;font-weight:700;}
-  .tab{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:11px 13px;border:none;background:none;color:rgba(255,255,255,.7);font-family:inherit;font-size:12.5px;cursor:pointer;border-radius:10px;margin-bottom:3px;transition:background .15s,color .15s,box-shadow .15s;}
+  .tab{display:flex;align-items:center;gap:11px;width:100%;text-align:left;padding:11px 13px;border:none;background:none;color:rgba(255,255,255,.7);font-family:inherit;font-size:14px;cursor:pointer;border-radius:10px;margin-bottom:3px;transition:background .15s,color .15s,box-shadow .15s;}
   .tab .tnum{width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.65);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
   .tab .tlabel{flex:1;line-height:1.3;}
   .tab:hover{background:rgba(255,255,255,.08);color:#fff;}
@@ -49,7 +49,7 @@
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:22px 38px 34px;}
   .grid .wide{grid-column:1 / -1;}
   .sec-card{background:var(--card);border-radius:14px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);}
-  .sec-card-head{padding:12px 17px 10px;font-size:13px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;justify-content:space-between;}
+  .sec-card-head{padding:12px 17px 10px;font-size:15px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;justify-content:space-between;}
   .sec-card-head .meta{font-size:11px;font-weight:500;opacity:.85;}
   .c-blue .sec-card-head{background:linear-gradient(90deg,#1D4ED8,#2563EB);}
   .c-gold .sec-card-head{background:linear-gradient(90deg,#92400E,#B45309);}
@@ -62,8 +62,8 @@
   .pipe-head .v{font-weight:700;}
   .pipe-track{height:10px;background:#E8EDF5;border-radius:99px;overflow:hidden;position:relative;}
   .pipe-fill{height:100%;border-radius:99px;transition:width .5s;}
-  table{width:100%;border-collapse:collapse;font-size:11.5px;}
-  th{background:#F6F9FC;padding:7px 8px;text-align:right;font-weight:700;border-bottom:2px solid var(--border);color:var(--navy);font-size:11px;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{background:#F6F9FC;padding:7px 8px;text-align:right;font-weight:700;border-bottom:2px solid var(--border);color:var(--navy);font-size:12.5px;}
   th.l{text-align:left;}
   td{padding:6px 8px;border-bottom:1px solid #F1F5F9;text-align:right;white-space:nowrap;}
   td.l{text-align:left;font-weight:600;white-space:normal;}
@@ -81,7 +81,7 @@
   .ms-item .ms-num{font-size:22px;font-weight:800;color:var(--navy);}
   .ms-item .ms-lbl{font-size:10px;color:var(--muted);margin-top:3px;}
   .note{font-size:10.5px;color:var(--muted);margin-top:8px;line-height:1.5;}
-  .sub-h{font-size:11.5px;font-weight:700;color:var(--navy);margin:2px 0 7px;}
+  .sub-h{font-size:13px;font-weight:700;color:var(--navy);margin:2px 0 7px;}
 
   /* ── 3단 파이프라인 플로우 ── */
   .flow-wrapper{padding:22px 38px 0;}
@@ -108,7 +108,7 @@
   .subtab.active{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 4px 12px rgba(26,79,171,.28);}
   .bm-card{margin-bottom:16px;}
   .bm-card .sec-card{box-shadow:var(--shadow);}
-  .bm-row{display:flex;gap:12px;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:11.5px;align-items:flex-start;}
+  .bm-row{display:flex;gap:12px;padding:7px 0;border-bottom:1px solid #F1F5F9;font-size:13px;align-items:flex-start;}
   .bm-row:last-of-type{border-bottom:none;}
   .bm-k{flex-shrink:0;width:84px;font-weight:700;color:var(--navy);}
   .bm-v{flex:1;color:var(--text);}
@@ -116,7 +116,7 @@
   .bm-src a{color:var(--blue);text-decoration:none;}
   .bm-src a:hover{text-decoration:underline;}
   .chk-h{font-size:11.5px;font-weight:700;color:var(--navy);margin:10px 0 4px;}
-  .chk-item{display:flex;gap:8px;font-size:11.5px;padding:3px 0;align-items:flex-start;}
+  .chk-item{display:flex;gap:8px;font-size:13px;padding:3px 0;align-items:flex-start;}
   .chk-item .cb{flex-shrink:0;color:var(--blue);font-weight:800;}
   .chk-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 20px;}
   @media(max-width:680px){.chk-cols{grid-template-columns:1fr;}}
