@@ -204,6 +204,39 @@
   #v1 .stage-body{flex:1;overflow-y:auto;padding:8px 10px;}
   #v1 .stage-body::-webkit-scrollbar{width:3px;}
   #v1 .stage-body::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:99px;}
+
+  /* ── 뷰9: 4기 실제 커리큘럼 캘린더 ── */
+  .curr-week-label{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:8px;}
+  .curr-week1 .curr-week-label{background:#DBEAFE;color:#1E40AF;}
+  .curr-week2 .curr-week-label{background:#D1FAE5;color:#065F46;}
+  .curr-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:18px;}
+  .curr-day{border:1px solid var(--border);border-top:4px solid #93C5FD;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:6px;background:#fff;}
+  .curr-week1 .curr-day{border-top-color:#1A4FAB;}
+  .curr-week2 .curr-day{border-top-color:#059669;}
+  .curr-day.is-today{border-top-color:#D97706 !important;background:#FFFBEB;box-shadow:0 0 0 1.5px #FDE68A;}
+  .curr-day-head{display:flex;align-items:center;justify-content:space-between;font-size:11.5px;font-weight:700;color:#0F172A;}
+  .curr-today-badge{display:none;background:#D97706;color:#fff;font-size:8.5px;font-weight:700;border-radius:99px;padding:1px 7px;}
+  .curr-day.is-today .curr-today-badge{display:inline-block;}
+  .curr-day-title{font-size:11px;font-weight:700;color:#1E40AF;}
+  .curr-week2 .curr-day-title{color:#065F46;}
+  .curr-blocks{border-top:1px dashed var(--border);padding-top:5px;display:flex;flex-direction:column;gap:3px;}
+  .curr-block{display:flex;gap:5px;font-size:9px;line-height:1.5;color:#374151;}
+  .curr-block .t{flex-shrink:0;width:56px;color:#94A3B8;}
+  .curr-block.lunch .c{color:#B45309;}
+  .curr-day-simple{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:14px 0;text-align:center;}
+  .curr-day-simple .tm{font-size:9px;color:#94A3B8;}
+  .curr-day-mat{border-top:1px solid var(--border);padding-top:5px;font-size:8.5px;color:#64748B;}
+  .curr-ojt-banner{display:flex;align-items:center;gap:10px;border:1px solid var(--border);border-left:4px solid #4338CA;background:#EEF2FF;border-radius:9px;padding:10px 14px;font-size:12px;color:#374151;}
+  .curr-ojt-badge{flex-shrink:0;background:#E0E7FF;color:#3730A3;font-size:10.5px;font-weight:700;border-radius:99px;padding:3px 10px;}
+  .curr-trainees{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  .curr-trainee{border:1px solid var(--border);border-left:4px solid #94A3B8;border-radius:9px;padding:10px 12px;background:#fff;}
+  .curr-trainee-name{font-size:13.5px;font-weight:700;color:#0F172A;}
+  .curr-trainee-track{font-size:10px;font-weight:400;color:#94A3B8;}
+  .curr-trainee-store{font-size:11px;color:#475569;margin-top:3px;}
+  @media (max-width: 900px){
+    .curr-grid{grid-template-columns:repeat(2,1fr);}
+    .curr-trainees{grid-template-columns:repeat(2,1fr);}
+  }
 </style>
 </head>
 <body>
@@ -225,6 +258,7 @@
       <button class="tab" data-view="v6"><span class="tnum">6</span><span class="tlabel">사후 관리 방안</span></button>
       <button class="tab" data-view="v7"><span class="tnum">7</span><span class="tlabel">이슈 및 해결 방안</span></button>
       <button class="tab" data-view="v8"><span class="tnum">8</span><span class="tlabel">타브랜드 아카데미</span></button>
+      <button class="tab" data-view="v9"><span class="tnum">9</span><span class="tlabel">4기 실제 커리큘럼</span></button>
     </nav>
     <div class="sb-foot"><span id="f-doc">문서 SLC-HR-2026-002</span></div>
   </aside>
@@ -2092,6 +2126,174 @@
       </div>
     </section>
 
+    <!-- ===== 뷰9: 4기 실제 커리큘럼 캘린더 ===== -->
+    <section id="v9" class="view">
+      <div class="grid">
+
+        <div class="sec-card c-blue wide">
+          <div class="sec-card-head"><span>📅 4기 2주 아카데미 캘린더</span><span class="meta">2026-07-20 ~ 2026-07-31 · 고명외식고 4명</span></div>
+          <div class="sec-card-body">
+
+            <div class="curr-week1">
+              <span class="curr-week-label">1주차 · 조직 이해 및 기본 소양</span>
+              <div class="curr-grid">
+                <div class="curr-day" data-date="2026-07-20">
+                  <div class="curr-day-head"><span>07/20 (월)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">오리엔테이션 및 영상 교육</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~10:30</span><span class="c">입소식 및 오리엔테이션</span></div>
+                    <div class="curr-block"><span class="t">10:30~12:00</span><span class="c">삼천리 홍보영상 시청(youtube)</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">점심시간 및 휴게 (서리재)</span></div>
+                    <div class="curr-block"><span class="t">13:00~15:00</span><span class="c">인사 기본 사항 영상 시청</span></div>
+                    <div class="curr-block"><span class="t">15:00~17:00</span><span class="c">위생교육 영상 시청</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">안전교육 영상 시청</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 영상준비 · 부림 2층 예약</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-21">
+                  <div class="curr-day-head"><span>07/21 (화)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">조리의 기초 이론 및 칼 연마</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~10:30</span><span class="c">개인 위생(복장준수) 및 주방 매너 교육</span></div>
+                    <div class="curr-block"><span class="t">10:30~12:00</span><span class="c">기본 조리 용어</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">점심시간 및 휴게 (차이797)</span></div>
+                    <div class="curr-block"><span class="t">13:00~15:00</span><span class="c">칼 연마 및 파지법</span></div>
+                    <div class="curr-block"><span class="t">15:00~17:00</span><span class="c">식재료 전처리 기초 (칼질 기초)</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">일일 결산 및 청소</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 세척 무 · 숫돌 3종</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-22">
+                  <div class="curr-day-head"><span>07/22 (수)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">칼 파지법 및 칼 사용법</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~10:30</span><span class="c">식재료 전처리 기초 (칼질 기초)</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">점심시간 및 휴게 (바른고기 정육점)</span></div>
+                    <div class="curr-block"><span class="t">13:00~15:00</span><span class="c">식재료 전처리 기초 (칼질 기초)</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">일일 결산 및 청소</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 세척 무</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-23">
+                  <div class="curr-day-head"><span>07/23 (목)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">칼질 기초</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~10:30</span><span class="c">식재료 전처리 기초 (칼질 기초)</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">점심시간 및 휴게 (서리재)</span></div>
+                    <div class="curr-block"><span class="t">13:00~15:00</span><span class="c">식재료 전처리 기초 (칼질 기초)</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">일일 결산 및 청소</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 대파 · 양파</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-24">
+                  <div class="curr-day-head"><span>07/24 (금)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">기초 평가</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~10:30</span><span class="c">주간 복습 및 퀴즈(조리용어 쪽지시험)</span></div>
+                    <div class="curr-block"><span class="t">10:30~12:00</span><span class="c">위생/안전 테스트(위생,안전 쪽지 시험)</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">점심시간 및 휴게</span></div>
+                    <div class="curr-block"><span class="t">13:00~15:00</span><span class="c">칼질 생산성 테스트 (정확도, 생산량)</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">1주차 총평 및 귀가</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 우수 실습생 경품 지급</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="curr-week2">
+              <span class="curr-week-label">2주차 · 조리 기초 실무</span>
+              <div class="curr-grid">
+                <div class="curr-day" data-date="2026-07-27">
+                  <div class="curr-day-head"><span>07/27 (월)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">매뉴얼 교육</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~10:30</span><span class="c">SL&amp;C 브랜드의 이해</span></div>
+                    <div class="curr-block"><span class="t">10:30~12:00</span><span class="c">브랜드 별 메뉴 소개</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">점심식사 및 휴게</span></div>
+                    <div class="curr-block"><span class="t">13:00~15:00</span><span class="c">소스 제조 및 계량 저울의 활용</span></div>
+                    <div class="curr-block"><span class="t">15:00~17:00</span><span class="c">브랜드 별 주요 소스 조리</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">일일 결산 및 청소</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 브랜드 별 컨셉 및 메뉴 조사(메뉴판)</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-28">
+                  <div class="curr-day-head"><span>07/28 (화)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">조리 실습1</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~12:00</span><span class="c">브랜드 별 메뉴 조리 (전처리)</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">점심식사 및 휴게</span></div>
+                    <div class="curr-block"><span class="t">13:00~17:00</span><span class="c">브랜드 별 메뉴 조리 (조리 후 품평회)</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">일일 결산 및 청소</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 브랜드 별 주요 메뉴 레시피</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-29">
+                  <div class="curr-day-head"><span>07/29 (수)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">조리 실습2</div>
+                  <div class="curr-blocks">
+                    <div class="curr-block"><span class="t">09:00~10:30</span><span class="c">브랜드 별 밥 짓기</span></div>
+                    <div class="curr-block lunch"><span class="t">12:00~13:00</span><span class="c">품평회 및 시식 (식사 대체)</span></div>
+                    <div class="curr-block"><span class="t">13:00~15:00</span><span class="c">피드백 및 반복 트레이닝</span></div>
+                    <div class="curr-block"><span class="t">17:00~18:00</span><span class="c">일일 결산 및 청소</span></div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 중식 계란볶음밥 · 일식 박고지 호소마키 · 정육점 된장찌개 백반 · 자유식 식자재 발주 (개별 선택)</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-30">
+                  <div class="curr-day-head"><span>07/30 (목)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">직원식 조리</div>
+                  <div class="curr-day-simple">
+                    <span class="tm">09:00~18:00</span>
+                    <div class="curr-day-title" style="font-size:12.5px;">자율 조리 후 품평회 및 아카데미 수료식<br>(조리 롤플레잉: 빌 프린트 확인)</div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 매장 요청에 의한 빌 프린트 확인 교육</div>
+                </div>
+                <div class="curr-day" data-date="2026-07-31">
+                  <div class="curr-day-head"><span>07/31 (금)</span><span class="curr-today-badge">오늘</span></div>
+                  <div class="curr-day-title">현장 견학 및 점실장 상견례</div>
+                  <div class="curr-day-simple">
+                    <span class="tm">09:00~18:00</span>
+                    <div class="curr-day-title" style="font-size:12.5px;">현장 견학 (배치 매장 투어)<br>인솔: 김효중 실장</div>
+                  </div>
+                  <div class="curr-day-mat">준비물: 운영팀 협의 후 배치 매장 결정</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="curr-ojt-banner">
+              <span class="curr-ojt-badge">현장실습 (OJT)</span>
+              <span>2026-08-03 ~ 2026-10-11 · (주)삼천리이엔지 매장 · 총 420시간</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="sec-card c-gold wide">
+          <div class="sec-card-head"><span>🧑‍🍳 교육생 배치 현황</span><span class="meta">운영팀 배치매장 협의중 · 미확정</span></div>
+          <div class="sec-card-body">
+            <div class="curr-trainees">
+              <div class="curr-trainee" style="border-left-color:#1baf7a;">
+                <div class="curr-trainee-name">민지원 <span class="curr-trainee-track">(딤섬)</span></div>
+                <div class="curr-trainee-store">배치(예정): 차이797</div>
+              </div>
+              <div class="curr-trainee" style="border-left-color:#2a78d6;">
+                <div class="curr-trainee-name">이은혁 <span class="curr-trainee-track">(일식)</span></div>
+                <div class="curr-trainee-store">배치(예정): 이타마에스시</div>
+              </div>
+              <div class="curr-trainee" style="border-left-color:#2a78d6;">
+                <div class="curr-trainee-name">최민준 <span class="curr-trainee-track">(일식)</span></div>
+                <div class="curr-trainee-store">배치(예정): 이타마에스시</div>
+              </div>
+              <div class="curr-trainee" style="border-left-color:#e34948;">
+                <div class="curr-trainee-name">황한결 <span class="curr-trainee-track">(정육)</span></div>
+                <div class="curr-trainee-store">배치(예정): 정육점</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     </main>
   </div>
 </div>
@@ -2107,14 +2309,15 @@
     v5:{t:'운영 인력 구성 및 매장 배치 정책', d:'채용팀 R&R · 매장(영업팀) R&R'},
     v6:{t:'사후 관리 방안', d:'타브랜드 이탈율 벤치마크 + 90일 정착관리(원인5대·캘린더·5만원 예산) + Claude 추천 추가안'},
     v7:{t:'이슈 및 해결 방안', d:'아카데미 운영 10대 이슈 — 타브랜드·업계 근거 + 삼천리 SL&C 해결 방안 (카테고리 인덱스)'},
-    v8:{t:'타브랜드 아카데미', d:'7개사(SPC·CJ·더본·아워홈·본아이에프·이랜드·롯데GRS) 조리 아카데미 벤치마킹 — 회사별 인덱스'}
+    v8:{t:'타브랜드 아카데미', d:'7개사(SPC·CJ·더본·아워홈·본아이에프·이랜드·롯데GRS) 조리 아카데미 벤치마킹 — 회사별 인덱스'},
+    v9:{t:'4기 실제 커리큘럼', d:'고명외식고 4기 실습생 4명 · 2주 아카데미 상세 시간표 + 현장실습(OJT) 일정 · 배치 협의중'}
   };
-  var order = ['v1','v2','v3','v4','v5','v6','v7','v8'];
+  var order = ['v1','v2','v3','v4','v5','v6','v7','v8','v9'];
   function setHead(id){
     var v=VIEWS[id]; if(!v) return;
     document.getElementById('vh-title').textContent=v.t;
     document.getElementById('vh-desc').textContent=v.d;
-    document.getElementById('vh-eyebrow').textContent='VIEW '+(order.indexOf(id)+1)+' / 8';
+    document.getElementById('vh-eyebrow').textContent='VIEW '+(order.indexOf(id)+1)+' / '+order.length;
   }
   document.querySelectorAll('.tab').forEach(function(t){
     t.addEventListener('click', function(){
@@ -2412,6 +2615,13 @@
   document.head.appendChild(s);
 })();
 
+// 뷰9: 오늘 날짜에 해당하는 캘린더 칸 강조 (열람 시점 기준, 매번 재계산)
+(function(){
+  var y=new Date(), pad=function(n){return n<10?'0'+n:''+n;};
+  var today=y.getFullYear()+'-'+pad(y.getMonth()+1)+'-'+pad(y.getDate());
+  var cell=document.querySelector('#v9 .curr-day[data-date="'+today+'"]');
+  if(cell) cell.classList.add('is-today');
+})();
 </script>
 </body>
 </html>
