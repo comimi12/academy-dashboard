@@ -39,8 +39,12 @@
   .tab-sub .tnum{width:18px;height:18px;font-size:10px;background:rgba(255,255,255,.07);}
   .tab-sub::before{content:'└';position:absolute;left:14px;font-size:11px;color:rgba(255,255,255,.3);pointer-events:none;}
   .tab-sub.active{background:linear-gradient(90deg,#1E40AF,#1D4ED8);}
-  .tab-group-label{display:flex;align-items:center;gap:11px;width:100%;padding:11px 13px;color:rgba(255,255,255,.45);font-size:15px;font-weight:700;border-radius:10px;margin-bottom:3px;cursor:default;border:1px dashed rgba(255,255,255,.15);}
-  .tab-group-label .tnum{width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,.06);color:rgba(255,255,255,.35);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .tab-group-label{display:flex;align-items:center;gap:11px;width:100%;padding:11px 13px;color:#93C5FD;font-size:15px;font-weight:700;border-radius:10px;margin-bottom:3px;cursor:default;border:1px dashed rgba(147,197,253,.25);}
+  .tab-group-label .tnum{width:22px;height:22px;border-radius:6px;background:rgba(147,197,253,.15);color:#93C5FD;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .tab-parent .tlabel{color:#93C5FD;}
+  .tab-parent .tnum{background:rgba(147,197,253,.15);color:#93C5FD;}
+  .tab-parent:hover .tlabel{color:#BFDBFE;}
+  .tab-parent.active .tlabel{color:#fff;}
   .tab-group.has-label::before{top:48px;}
   .sb-foot{padding:14px 22px 18px;border-top:1px solid rgba(255,255,255,.08);font-size:10px;color:rgba(255,255,255,.42);line-height:1.6;}
   .sb-foot strong{color:rgba(255,255,255,.7);}
@@ -261,19 +265,19 @@
       <div class="cap">Views</div>
       <!-- 그룹1: 신규 아카데미 채용 계획 -->
       <div class="tab-group" style="position:relative;">
-        <button class="tab active" data-view="v1"><span class="tnum">1</span><span class="tlabel">신규 아카데미 채용 계획</span></button>
+        <button class="tab tab-parent active" data-view="v1"><span class="tnum">1</span><span class="tlabel">신규 아카데미 채용 계획</span></button>
         <button class="tab tab-sub" data-view="v10" style="position:relative;"><span class="tnum">·</span><span class="tlabel">중장년층 고용시 고려하면 좋은점</span></button>
       </div>
       <!-- 그룹2: 아카데미 매장 시뮬레이션 -->
       <div class="tab-group" style="position:relative;">
-        <button class="tab" data-view="v2"><span class="tnum">2</span><span class="tlabel">아카데미 매장 시뮬레이션</span></button>
+        <button class="tab tab-parent" data-view="v2"><span class="tnum">2</span><span class="tlabel">아카데미 매장 시뮬레이션</span></button>
         <button class="tab tab-sub" data-view="v11" style="position:relative;"><span class="tnum">·</span><span class="tlabel">아카데미_구내식당형 후보지</span></button>
         <button class="tab tab-sub" data-view="v5" style="position:relative;"><span class="tnum">·</span><span class="tlabel">운영 인력 구성 및 매장 배치 정책</span></button>
         <button class="tab tab-sub" data-view="v4" style="position:relative;"><span class="tnum">·</span><span class="tlabel">(NEW Ver.) 아카데미 상세 커리큘럼</span></button>
       </div>
       <!-- 그룹3: 기존 아카데미 현황 -->
       <div class="tab-group" style="position:relative;">
-        <button class="tab" data-view="v3"><span class="tnum">3</span><span class="tlabel">기존 아카데미 현황</span></button>
+        <button class="tab tab-parent" data-view="v3"><span class="tnum">3</span><span class="tlabel">기존 아카데미 현황</span></button>
         <button class="tab tab-sub" data-view="v9" style="position:relative;"><span class="tnum">·</span><span class="tlabel">(기존ver.) 4기 커리큘럼</span></button>
       </div>
       <!-- 그룹4: 기타 고려사항 -->
