@@ -33,6 +33,12 @@
   .tab:hover{background:rgba(255,255,255,.08);color:#fff;}
   .tab.active{background:linear-gradient(90deg,#1D4ED8,#2563EB);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(29,78,216,.45);}
   .tab.active .tnum{background:rgba(255,255,255,.25);color:#fff;}
+  .tab-group{position:relative;}
+  .tab-group::before{content:'';position:absolute;left:22px;top:44px;bottom:8px;width:1.5px;background:rgba(255,255,255,.18);border-radius:2px;}
+  .tab-sub{padding-left:36px;font-size:13px;color:rgba(255,255,255,.58);}
+  .tab-sub .tnum{width:18px;height:18px;font-size:10px;background:rgba(255,255,255,.07);}
+  .tab-sub::before{content:'└';position:absolute;left:14px;font-size:11px;color:rgba(255,255,255,.3);pointer-events:none;}
+  .tab-sub.active{background:linear-gradient(90deg,#1E40AF,#1D4ED8);}
   .sb-foot{padding:14px 22px 18px;border-top:1px solid rgba(255,255,255,.08);font-size:10px;color:rgba(255,255,255,.42);line-height:1.6;}
   .sb-foot strong{color:rgba(255,255,255,.7);}
 
@@ -250,9 +256,11 @@
     </div>
     <nav class="nav">
       <div class="cap">Views</div>
-      <button class="tab active" data-view="v1"><span class="tnum">1</span><span class="tlabel">신규 아카데미 채용 계획</span></button>
-      <button class="tab" data-view="v10"><span class="tnum">2</span><span class="tlabel">중장년층 고용시 고려하면 좋은점</span></button>
-      <button class="tab" data-view="v2"><span class="tnum">3</span><span class="tlabel">아카데미 매장 시뮬레이션</span></button>
+      <div class="tab-group" style="position:relative;">
+        <button class="tab active" data-view="v1"><span class="tnum">1</span><span class="tlabel">신규 아카데미 채용 계획</span></button>
+        <button class="tab tab-sub" data-view="v2" style="position:relative;"><span class="tnum">2</span><span class="tlabel">아카데미 매장 시뮬레이션</span></button>
+      </div>
+      <button class="tab" data-view="v10"><span class="tnum">3</span><span class="tlabel">중장년층 고용시 고려하면 좋은점</span></button>
       <button class="tab" data-view="v3"><span class="tnum">4</span><span class="tlabel">기존 아카데미 현황</span></button>
       <button class="tab" data-view="v5"><span class="tnum">5</span><span class="tlabel">운영 인력 구성 및 매장 배치 정책</span></button>
       <button class="tab" data-view="v11"><span class="tnum">6</span><span class="tlabel">아카데미_구내식당형 후보지</span></button>
@@ -2654,7 +2662,7 @@
     v10:{t:'중장년층 고용시 고려하면 좋은점', d:'3기 수료생 석OO 조기 퇴사 사례 분석 · 중장년층 고용 시 근무시간 단축·업무 조정 권고사항'},
     v11:{t:'아카데미_구내식당형 후보지', d:'신규 후보지 2곳 비교 — 이수아파트 상가 203호 vs 서리풀J빌딩 · 건축물대장 기준'}
   };
-  var order = ['v1','v10','v2','v3','v5','v11','v9','v4','v6','v7','v8'];
+  var order = ['v1','v2','v10','v3','v5','v11','v9','v4','v6','v7','v8'];
   function setHead(id){
     var v=VIEWS[id]; if(!v) return;
     document.getElementById('vh-title').textContent=v.t;
