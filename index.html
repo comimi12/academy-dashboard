@@ -697,67 +697,76 @@
         <div class="sec-card c-gold wide">
           <div class="sec-card-head"><span>📍 아카데미 매장 공간 구성</span></div>
           <div class="sec-card-body">
-            <!-- 공간 구성 3구역 -->
-            <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-bottom:20px;">
-              <!-- 도넛 SVG -->
-              <div style="text-align:center;flex-shrink:0;">
-                <svg width="170" height="170" viewBox="0 0 36 36">
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#F3F4F6" stroke-width="4"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#D97706" stroke-width="4"
-                    stroke-dasharray="50 50" stroke-dashoffset="0"
-                    transform="rotate(-90 18 18)"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1D4ED8" stroke-width="4"
-                    stroke-dasharray="33 67" stroke-dashoffset="-50"
-                    transform="rotate(-90 18 18)"/>
-                  <circle cx="18" cy="18" r="15.9" fill="none" stroke="#059669" stroke-width="4"
-                    stroke-dasharray="17 83" stroke-dashoffset="-83"
-                    transform="rotate(-90 18 18)"/>
-                  <text x="18" y="17" text-anchor="middle" font-size="3.5" font-weight="700" fill="#64748B">공간 구성</text>
-                </svg>
-                <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px;text-align:left;padding:0 8px;">
-                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#D97706;flex-shrink:0;"></span>주방 (50%)</div>
-                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#1D4ED8;flex-shrink:0;"></span>교육·식당 (33%)</div>
-                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#059669;flex-shrink:0;"></span>행정 공간 및 지원 공간 (17%)</div>
-                </div>
-              </div>
-              <!-- 구역별 카드 -->
-              <div style="display:flex;flex-direction:column;gap:10px;">
-                <div style="background:#FFFBEB;border-radius:10px;padding:11px 14px;border-left:4px solid #D97706;display:flex;align-items:flex-start;gap:12px;">
-                  <div style="font-size:26px;line-height:1;margin-top:2px;">🍳</div>
-                  <div>
-                    <div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:3px;">주방 <span style="font-size:10px;font-weight:600;background:#FEF3C7;padding:1px 6px;border-radius:99px;">50%</span></div>
-                    <div style="font-size:10px;color:#78350F;line-height:1.65;">산업용 조리장비 &nbsp;·&nbsp; 한·중·일 메뉴 동시 조리 &nbsp;·&nbsp; 교육생 현장 실습</div>
+            <!-- 3열 공간 카드 -->
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;">
+
+              <!-- ① 주방 -->
+              <div style="border-radius:14px;overflow:hidden;border:2px solid #FDE68A;display:flex;flex-direction:column;">
+                <!-- 설명 박스 (사진 위) -->
+                <div style="background:#92400E;padding:16px 18px;">
+                  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    <span style="font-size:22px;">🍳</span>
+                    <span style="font-size:14px;font-weight:800;color:#FEF3C7;line-height:1.2;">주방</span>
+                    <span style="margin-left:auto;background:#D97706;color:#fff;font-size:9px;font-weight:800;padding:3px 10px;border-radius:99px;">50%</span>
+                  </div>
+                  <div style="font-size:10px;color:#FDE68A;line-height:1.8;">
+                    · 산업용 조리장비 설치<br>
+                    · 한·중·일 메뉴 동시 조리<br>
+                    · 교육생 현장 실습 공간
                   </div>
                 </div>
-                <div style="background:#EFF6FF;border-radius:10px;padding:11px 14px;border-left:4px solid #1D4ED8;display:flex;align-items:flex-start;gap:12px;">
-                  <div style="font-size:26px;line-height:1;margin-top:2px;">🏫</div>
-                  <div>
-                    <div style="font-size:12px;font-weight:800;color:#1E3A8A;margin-bottom:3px;">교육·식당 <span style="font-size:10px;font-weight:600;background:#DBEAFE;padding:1px 6px;border-radius:99px;">33%</span></div>
-                    <div style="font-size:10px;color:#1E40AF;line-height:1.65;">오전: 이론·실습 교육실 &nbsp;·&nbsp; 점심: 임직원 식당 겸용 &nbsp;·&nbsp; 약 20석</div>
-                  </div>
-                </div>
-                <div style="background:#ECFDF5;border-radius:10px;padding:11px 14px;border-left:4px solid #059669;display:flex;align-items:flex-start;gap:12px;">
-                  <div style="font-size:26px;line-height:1;margin-top:2px;">📦</div>
-                  <div>
-                    <div style="font-size:12px;font-weight:800;color:#065F46;margin-bottom:3px;">행정 공간 및 지원 공간 <span style="font-size:10px;font-weight:600;background:#D1FAE5;padding:1px 6px;border-radius:99px;">17%</span></div>
-                    <div style="font-size:10px;color:#047857;line-height:1.65;">강사·행정 사무 &nbsp;·&nbsp; 교육생 탈의·락커 &nbsp;·&nbsp; 식재료 보관 &nbsp;·&nbsp; 대기·휴게</div>
-                  </div>
+                <!-- 사진 영역 -->
+                <div style="flex:1;background:#FEF9C3;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+                  <!-- 사진 교체 시 아래 div를 <img src="..." style="width:100%;height:100%;object-fit:cover;"> 로 교체 -->
+                  <div style="font-size:36px;opacity:.45;">📷</div>
+                  <div style="font-size:9px;color:#92400E;font-weight:600;opacity:.6;">사진 삽입 예정</div>
                 </div>
               </div>
-            </div>
-            <!-- 이미지 — AI 렌더링 자료 -->
-            <div>
-              <div style="font-size:10px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.05em;">📷 공간 레퍼런스 이미지</div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                <div style="border-radius:10px;background:#F1F5F9;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:2px dashed #CBD5E1;">
-                  <div style="font-size:32px;">🍱</div>
-                  <div style="font-size:10px;font-weight:700;color:#64748B;text-align:center;">구내식당형 점심 — 한·중·일 로테이션<br><span style="font-size:9px;font-weight:400;color:#94A3B8;">AI 렌더링 이미지 삽입 예정</span></div>
+
+              <!-- ② 교육장·식당 -->
+              <div style="border-radius:14px;overflow:hidden;border:2px solid #BFDBFE;display:flex;flex-direction:column;">
+                <!-- 설명 박스 (사진 위) -->
+                <div style="background:#1E3A8A;padding:16px 18px;">
+                  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    <span style="font-size:22px;">🏫</span>
+                    <span style="font-size:14px;font-weight:800;color:#DBEAFE;line-height:1.2;">교육장·식당</span>
+                    <span style="margin-left:auto;background:#1D4ED8;color:#fff;font-size:9px;font-weight:800;padding:3px 10px;border-radius:99px;">33%</span>
+                  </div>
+                  <div style="font-size:10px;color:#BFDBFE;line-height:1.8;">
+                    · 오전: 이론·실습 교육실<br>
+                    · 칠판·식판·목재 의자 · 약 20석<br>
+                    · 점심: 임직원 식당 겸용
+                  </div>
                 </div>
-                <div style="border-radius:10px;background:#F1F5F9;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:2px dashed #CBD5E1;">
-                  <div style="font-size:32px;">🏫</div>
-                  <div style="font-size:10px;font-weight:700;color:#64748B;text-align:center;">교실형 식당 공간<br><span style="font-size:9px;font-weight:400;color:#94A3B8;">AI 렌더링 이미지 삽입 예정</span></div>
+                <!-- 사진 영역 -->
+                <div style="flex:1;background:#EFF6FF;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+                  <div style="font-size:36px;opacity:.45;">📷</div>
+                  <div style="font-size:9px;color:#1E3A8A;font-weight:600;opacity:.6;">사진 삽입 예정</div>
                 </div>
               </div>
+
+              <!-- ③ 행정 공간 및 지원 공간 -->
+              <div style="border-radius:14px;overflow:hidden;border:2px solid #86EFAC;display:flex;flex-direction:column;">
+                <!-- 설명 박스 (사진 위) -->
+                <div style="background:#065F46;padding:16px 18px;">
+                  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                    <span style="font-size:22px;">📦</span>
+                    <span style="font-size:13px;font-weight:800;color:#D1FAE5;line-height:1.2;">행정 공간 및 지원 공간</span>
+                    <span style="margin-left:auto;background:#059669;color:#fff;font-size:9px;font-weight:800;padding:3px 10px;border-radius:99px;">17%</span>
+                  </div>
+                  <div style="font-size:10px;color:#A7F3D0;line-height:1.8;">
+                    · 강사·행정 사무<br>
+                    · 교육생 탈의·락커<br>
+                    · 식재료 보관 · 대기·휴게
+                  </div>
+                </div>
+                <!-- 사진 영역 -->
+                <div style="flex:1;background:#ECFDF5;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+                  <div style="font-size:36px;opacity:.45;">📷</div>
+                  <div style="font-size:9px;color:#065F46;font-weight:600;opacity:.6;">사진 삽입 예정</div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
