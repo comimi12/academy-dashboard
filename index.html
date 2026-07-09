@@ -266,11 +266,10 @@
       <!-- 파트 1: 채용 계획 -->
       <div class="tab-group" style="position:relative;">
         <button class="tab tab-parent active" data-view="v1"><span class="tnum">1</span><span class="tlabel">연간 채용 계획</span></button>
-        <button class="tab tab-sub" data-view="v10" style="position:relative;"><span class="tnum">·</span><span class="tlabel">중장년층 고용 고려사항</span></button>
       </div>
-      <!-- 파트 2: 운영 모델 -->
+      <!-- 파트 2: 아카데미 모델 -->
       <div class="tab-group" style="position:relative;">
-        <button class="tab tab-parent" data-view="v2"><span class="tnum">2</span><span class="tlabel">운영 모델</span></button>
+        <button class="tab tab-parent" data-view="v2"><span class="tnum">2</span><span class="tlabel">아카데미 모델</span></button>
         <button class="tab tab-sub" data-view="v11" style="position:relative;"><span class="tnum">·</span><span class="tlabel">아카데미 구내식당형<br>후보지</span></button>
         <button class="tab tab-sub" data-view="v5" style="position:relative;"><span class="tnum">·</span><span class="tlabel">운영 인력 구성</span></button>
         <button class="tab tab-sub" data-view="v4" style="position:relative;"><span class="tnum">·</span><span class="tlabel">아카데미 커리큘럼</span></button>
@@ -655,7 +654,7 @@
 
         <!-- 매장 컨셉 -->
         <div class="sec-card c-blue wide">
-          <div class="sec-card-head"><span>🍱 매장 컨셉 — SL&amp;C 조리 아카데미 겸 사내 구내식당</span></div>
+          <div class="sec-card-head"><span>🎓 아카데미 모델 — SL&amp;C 조리 아카데미</span></div>
           <div class="sec-card-body">
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin-bottom:16px;">
 
@@ -696,151 +695,70 @@
 
         <!-- ① 공간 구성 도넛 차트 -->
         <div class="sec-card c-gold wide">
-          <div class="sec-card-head"><span>📍 방배동 아카데미 매장 공간 구성 (총 30평)</span></div>
+          <div class="sec-card-head"><span>📍 아카데미 매장 공간 구성</span></div>
           <div class="sec-card-body">
-            <!-- 위치 한 줄 -->
-            <div style="text-align:center;font-size:11px;color:var(--muted);margin-bottom:18px;background:#FFFBEB;border-radius:8px;padding:7px 14px;border:1px solid #FDE68A;">
-              📍 서초구 방배동 서래마을 인근 &nbsp;·&nbsp; 방배역 도보 5분 이내 &nbsp;·&nbsp; 2층 상가 (99㎡) &nbsp;·&nbsp; 제2종 근린생활시설 &nbsp;·&nbsp; 음식점 허가 가능
-            </div>
-            <!-- 도넛 차트 + 구역 카드 -->
-            <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;">
+            <!-- 공간 구성 3구역 -->
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;margin-bottom:20px;">
               <!-- 도넛 SVG -->
               <div style="text-align:center;flex-shrink:0;">
                 <svg width="170" height="170" viewBox="0 0 36 36">
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#F3F4F6" stroke-width="4"/>
-                  <!-- 주방 50% -->
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#D97706" stroke-width="4"
                     stroke-dasharray="50 50" stroke-dashoffset="0"
                     transform="rotate(-90 18 18)"/>
-                  <!-- 교육·식당 33% -->
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#1D4ED8" stroke-width="4"
                     stroke-dasharray="33 67" stroke-dashoffset="-50"
                     transform="rotate(-90 18 18)"/>
-                  <!-- 창고·탈의·사무·대기 17% -->
                   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#059669" stroke-width="4"
                     stroke-dasharray="17 83" stroke-dashoffset="-83"
                     transform="rotate(-90 18 18)"/>
-                  <text x="18" y="15.5" text-anchor="middle" font-size="6.5" font-weight="900" fill="#0F2147">30평</text>
-                  <text x="18" y="21" text-anchor="middle" font-size="2.8" fill="#64748B">총 면적</text>
+                  <text x="18" y="17" text-anchor="middle" font-size="3.5" font-weight="700" fill="#64748B">공간 구성</text>
                 </svg>
-                <!-- 범례 -->
                 <div style="display:flex;flex-direction:column;gap:5px;margin-top:6px;text-align:left;padding:0 8px;">
-                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#D97706;flex-shrink:0;"></span>주방 15평 (50%)</div>
-                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#1D4ED8;flex-shrink:0;"></span>교육·식당 10평 (33%)</div>
-                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#059669;flex-shrink:0;"></span>창고·탈의·사무·대기 5평 (17%)</div>
+                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#D97706;flex-shrink:0;"></span>주방 (50%)</div>
+                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#1D4ED8;flex-shrink:0;"></span>교육·식당 (33%)</div>
+                  <div style="display:flex;align-items:center;gap:6px;font-size:10px;"><span style="width:12px;height:12px;border-radius:3px;background:#059669;flex-shrink:0;"></span>행정 공간 및 지원 공간 (17%)</div>
                 </div>
               </div>
-              <!-- 구역별 세부 카드 -->
+              <!-- 구역별 카드 -->
               <div style="display:flex;flex-direction:column;gap:10px;">
                 <div style="background:#FFFBEB;border-radius:10px;padding:11px 14px;border-left:4px solid #D97706;display:flex;align-items:flex-start;gap:12px;">
                   <div style="font-size:26px;line-height:1;margin-top:2px;">🍳</div>
                   <div>
-                    <div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:3px;">주방 — 15평 <span style="font-size:10px;font-weight:600;background:#FEF3C7;padding:1px 6px;border-radius:99px;">50%</span></div>
-                    <div style="font-size:10px;color:#78350F;line-height:1.65;">산업용 조리장비 설치 &nbsp;·&nbsp; 한·중·일 메뉴 5~7종 동시 조리 &nbsp;·&nbsp; 교육생 현장 실습 공간</div>
+                    <div style="font-size:12px;font-weight:800;color:#92400E;margin-bottom:3px;">주방 <span style="font-size:10px;font-weight:600;background:#FEF3C7;padding:1px 6px;border-radius:99px;">50%</span></div>
+                    <div style="font-size:10px;color:#78350F;line-height:1.65;">산업용 조리장비 &nbsp;·&nbsp; 한·중·일 메뉴 동시 조리 &nbsp;·&nbsp; 교육생 현장 실습</div>
                   </div>
                 </div>
                 <div style="background:#EFF6FF;border-radius:10px;padding:11px 14px;border-left:4px solid #1D4ED8;display:flex;align-items:flex-start;gap:12px;">
                   <div style="font-size:26px;line-height:1;margin-top:2px;">🏫</div>
                   <div>
-                    <div style="font-size:12px;font-weight:800;color:#1E3A8A;margin-bottom:3px;">교육·식당 — 10평 <span style="font-size:10px;font-weight:600;background:#DBEAFE;padding:1px 6px;border-radius:99px;">33%</span></div>
-                    <div style="font-size:10px;color:#1E40AF;line-height:1.65;">학교 교실 인테리어 &nbsp;·&nbsp; 칠판·식판·목재 의자 &nbsp;·&nbsp; 약 20석 &nbsp;·&nbsp; 오전 교육 / 점심 식당 겸용 &nbsp;·&nbsp; 칸막이 없는 오픈 구조</div>
+                    <div style="font-size:12px;font-weight:800;color:#1E3A8A;margin-bottom:3px;">교육·식당 <span style="font-size:10px;font-weight:600;background:#DBEAFE;padding:1px 6px;border-radius:99px;">33%</span></div>
+                    <div style="font-size:10px;color:#1E40AF;line-height:1.65;">오전: 이론·실습 교육실 &nbsp;·&nbsp; 점심: 임직원 식당 겸용 &nbsp;·&nbsp; 약 20석</div>
                   </div>
                 </div>
                 <div style="background:#ECFDF5;border-radius:10px;padding:11px 14px;border-left:4px solid #059669;display:flex;align-items:flex-start;gap:12px;">
                   <div style="font-size:26px;line-height:1;margin-top:2px;">📦</div>
                   <div>
-                    <div style="font-size:12px;font-weight:800;color:#065F46;margin-bottom:3px;">창고·탈의·사무·대기 — 5평 <span style="font-size:10px;font-weight:600;background:#D1FAE5;padding:1px 6px;border-radius:99px;">17%</span></div>
-                    <div style="font-size:10px;color:#047857;line-height:1.65;">식재료·소모품 보관 창고 &nbsp;·&nbsp; 교육생 탈의·락커 &nbsp;·&nbsp; 강사 사무 공간 &nbsp;·&nbsp; 대기·휴게</div>
-                  </div>
-                </div>
-                <!-- 컨셉 포인트 -->
-                <div style="background:#F0FDF4;border-radius:10px;padding:10px 14px;border:1px dashed #059669;">
-                  <div style="font-size:10.5px;color:#065F46;font-weight:700;margin-bottom:4px;">💡 교실 컨셉 포인트</div>
-                  <div style="font-size:10px;color:#374151;line-height:1.75;">
-                    오늘의 급식 메뉴판 &nbsp;·&nbsp; 칠판 벽면 &nbsp;·&nbsp; 학교 식판 &nbsp;·&nbsp; 목재 1인 책상<br>
-                    오전: 이론·실습 교육실 &nbsp;→&nbsp; 점심: 초기 임직원 한정 운영 (안정화 후 외부 고객 확대 검토)<br>
-                    <b>순수식판(한남동)과 동일한 "직원식당 개방" 모델</b>
+                    <div style="font-size:12px;font-weight:800;color:#065F46;margin-bottom:3px;">행정 공간 및 지원 공간 <span style="font-size:10px;font-weight:600;background:#D1FAE5;padding:1px 6px;border-radius:99px;">17%</span></div>
+                    <div style="font-size:10px;color:#047857;line-height:1.65;">강사·행정 사무 &nbsp;·&nbsp; 교육생 탈의·락커 &nbsp;·&nbsp; 식재료 보관 &nbsp;·&nbsp; 대기·휴게</div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- 레퍼런스 이미지 -->
-            <div style="margin-top:18px;">
-              <div style="font-size:10px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.05em;">📷 레퍼런스 — 식판형 한·중·일 구내식당</div>
+            <!-- 이미지 — AI 렌더링 자료 -->
+            <div>
+              <div style="font-size:10px;font-weight:700;color:#374151;margin-bottom:8px;letter-spacing:.05em;">📷 공간 레퍼런스 이미지</div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                <div style="border-radius:10px;overflow:hidden;position:relative;">
-                  <img src="https://t4.ftcdn.net/jpg/09/49/37/13/360_F_949371340_e3dMHrDd7gXuZLzrRdi9TZq4VPDwaJpi.jpg" style="width:100%;height:200px;object-fit:cover;display:block;" alt="한식 반찬 식판 레퍼런스">
-                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.55));padding:8px 10px;">
-                    <div style="font-size:9px;color:#fff;font-weight:600;">한·중·일 로테이션 메뉴 — 5~7종 (교육생 트랙 연동)</div>
-                  </div>
+                <div style="border-radius:10px;background:#F1F5F9;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:2px dashed #CBD5E1;">
+                  <div style="font-size:32px;">🍱</div>
+                  <div style="font-size:10px;font-weight:700;color:#64748B;text-align:center;">구내식당형 점심 — 한·중·일 로테이션<br><span style="font-size:9px;font-weight:400;color:#94A3B8;">AI 렌더링 이미지 삽입 예정</span></div>
                 </div>
-                <div style="border-radius:10px;overflow:hidden;position:relative;">
-                  <img src="https://imageoptimzer.acon3d.com/?image=https:%2F%2Fstorage.acon3d.com%2Fproduct%2FbCa6NcyfbRCEXaKZFtZgi&width=2600&quality=70&watermark=true" style="width:100%;height:200px;object-fit:cover;display:block;" alt="교실형 식당 레퍼런스">
-                  <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.55));padding:8px 10px;">
-                    <div style="font-size:9px;color:#fff;font-weight:600;">교실형 식당 분위기 — 순수식판(한남동) 스타일</div>
-                  </div>
+                <div style="border-radius:10px;background:#F1F5F9;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:2px dashed #CBD5E1;">
+                  <div style="font-size:32px;">🏫</div>
+                  <div style="font-size:10px;font-weight:700;color:#64748B;text-align:center;">교실형 식당 공간<br><span style="font-size:9px;font-weight:400;color:#94A3B8;">AI 렌더링 이미지 삽입 예정</span></div>
                 </div>
               </div>
-              <div style="font-size:8.5px;color:var(--muted);margin-top:5px;text-align:right;">Photo by Unsplash (CC0)</div>
             </div>
-          </div>
-        </div>
-
-        <!-- ③ 영업매장 vs 아카데미 매장 비교 (wide) -->
-        <div class="sec-card c-blue wide">
-          <div class="sec-card-head"><span>🔍 영업매장 vs 아카데미 매장 — 무엇이 다른가</span></div>
-          <div class="sec-card-body">
-            <!-- 핵심 한 줄 -->
-            <div style="text-align:center;font-size:13px;font-weight:800;color:#1D4ED8;background:#EFF6FF;border-radius:10px;padding:12px 20px;margin-bottom:18px;border:1px solid #BFDBFE;">
-              영업매장은 일용직을 <span style="color:#DC2626;">소비</span>하는 곳 &nbsp;·&nbsp; 아카데미 매장은 일용직을 <span style="color:#059669;">줄이는</span> 곳
-            </div>
-            <!-- 비교 테이블 -->
-            <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
-              <thead>
-                <tr>
-                  <th style="padding:10px 16px;text-align:left;background:#F1F5F9;color:var(--muted);font-weight:700;font-size:11px;width:26%;">구분</th>
-                  <th style="padding:10px 16px;text-align:center;background:#1D4ED8;color:#fff;font-weight:800;font-size:13px;width:37%;">🏫 아카데미 매장</th>
-                  <th style="padding:10px 16px;text-align:center;background:#374151;color:#fff;font-weight:800;font-size:13px;width:37%;">🏪 영업매장</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom:1px solid #F1F5F9;">
-                  <td style="padding:11px 16px;font-weight:700;color:var(--muted);font-size:11px;">주목적</td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#1D4ED8;background:#F0F7FF;">숙련 인재 양성</td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#374151;">매출·이익 극대화</td>
-                </tr>
-                <tr style="border-bottom:1px solid #F1F5F9;background:#FAFAFA;">
-                  <td style="padding:11px 16px;font-weight:700;color:var(--muted);font-size:11px;">주요 산출물</td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:600;color:#1D4ED8;background:#F0F7FF;">검증된 직원 10명 / 기수<br><span style="font-size:10px;font-weight:400;color:var(--muted);">+ 점심 식판 30명/일 (부산물)</span></td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:600;color:#374151;">식사 N명/일<br><span style="font-size:10px;font-weight:400;color:var(--muted);">매출·수익</span></td>
-                </tr>
-                <tr style="border-bottom:1px solid #F1F5F9;">
-                  <td style="padding:11px 16px;font-weight:700;color:var(--muted);font-size:11px;">인력 구성</td>
-                  <td style="padding:11px 16px;text-align:center;color:#1D4ED8;background:#F0F7FF;">훈련생 10명 + 강사·행정</td>
-                  <td style="padding:11px 16px;text-align:center;color:#374151;">숙련 정규직</td>
-                </tr>
-                <tr style="border-bottom:1px solid #F1F5F9;background:#FAFAFA;">
-                  <td style="padding:11px 16px;font-weight:700;color:var(--muted);font-size:11px;">손익 구조</td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#DC2626;background:#F0F7FF;">구조적 적자 (월 △2,828만원)<br><span style="font-size:10px;font-weight:400;color:var(--muted);">= 교육 투자 비용 (식판형 점심 운영)</span></td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#059669;">흑자 추구</td>
-                </tr>
-                <tr style="border-bottom:1px solid #F1F5F9;">
-                  <td style="padding:11px 16px;font-weight:700;color:var(--muted);font-size:11px;">핵심 KPI</td>
-                  <td style="padding:11px 16px;text-align:center;color:#1D4ED8;background:#F0F7FF;">수료율 · 재직률 · 배치 인원</td>
-                  <td style="padding:11px 16px;text-align:center;color:#374151;">매출 · 영업이익 · 객단가</td>
-                </tr>
-                <tr style="border-bottom:1px solid #F1F5F9;background:#FAFAFA;">
-                  <td style="padding:11px 16px;font-weight:700;color:var(--muted);font-size:11px;">일용직과의 관계</td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#059669;background:#F0F7FF;">일용직 대체 인력 공급처</td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#DC2626;">일용직 수요처</td>
-                </tr>
-                <tr>
-                  <td style="padding:11px 16px;font-weight:700;color:var(--muted);font-size:11px;">연간 비용 관계</td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#1D4ED8;background:#F0F7FF;">수료생 1일 <b>8.5만원</b> (187만÷22일)<br><span style="font-size:10px;font-weight:600;color:#059669;">→ 1인 연 절감 1,980만원 · 100명 순 절감 약 16.4억원</span></td>
-                  <td style="padding:11px 16px;text-align:center;font-weight:700;color:#DC2626;">일용직 1일 <b>16만원</b> = 월 352만원<br><span style="font-size:10px;font-weight:400;">수료생 대비 1인당 월 165만원 더 비쌈</span></td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
 
@@ -861,18 +779,18 @@
                   <tr><td class="l">집기·비품</td><td class="l"><span class="tag tag-red">초기투자</span></td><td class="num-cell">1,000만원</td></tr>
                   <tr class="total-row"><td class="l" colspan="2"><b>초기 합계</b> <span style="font-size:9px;font-weight:400;color:var(--muted);">(보증금 포함)</span></td><td class="num-cell" style="color:#B91C1C;">1억 5,000만원</td></tr>
                   <tr><td class="l">인건비 (매장 정규직 2명 · 400만원×2)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">800만원/월</td></tr>
-                  <tr><td class="l">교육생 인건비 (10명 · 최저임금 10,030원×8h×22일)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">1,765만원/월</td></tr>
+                  <tr><td class="l">교육생 인건비 (10명 · 최저임금 12,036원×8h×22일)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">2,118만원/월</td></tr>
                   <tr><td colspan="3" style="padding:0;"><div class="alert alert-amber" style="margin:4px 2px;border-radius:7px;"><div>⚠️</div><div><b>교육생 법적 리스크 검토 필요:</b> 교육생 근로자성 인정 여부 · 최저임금 적용 기준 · 4대보험 및 산재보험 가입 의무 · 안전보건교육 이수 요건 — 법무·노무 사전 확인 필수</div></div></td></tr>
                   <tr><td class="l">월세</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell" style="font-weight:700;">500만원/월</td></tr>
                   <tr><td class="l">관리비</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">30만원/월</td></tr>
-                  <tr><td class="l">재료비 (원가율 40% · 한·중·일 로테이션)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">185만원/월</td></tr>
+                  <tr><td class="l">재료비 (브랜드 메뉴 원가율 동일 적용 · 한·중·일 로테이션)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">185만원/월</td></tr>
                   <tr><td class="l">소모품 (식판·수저 등 재사용)</td><td class="l"><span class="tag tag-gold">월 운영</span></td><td class="num-cell">10만원/월</td></tr>
                   <tr><td class="l">식판 점심 매출 (30명×22일×7,000원)</td><td class="l"><span class="tag tag-green">월 수익</span></td><td class="num-cell" style="color:#166534;">−462만원/월</td></tr>
-                  <tr class="total-row"><td class="l" colspan="2"><b>월 순 운영비</b></td><td class="num-cell" style="color:#D97706;">약 2,828만원</td></tr>
-                  <tr class="total-row"><td class="l" colspan="2"><b>연간 순 운영비</b> <span style="font-size:9px;font-weight:400;color:var(--muted);">(보증금 제외)</span></td><td class="num-cell" style="color:#B91C1C;">약 3억 3,936만원</td></tr>
+                  <tr class="total-row"><td class="l" colspan="2"><b>월 순 운영비</b></td><td class="num-cell" style="color:#D97706;">약 3,181만원</td></tr>
+                  <tr class="total-row"><td class="l" colspan="2"><b>연간 순 운영비</b> <span style="font-size:9px;font-weight:400;color:var(--muted);">(보증금 제외)</span></td><td class="num-cell" style="color:#B91C1C;">약 3억 8,172만원</td></tr>
                 </tbody>
               </table>
-              <div class="alert alert-green" style="margin-top:8px;"><div>✅</div><div>일용직 <b>16만원/일 (월 352만원)</b> vs 수료생 배치 후 <b>8.5만원/일 (월 187만원)</b> → 1인당 월 <b>165만원</b> 절감 → 100명 기준 연 19.8억 절감 — 아카데미 운영비 3.39억 차감 → <b>순 절감 약 16.4억원/년</b> &nbsp;·&nbsp; 매장식사 전용 (배달·포장 없음)</div></div>
+              <div class="alert alert-green" style="margin-top:8px;"><div>✅</div><div>일용직 <b>16만원/일 (월 352만원)</b> vs 수료생 배치 후 <b>8.5만원/일 (월 187만원)</b> → 1인당 월 <b>165만원</b> 절감 → 100명 기준 연 19.8억 절감 — 아카데미 운영비 3.82억 차감 → <b>순 절감 약 16.0억원/년</b> &nbsp;·&nbsp; 매장식사 전용 (배달·포장 없음)</div></div>
             </div>
             <!-- 우: 용도 적합성 분석 -->
             <div style="display:flex;flex-direction:column;gap:10px;">
@@ -926,13 +844,13 @@
               </div>
               <div style="background:#FEF2F2;border-radius:12px;padding:14px 10px;text-align:center;border-top:3px solid #EF4444;">
                 <div style="font-size:11px;font-weight:700;color:#991B1B;margin-bottom:4px;">월 순 운영비</div>
-                <div style="font-size:24px;font-weight:900;color:#DC2626;line-height:1;">2,828만</div>
+                <div style="font-size:24px;font-weight:900;color:#DC2626;line-height:1;">3,181만</div>
                 <div style="font-size:9px;color:#64748B;margin-top:4px;">매출 462만 상쇄 후 (교육생 인건비 포함)</div>
               </div>
               <div style="background:#ECFDF5;border-radius:12px;padding:14px 10px;text-align:center;border-top:3px solid #059669;">
                 <div style="font-size:11px;font-weight:700;color:#065F46;margin-bottom:4px;">연간 순 절감</div>
-                <div style="font-size:24px;font-weight:900;color:#059669;line-height:1;">16.4억</div>
-                <div style="font-size:9px;color:#64748B;margin-top:4px;">인건비 절감 19.8억 − 아카데미 운영비 3.39억</div>
+                <div style="font-size:24px;font-weight:900;color:#059669;line-height:1;">16.0억</div>
+                <div style="font-size:9px;color:#64748B;margin-top:4px;">인건비 절감 19.8억 − 아카데미 운영비 3.82억</div>
               </div>
               <div style="background:#EFF6FF;border-radius:12px;padding:14px 10px;text-align:center;border-top:3px solid #1A4FAB;">
                 <div style="font-size:11px;font-weight:700;color:#1E40AF;margin-bottom:4px;">대체율</div>
@@ -943,7 +861,7 @@
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
               <div style="background:linear-gradient(90deg,#ECFDF5,#F0FDF4);border-radius:10px;padding:12px 16px;border-left:4px solid #059669;">
                 <div style="font-size:8.5px;font-weight:800;color:#166534;letter-spacing:.08em;margin-bottom:4px;">KEY MESSAGE</div>
-                <div style="font-size:11px;color:#14532D;line-height:1.65;">일용직 <strong>16만원/일 (월 352만원)</strong> → 수료생 배치 후 <strong>187만원/월</strong>으로 대체 시 1인당 월 165만원, 연 <strong>1,980만원 절감</strong>. 100명 기준 인건비 절감 19.8억 — 아카데미 운영비 3.39억 = 순 절감 <strong>약 16.4억원/년</strong>. 매장식사 전용(배달·포장 없음) · 초기 임직원 한정 운영.</div>
+                <div style="font-size:11px;color:#14532D;line-height:1.65;">일용직 <strong>16만원/일 (월 352만원)</strong> → 수료생 배치 후 <strong>187만원/월</strong>으로 대체 시 1인당 월 165만원, 연 <strong>1,980만원 절감</strong>. 100명 기준 인건비 절감 19.8억 — 아카데미 운영비 3.82억 = 순 절감 <strong>약 16.0억원/년</strong>. 매장식사 전용(배달·포장 없음) · 초기 임직원 한정 운영.</div>
               </div>
               <div style="background:#F8FAFC;border-radius:10px;padding:12px 16px;border:1px solid #E2E8F0;">
                 <div style="font-size:9px;font-weight:700;color:#374151;margin-bottom:8px;">💰 절감 구조 (100명 기준, 연간)</div>
@@ -955,12 +873,12 @@
                 <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
                   <div style="font-size:9px;color:#374151;width:96px;flex-shrink:0;">아카데미 운영비</div>
                   <div style="flex:1;background:#E5E7EB;border-radius:99px;height:8px;overflow:hidden;"><div style="width:17.1%;height:100%;background:linear-gradient(90deg,#DC2626,#EF4444);border-radius:99px;"></div></div>
-                  <div style="font-size:9.5px;font-weight:700;color:#DC2626;width:36px;text-align:right;">3.4억</div>
+                  <div style="font-size:9.5px;font-weight:700;color:#DC2626;width:36px;text-align:right;">3.82억</div>
                 </div>
                 <div style="display:flex;align-items:center;gap:6px;">
                   <div style="font-size:9px;color:#374151;width:96px;flex-shrink:0;font-weight:700;">순 절감</div>
-                  <div style="flex:1;background:#E5E7EB;border-radius:99px;height:8px;overflow:hidden;"><div style="width:82.8%;height:100%;background:linear-gradient(90deg,#2563EB,#60A5FA);border-radius:99px;"></div></div>
-                  <div style="font-size:9.5px;font-weight:700;color:#1D4ED8;width:36px;text-align:right;">16.4억</div>
+                  <div style="flex:1;background:#E5E7EB;border-radius:99px;height:8px;overflow:hidden;"><div style="width:80.8%;height:100%;background:linear-gradient(90deg,#2563EB,#60A5FA);border-radius:99px;"></div></div>
+                  <div style="font-size:9.5px;font-weight:700;color:#1D4ED8;width:36px;text-align:right;">16.0억</div>
                 </div>
               </div>
             </div>
@@ -2620,7 +2538,7 @@
   // 뷰별 헤더 메타 (view-head 밴드)
   var VIEWS = {
     v1:{t:'연간 채용 계획', d:'BOH 일용직 의존도를 낮추고 검증된 조리 인력을 안정적으로 공급하기 위한 인력 내재화 프로젝트'},
-    v2:{t:'운영 모델', d:'방배동 매장 시뮬레이션 · 운영 인력 · 투자·운영비 · 인건비 안분'},
+    v2:{t:'아카데미 모델', d:'아카데미 운영 모델 · 공간 구성 · 투자·운영비 · 인건비 안분'},
     v3:{t:'인력·비용 효과', d:'월별 실적 누계 자동집계 — 목표 대비 진행률·트랙·절감'},
     v4:{t:'아카데미 상세 커리큘럼', d:'3개월 과정 단계별 커리큘럼과 운영 원칙'},
     v5:{t:'운영 인력 구성 및 매장 배치 정책', d:'채용팀 R&R · 매장(영업팀) R&R'},
