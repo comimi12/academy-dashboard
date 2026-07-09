@@ -1348,74 +1348,73 @@
         <div class="sec-card c-green">
           <div class="sec-card-head"><span>🏢 아카데미 운영 인력 구조(조직도)</span></div>
           <div class="sec-card-body">
-            <!-- 신규 조직도 (포스트잇 기반) -->
+            <!-- 신규 조직도 (탑다운 구조) -->
             <div style="width:100%;overflow-x:auto;margin-bottom:16px;">
-              <svg viewBox="0 0 700 290" width="100%" style="max-width:700px;display:block;margin:0 auto;" font-family="'Noto Sans KR',sans-serif">
+              <svg viewBox="0 0 520 395" width="100%" style="max-width:480px;display:block;margin:0 auto;" font-family="'Noto Sans KR',sans-serif">
                 <defs>
-                  <linearGradient id="og-blue" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#1E3A8A"/><stop offset="100%" stop-color="#2563EB"/>
+                  <linearGradient id="og-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#92400E"/><stop offset="100%" stop-color="#D97706"/>
                   </linearGradient>
                   <linearGradient id="og-green" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#065F46"/><stop offset="100%" stop-color="#059669"/>
                   </linearGradient>
-                  <linearGradient id="og-amber" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#92400E"/><stop offset="100%" stop-color="#D97706"/>
+                  <linearGradient id="og-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1E3A8A"/><stop offset="100%" stop-color="#2563EB"/>
                   </linearGradient>
-                  <filter id="og-shadow"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="rgba(0,0,0,.15)"/></filter>
+                  <linearGradient id="og-slate" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1E3A5F"/><stop offset="100%" stop-color="#475569"/>
+                  </linearGradient>
+                  <filter id="og-shadow"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="rgba(0,0,0,.18)"/></filter>
                 </defs>
 
                 <!-- 연결선 -->
-                <!-- 행정지원 → 중앙 총괄 -->
-                <line x1="152" y1="100" x2="235" y2="145" stroke="#CBD5E1" stroke-width="2.5"/>
-                <!-- 강사 → 중앙 총괄 -->
-                <line x1="150" y1="200" x2="235" y2="155" stroke="#CBD5E1" stroke-width="2.5"/>
-                <!-- 중앙 → 우측 수직 바 -->
-                <line x1="395" y1="150" x2="466" y2="150" stroke="#CBD5E1" stroke-width="2.5"/>
-                <!-- 우측 수직 바 -->
-                <line x1="466" y1="65" x2="466" y2="235" stroke="#CBD5E1" stroke-width="2.5"/>
-                <!-- 우측 분기 3개 -->
-                <line x1="466" y1="65"  x2="510" y2="65"  stroke="#CBD5E1" stroke-width="2.5"/>
-                <line x1="466" y1="150" x2="510" y2="150" stroke="#CBD5E1" stroke-width="2.5"/>
-                <line x1="466" y1="235" x2="510" y2="235" stroke="#CBD5E1" stroke-width="2.5"/>
+                <!-- TOP(원장) → MIDDLE(조리교육담당) -->
+                <line x1="260" y1="123" x2="260" y2="140" stroke="#CBD5E1" stroke-width="2.5"/>
+                <!-- SIDE(행정지원) → MIDDLE -->
+                <line x1="142" y1="210" x2="190" y2="210" stroke="#CBD5E1" stroke-width="2.5"/>
+                <!-- MIDDLE → 분기점 -->
+                <line x1="260" y1="280" x2="260" y2="300" stroke="#CBD5E1" stroke-width="2.5"/>
+                <!-- 분기 수평선 -->
+                <line x1="155" y1="300" x2="375" y2="300" stroke="#CBD5E1" stroke-width="2.5"/>
+                <!-- 분기 → BOTTOM-LEFT -->
+                <line x1="155" y1="300" x2="155" y2="307" stroke="#CBD5E1" stroke-width="2.5"/>
+                <!-- 분기 → BOTTOM-RIGHT -->
+                <line x1="375" y1="300" x2="375" y2="307" stroke="#CBD5E1" stroke-width="2.5"/>
+                <!-- 분기점 -->
+                <circle cx="260" cy="300" r="4.5" fill="#CBD5E1"/>
 
-                <!-- 좌측: 행정지원 (중간 원) -->
-                <circle cx="88" cy="100" r="62" fill="url(#og-blue)" filter="url(#og-shadow)"/>
-                <text x="88" y="96"  text-anchor="middle" fill="white" font-size="12" font-weight="800">행정지원</text>
-                <text x="88" y="112" text-anchor="middle" fill="rgba(255,255,255,.75)" font-size="9.5">운영지원</text>
+                <!-- TOP: 아카데미 원장 (황금) -->
+                <circle cx="260" cy="65" r="58" fill="url(#og-amber)" filter="url(#og-shadow)"/>
+                <text x="260" y="59" text-anchor="middle" fill="white" font-size="14" font-weight="900">아카데미</text>
+                <text x="260" y="77" text-anchor="middle" fill="white" font-size="14" font-weight="900">원장</text>
 
-                <!-- 좌측: 강사 (작은 타원) -->
-                <ellipse cx="82" cy="203" rx="68" ry="45" fill="url(#og-green)" filter="url(#og-shadow)"/>
-                <text x="82" y="197" text-anchor="middle" fill="white" font-size="10" font-weight="800">아카데미 운영</text>
-                <text x="82" y="211" text-anchor="middle" fill="white" font-size="10" font-weight="800">조리 교육강사</text>
+                <!-- SIDE: 행정지원 (파란) -->
+                <circle cx="90" cy="210" r="52" fill="url(#og-blue)" filter="url(#og-shadow)"/>
+                <text x="90" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="800">행정</text>
+                <text x="90" y="221" text-anchor="middle" fill="white" font-size="12" font-weight="800">지원</text>
 
-                <!-- 중앙: 아카데미 총괄 (큰 원) -->
-                <circle cx="315" cy="150" r="90" fill="url(#og-amber)" filter="url(#og-shadow)"/>
-                <text x="315" y="141" text-anchor="middle" fill="white" font-size="14.5" font-weight="900">아카데미 총괄</text>
-                <text x="315" y="158" text-anchor="middle" fill="rgba(255,255,255,.85)" font-size="11.5" font-weight="600">(원장급)</text>
+                <!-- MIDDLE: 아카데미 운영 및 조리교육담당 (초록) -->
+                <circle cx="260" cy="210" r="70" fill="url(#og-green)" filter="url(#og-shadow)"/>
+                <text x="260" y="199" text-anchor="middle" fill="white" font-size="10.5" font-weight="800">아카데미 운영 및</text>
+                <text x="260" y="215" text-anchor="middle" fill="white" font-size="10.5" font-weight="800">조리교육담당</text>
 
-                <!-- 우측 노드 1 (상단 원) — TBD -->
-                <circle cx="558" cy="65" r="42" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
-                <text x="558" y="61"  text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="700">추후</text>
-                <text x="558" y="75"  text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="700">입력</text>
+                <!-- BOTTOM-LEFT: 조리보조 (매장) -->
+                <ellipse cx="155" cy="345" rx="75" ry="40" fill="url(#og-slate)" filter="url(#og-shadow)"/>
+                <text x="155" y="339" text-anchor="middle" fill="white" font-size="11" font-weight="800">조리보조</text>
+                <text x="155" y="356" text-anchor="middle" fill="rgba(255,255,255,.75)" font-size="9.5">매장</text>
 
-                <!-- 우측 노드 2 (중간 타원) — TBD -->
-                <ellipse cx="560" cy="150" rx="46" ry="30" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
-                <text x="560" y="154" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="700">추후 입력</text>
-
-                <!-- 우측 노드 3 (하단 둥근 사각형) — TBD -->
-                <rect x="512" y="210" width="96" height="50" rx="14" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2"/>
-                <text x="560" y="231" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="700">추후</text>
-                <text x="560" y="247" text-anchor="middle" fill="#94A3B8" font-size="10" font-weight="700">입력</text>
-
-                <!-- 접합점 -->
-                <circle cx="466" cy="150" r="5" fill="#94A3B8"/>
+                <!-- BOTTOM-RIGHT: 운영매니저 (매장) -->
+                <ellipse cx="375" cy="345" rx="75" ry="40" fill="url(#og-slate)" filter="url(#og-shadow)"/>
+                <text x="375" y="339" text-anchor="middle" fill="white" font-size="11" font-weight="800">운영매니저</text>
+                <text x="375" y="356" text-anchor="middle" fill="rgba(255,255,255,.75)" font-size="9.5">매장</text>
               </svg>
             </div>
             <hr class="inner-div">
-            <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>아카데미 총괄(원장급):</b> 교육과정 전반 기획·운영·품질 책임</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#D97706"></div><span class="ri-label"><b>아카데미 원장:</b> 교육과정 전반 기획·운영·품질 총괄 책임</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#059669"></div><span class="ri-label"><b>아카데미 운영 및 조리교육담당:</b> 한·중·일 실습 교육, 현장 지도, 수료 역량 평가</span></div>
             <div class="row-item"><div class="ri-dot" style="background:#1D4ED8"></div><span class="ri-label"><b>행정지원:</b> 입교·수료 행정처리, 교육생 출결·인건비 관리, 매장 배치 조율</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#065F46"></div><span class="ri-label"><b>아카데미 운영 및 조리 교육강사:</b> 한·중·일 실습 교육, 현장 지도, 수료 역량 평가</span></div>
-            <div class="row-item"><div class="ri-dot" style="background:#94A3B8"></div><span class="ri-label"><b>우측 3개 노드:</b> 추후 입력 예정</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#475569"></div><span class="ri-label"><b>조리보조 (매장):</b> 수료 후 매장 배치 — 조리 포지션</span></div>
+            <div class="row-item"><div class="ri-dot" style="background:#475569"></div><span class="ri-label"><b>운영매니저 (매장):</b> 수료 후 매장 배치 — 운영·홀 포지션</span></div>
           </div>
         </div>
 
@@ -2358,10 +2357,111 @@
       </div>
     </section>
 
-    <!-- ===== 뷰11: 아카데미 구내식당형 부동산 후보지 ===== -->
+    <!-- ===== 뷰11: 아카데미 구내식당형 후보지 매물 ===== -->
     <section id="v11" class="view">
       <div class="grid">
-        <!-- 내용 추가 예정 -->
+
+        <!-- 비교 요약 -->
+        <div class="sec-card c-blue wide">
+          <div class="sec-card-head"><span>🏠 후보지 매물 비교 — 2선</span><span class="meta">건축물대장 기준 · 2026-07-08</span></div>
+          <div class="sec-card-body">
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+              <div style="background:#EFF6FF;border-radius:10px;padding:12px;text-align:center;border-top:3px solid #1E40AF;">
+                <div style="font-size:10px;color:#64748B;margin-bottom:4px;">후보지 A 면적</div>
+                <div style="font-size:20px;font-weight:900;color:#1E40AF;">34.6평</div>
+                <div style="font-size:9px;color:#94A3B8;">105㎡ · 2층</div>
+              </div>
+              <div style="background:#EFF6FF;border-radius:10px;padding:12px;text-align:center;border-top:3px solid #1E40AF;">
+                <div style="font-size:10px;color:#64748B;margin-bottom:4px;">후보지 A 임차료</div>
+                <div style="font-size:20px;font-weight:900;color:#1E40AF;">350만/월</div>
+                <div style="font-size:9px;color:#94A3B8;">보증금 5,000</div>
+              </div>
+              <div style="background:#ECFDF5;border-radius:10px;padding:12px;text-align:center;border-top:3px solid #059669;">
+                <div style="font-size:10px;color:#64748B;margin-bottom:4px;">후보지 B 면적</div>
+                <div style="font-size:20px;font-weight:900;color:#059669;">약 84평</div>
+                <div style="font-size:9px;color:#94A3B8;">278㎡ · 지1+1층</div>
+              </div>
+              <div style="background:#ECFDF5;border-radius:10px;padding:12px;text-align:center;border-top:3px solid #059669;">
+                <div style="font-size:10px;color:#64748B;margin-bottom:4px;">후보지 B 임차료</div>
+                <div style="font-size:20px;font-weight:900;color:#059669;">500만/월</div>
+                <div style="font-size:9px;color:#94A3B8;">보증금 6,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 후보지 A 상세 -->
+        <div class="sec-card c-blue">
+          <div class="sec-card-head" style="background:linear-gradient(135deg,#1E40AF,#2563EB);">
+            <span style="color:#fff;">📍 후보지 A — 이수아파트 상가 203호</span>
+            <span style="margin-left:auto;background:#22C55E;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:99px;white-space:nowrap;">✅ 적합</span>
+          </div>
+          <div class="sec-card-body">
+            <div style="font-size:11px;color:#374151;margin-bottom:14px;padding:8px 12px;background:#EFF6FF;border-radius:8px;">
+              📌 서초구 방배로 195 (방배동 836-3)
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;">
+              <div style="background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">전용 면적</div>
+                <div style="font-size:16px;font-weight:900;color:#1E40AF;">34.61평</div>
+                <div style="font-size:9px;color:#94A3B8;">105.12㎡ · 2층</div>
+              </div>
+              <div style="background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">임대 조건</div>
+                <div style="font-size:16px;font-weight:900;color:#1E40AF;">350만/월</div>
+                <div style="font-size:9px;color:#94A3B8;">보증금 5,000 · 관리비 15</div>
+              </div>
+              <div style="background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">등록 용도</div>
+                <div style="font-size:13px;font-weight:800;color:#1E40AF;">제2종근린생활</div>
+                <div style="font-size:9px;color:#94A3B8;">학원 기등록</div>
+              </div>
+              <div style="background:#F8FAFF;border:1px solid #DBEAFE;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">건물 준공</div>
+                <div style="font-size:13px;font-weight:800;color:#DC2626;">1978년 (48년)</div>
+                <div style="font-size:9px;color:#94A3B8;">철근콘크리트</div>
+              </div>
+            </div>
+            <div class="alert alert-blue"><div>⚠️</div><div>교육 공간 <b>학원 기등록</b> — 구내식당 운영을 위한 용도변경 검토 필요. 3인 공동소유 협의 필요</div></div>
+          </div>
+        </div>
+
+        <!-- 후보지 B 상세 -->
+        <div class="sec-card c-green">
+          <div class="sec-card-head" style="background:linear-gradient(135deg,#065F46,#059669);">
+            <span style="color:#fff;">📍 후보지 B — 서리풀J빌딩</span>
+            <span style="margin-left:auto;background:#22C55E;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:99px;white-space:nowrap;">✅ 적합</span>
+          </div>
+          <div class="sec-card-body">
+            <div style="font-size:11px;color:#374151;margin-bottom:14px;padding:8px 12px;background:#ECFDF5;border-radius:8px;">
+              📌 서초구 서초대로25길 24 (방배동 876-3)
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;">
+              <div style="background:#F0FDF9;border:1px solid #A7F3D0;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">전용 면적</div>
+                <div style="font-size:16px;font-weight:900;color:#065F46;">약 84평</div>
+                <div style="font-size:9px;color:#94A3B8;">지1층+1층 278㎡</div>
+              </div>
+              <div style="background:#F0FDF9;border:1px solid #A7F3D0;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">임대 조건</div>
+                <div style="font-size:16px;font-weight:900;color:#065F46;">500만/월</div>
+                <div style="font-size:9px;color:#94A3B8;">보증금 6,000 · 관리비 20</div>
+              </div>
+              <div style="background:#F0FDF9;border:1px solid #A7F3D0;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">등록 용도</div>
+                <div style="font-size:13px;font-weight:800;color:#065F46;">일반음식점</div>
+                <div style="font-size:9px;color:#94A3B8;">즉시 운영 가능</div>
+              </div>
+              <div style="background:#F0FDF9;border:1px solid #A7F3D0;border-radius:10px;padding:12px;">
+                <div style="font-size:9px;color:#64748B;margin-bottom:3px;">건물 준공</div>
+                <div style="font-size:13px;font-weight:800;color:#065F46;">2020년 (5년)</div>
+                <div style="font-size:9px;color:#94A3B8;">내진설계 적용</div>
+              </div>
+            </div>
+            <div class="alert alert-green"><div>✅</div><div>일반음식점 <b>기등록 + 신축</b> — 구내식당형 즉시 운영 가능. 제2종일반주거지역·상대보호구역 영업시간 협의 필요</div></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
