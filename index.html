@@ -2603,7 +2603,7 @@
 
   if(D.meta && D.meta.title){ var ht=document.getElementById('h-title'); if(ht) ht.textContent=D.meta.title; }
 
-  document.getElementById('prog-asof').textContent = '기준 '+last.ym;
+  var progAsofEl = document.getElementById('prog-asof'); if(progAsofEl) progAsofEl.textContent = '기준 '+last.ym;
 
   // KPI 4개 카드
   var kpiEl = document.getElementById('kpi-cards');
@@ -2663,7 +2663,8 @@
       +'<div class="pipe-track"><div class="pipe-fill" style="width:'+pct+'%;background:'+fillColor+'"></div></div>'
       +'</div>';
   }
-  document.getElementById('progress').innerHTML =
+  var progressEl = document.getElementById('progress');
+  if(progressEl) progressEl.innerHTML =
       progBar('👥 채용 (연 '+D.targets.채용.total+'명)', cumChae, D.targets.채용.total, '#1A4FAB','#3B82F6')
     + progBar('🎓 아카데미 수료', cumSuryo, D.targets.수료, '#B45309','#F59E0B')
     + progBar('🏬 매장 배치', cumBaechi, D.targets.배치, '#047857','#10B981')
@@ -2676,7 +2677,8 @@
       +'<div class="pipe-track"><div class="pipe-fill" style="width:'+pct+'%;background:linear-gradient(90deg,'+c1+','+c2+')"></div></div>'
       +'</div>';
   }
-  document.getElementById('track').innerHTML =
+  var trackEl = document.getElementById('track');
+  if(trackEl) trackEl.innerHTML =
       trackBar('🔵 고급 기능직', cumGo, D.targets.채용.고급, '#1D4ED8','#3B82F6')
     + trackBar('🟣 중급 기능직', cumJung, D.targets.채용.중급, '#6D28D9','#8B5CF6')
     + trackBar('🟢 기초·신입', cumGi, D.targets.채용.기초, '#065F46','#10B981')
@@ -2792,7 +2794,8 @@
       +'<td>'+(x.절감액?won(x.절감액):'—')+'</td>'
       +'<td class="cum">'+runC+'</td><td class="cum">'+runB+'</td><td class="cum">'+(runJ?won(runJ):'—')+'</td></tr>';
   }).join('');
-  document.getElementById('trend-table').innerHTML =
+  var trendTableEl = document.getElementById('trend-table');
+  if(trendTableEl) trendTableEl.innerHTML =
     '<table><thead><tr>'
     +'<th class="l">월</th><th>채용</th><th>입교</th><th>수료</th><th>배치</th><th>재직중</th><th>절감</th>'
     +'<th class="cum">누계채용</th><th class="cum">누계배치</th><th class="cum">누계절감</th></tr></thead>'
