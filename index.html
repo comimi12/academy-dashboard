@@ -294,6 +294,7 @@
       <!-- 파트 6: 중장기 전략 -->
       <div class="tab-group" style="position:relative;">
         <button class="tab tab-parent" data-view="v12"><span class="tnum">6</span><span class="tlabel">중장기 계획</span></button>
+        <button class="tab tab-sub" data-view="v14" style="position:relative;"><span class="tnum">·</span><span class="tlabel">중장기 계획2</span></button>
       </div>
     </nav>
     <div class="sb-foot"><span id="f-doc">문서 SLC-HR-2026-002</span></div>
@@ -3046,6 +3047,22 @@
       </div>
     </section>
 
+    <!-- ===== 뷰14: 중장기 계획2 (빈 스켈레톤, 내용 TBD) ===== -->
+    <section id="v14" class="view">
+      <div class="grid">
+
+        <div class="sec-card c-accent wide">
+          <div class="sec-card-head"><span>🎯 중장기 계획2</span><span class="meta">내용 TBD</span></div>
+          <div class="sec-card-body">
+            <div style="font-size:12px;color:#6B7280;line-height:1.8;">
+              아직 내용이 채워지지 않은 빈 뷰입니다. 이 탭에 담을 내용(대안 시나리오, 기존 로드맵 개정판 등)을 알려주시면 채워 넣겠습니다.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     </main>
   </div>
 </div>
@@ -3082,9 +3099,10 @@
     v10:{t:'중장년층 고용시 고려하면 좋은점', d:'3기 수료생 석OO 조기 퇴사 사례 분석 · 중장년층 고용 시 근무시간 단축·업무 조정 권고사항'},
     v11:{t:'아카데미_구내식당형 후보지 (2028년 사전조사)', d:'신규 후보지 2곳 비교 — 이수아파트 상가 203호 vs 서리풀J빌딩 · 건축물대장 기준 · 3개년 로드맵상 2028년 구내식당형 전환 대비 사전 조사'},
     v12:{t:'중장기 계획 — 3개년 로드맵 · 프랜차이즈 전환 시나리오', d:'3개년 인재 육성 로드맵(2026 100명 → 2027 150명 → 2028 200명, 파일럿→수익형→상시공급) + SL&C 프랜차이즈 전환 시 아카데미 역할 확장안 (초기 구상 초안)'},
+    v14:{t:'중장기 계획2', d:'내용 TBD — 빈 스켈레톤'},
     v13:{t:'5기 커리큘럼', d:'한국조리과학고 2명(김채서·김현아)·고명외식고 1명(최의석)·서울50+ 1명(정인석, 파트타이머) 총 4명 · 배치매장·현장담당교사 확정, 2026.10.19~10.31 아카데미 상세 일정(최의석 10/23 합류) · 운영구분 초안(미정) · 현장실습(OJT) 일정 TBD'}
   };
-  var order = ['v1','v10','v2','v11','v5','v4','v3','v9','v13','v6','v7','v8','v12'];
+  var order = ['v1','v10','v2','v11','v5','v4','v3','v9','v13','v6','v7','v8','v12','v14'];
   function setHead(id){
     var v=VIEWS[id]; if(!v) return;
     document.getElementById('vh-title').textContent=v.t;
